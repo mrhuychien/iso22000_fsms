@@ -1,0 +1,51 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company_section",
+  "company_name",
+  "tax_id",
+  "address",
+  "column_break_company",
+  "scope_section",
+  "scope_organization",
+  "scope_location",
+  "scope_product",
+  "compliance_section",
+  "std_version",
+  "fiscal_year_cycle",
+  "retention_years_default",
+  "mandatory_drill_frequency_months"
+ ],
+ "fields": [
+  {"fieldname": "company_section", "fieldtype": "Section Break", "label": "Thông tin công ty"},
+  {"fieldname": "company_name", "fieldtype": "Data", "label": "Tên công ty", "reqd": 1},
+  {"fieldname": "tax_id", "fieldtype": "Data", "label": "MST"},
+  {"fieldname": "address", "fieldtype": "Small Text", "label": "Địa chỉ"},
+  {"fieldname": "column_break_company", "fieldtype": "Column Break"},
+  {"fieldname": "scope_section", "fieldtype": "Section Break", "label": "Phạm vi áp dụng FSMS"},
+  {"fieldname": "scope_organization", "fieldtype": "Small Text", "label": "Phạm vi tổ chức"},
+  {"fieldname": "scope_location", "fieldtype": "Small Text", "label": "Phạm vi địa điểm"},
+  {"fieldname": "scope_product", "fieldtype": "Small Text", "label": "Phạm vi sản phẩm"},
+  {"fieldname": "compliance_section", "fieldtype": "Section Break", "label": "Cấu hình tuân thủ"},
+  {"fieldname": "std_version", "fieldtype": "Data", "label": "Phiên bản tiêu chuẩn", "default": "ISO 22000:2018"},
+  {"fieldname": "fiscal_year_cycle", "fieldtype": "Select", "label": "Chu kỳ năm tài chính", "options": "Calendar\nApril-March\nJuly-June", "default": "Calendar"},
+  {"fieldname": "retention_years_default", "fieldtype": "Int", "label": "Số năm lưu hồ sơ mặc định", "default": 3},
+  {"fieldname": "mandatory_drill_frequency_months", "fieldtype": "Int", "label": "Tần suất diễn tập (tháng)", "default": 12}
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Core",
+ "name": "FSMS Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

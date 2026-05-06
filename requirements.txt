@@ -1,0 +1,2 @@
+# Frappe / ERPNext are managed by bench, not pip-installed here.
+# Add app-specific runtime deps below.

@@ -1,0 +1,17 @@
+[project]
+name = "iso22000_fsms"
+version = "1.0.0"
+description = "Hệ thống quản lý ATTP theo ISO 22000:2018"
+authors = [
+    { name = "Công ty CP Hoàng Giang", email = "hoanggiavn.vn@gmail.com" },
+]
+readme = "README.md"
+license = { file = "LICENSE.txt" }
+requires-python = ">=3.10"
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.module]
+name = "iso22000_fsms"
