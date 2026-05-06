@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "criterion_name",
+  "weight",
+  "score",
+  "col_a",
+  "weighted_score",
+  "evidence"
+ ],
+ "fields": [
+  {
+   "fieldname": "criterion_name",
+   "fieldtype": "Data",
+   "label": "Tiêu chí",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Trọng số",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Int",
+   "label": "Điểm",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "weighted_score",
+   "fieldtype": "Float",
+   "label": "Điểm có trọng số",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "evidence",
+   "fieldtype": "Small Text",
+   "label": "Bằng chứng"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Supplier",
+ "name": "FSMS Supplier Evaluation Criteria",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

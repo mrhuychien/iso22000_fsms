@@ -1,0 +1,164 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "header_section",
+  "trace_no",
+  "trace_date",
+  "trigger",
+  "col_a",
+  "linked_recall_event",
+  "target_batch",
+  "links_section",
+  "forward_links",
+  "backward_links",
+  "report_section",
+  "report_attached",
+  "workflow_section",
+  "workflow_state"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "TXNG.{YYYY}.-.####",
+   "default": "TXNG.{YYYY}.-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "header_section",
+   "fieldtype": "Section Break",
+   "label": "Phiếu truy xuất"
+  },
+  {
+   "fieldname": "trace_no",
+   "fieldtype": "Data",
+   "label": "Số phiếu",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "trace_date",
+   "fieldtype": "Date",
+   "label": "Ngày",
+   "default": "Today",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "trigger",
+   "fieldtype": "Select",
+   "label": "Trigger",
+   "options": "Recall\nQLNN yêu cầu\nKH yêu cầu\nDrill",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "linked_recall_event",
+   "fieldtype": "Link",
+   "label": "Recall Event",
+   "options": "FSMS Recall Event"
+  },
+  {
+   "fieldname": "target_batch",
+   "fieldtype": "Link",
+   "label": "Batch",
+   "options": "Batch",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "links_section",
+   "fieldtype": "Section Break",
+   "label": "Trace links"
+  },
+  {
+   "fieldname": "forward_links",
+   "fieldtype": "Table",
+   "label": "Forward",
+   "options": "FSMS Trace Forward Link"
+  },
+  {
+   "fieldname": "backward_links",
+   "fieldtype": "Table",
+   "label": "Backward",
+   "options": "FSMS Trace Backward Link"
+  },
+  {
+   "fieldname": "report_section",
+   "fieldtype": "Section Break",
+   "label": "Báo cáo"
+  },
+  {
+   "fieldname": "report_attached",
+   "fieldtype": "Attach",
+   "label": "Báo cáo PDF"
+  },
+  {
+   "fieldname": "workflow_section",
+   "fieldtype": "Section Break",
+   "label": "Workflow"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "label": "Trạng thái",
+   "options": "Workflow State",
+   "read_only": 1,
+   "in_list_view": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Traceability",
+ "name": "FSMS Traceability Trace",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "trace_no",
+ "track_changes": 1
+}

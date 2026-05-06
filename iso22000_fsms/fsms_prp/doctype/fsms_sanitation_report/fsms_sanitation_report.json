@@ -1,0 +1,231 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "header_section",
+  "report_period",
+  "report_year",
+  "report_period_value",
+  "summary_section",
+  "worker_hygiene_summary",
+  "area_cleaning_summary",
+  "pest_control_summary",
+  "chemical_storage_check",
+  "findings_section",
+  "findings",
+  "improvements",
+  "signature_section",
+  "prepared_by",
+  "prepared_on",
+  "prepared_signature",
+  "column_break_sig1",
+  "reviewed_by",
+  "reviewed_on",
+  "reviewed_signature",
+  "column_break_sig2",
+  "approved_by",
+  "approved_on",
+  "approved_signature",
+  "workflow_section",
+  "workflow_state"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "BC-VS.{YYYY}.-.##",
+   "default": "BC-VS.{YYYY}.-.##",
+   "reqd": 1
+  },
+  {
+   "fieldname": "header_section",
+   "fieldtype": "Section Break",
+   "label": "Báo cáo vệ sinh"
+  },
+  {
+   "fieldname": "report_period",
+   "fieldtype": "Select",
+   "label": "Kỳ",
+   "options": "Tuần\nTháng\nQuý",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "report_year",
+   "fieldtype": "Int",
+   "label": "Năm",
+   "reqd": 1
+  },
+  {
+   "fieldname": "report_period_value",
+   "fieldtype": "Int",
+   "label": "Kỳ thứ"
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Tóm tắt"
+  },
+  {
+   "fieldname": "worker_hygiene_summary",
+   "fieldtype": "Long Text",
+   "label": "Tổng hợp vệ sinh CN"
+  },
+  {
+   "fieldname": "area_cleaning_summary",
+   "fieldtype": "Long Text",
+   "label": "Tổng hợp vệ sinh khu vực"
+  },
+  {
+   "fieldname": "pest_control_summary",
+   "fieldtype": "Long Text",
+   "label": "Tổng hợp diệt côn trùng"
+  },
+  {
+   "fieldname": "chemical_storage_check",
+   "fieldtype": "Long Text",
+   "label": "Kho hóa chất"
+  },
+  {
+   "fieldname": "findings_section",
+   "fieldtype": "Section Break",
+   "label": "Phát hiện & cải tiến"
+  },
+  {
+   "fieldname": "findings",
+   "fieldtype": "Long Text",
+   "label": "Phát hiện"
+  },
+  {
+   "fieldname": "improvements",
+   "fieldtype": "Long Text",
+   "label": "Cải tiến"
+  },
+  {
+   "fieldname": "signature_section",
+   "fieldtype": "Section Break",
+   "label": "Chữ ký"
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Link",
+   "label": "Người soạn",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "prepared_on",
+   "fieldtype": "Datetime",
+   "label": "Ngày soạn",
+   "read_only": 1
+  },
+  {
+   "fieldname": "prepared_signature",
+   "fieldtype": "Attach Image",
+   "label": "Chữ ký người soạn"
+  },
+  {
+   "fieldname": "column_break_sig1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reviewed_by",
+   "fieldtype": "Link",
+   "label": "Người soát xét",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "reviewed_on",
+   "fieldtype": "Datetime",
+   "label": "Ngày soát xét",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reviewed_signature",
+   "fieldtype": "Attach Image",
+   "label": "Chữ ký người soát xét"
+  },
+  {
+   "fieldname": "column_break_sig2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Người phê duyệt",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "approved_on",
+   "fieldtype": "Datetime",
+   "label": "Ngày phê duyệt",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_signature",
+   "fieldtype": "Attach Image",
+   "label": "Chữ ký người phê duyệt"
+  },
+  {
+   "fieldname": "workflow_section",
+   "fieldtype": "Section Break",
+   "label": "Workflow"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "label": "Trạng thái",
+   "options": "Workflow State",
+   "read_only": 1,
+   "in_list_view": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS PRP",
+ "name": "FSMS Sanitation Report",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "report_period",
+ "track_changes": 1
+}

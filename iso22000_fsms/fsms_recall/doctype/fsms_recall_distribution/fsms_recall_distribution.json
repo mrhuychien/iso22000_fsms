@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "delivery_note",
+  "col_a",
+  "distributed_qty",
+  "recovered_qty",
+  "remaining_qty",
+  "customer_response_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Khách hàng",
+   "options": "Customer",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "delivery_note",
+   "fieldtype": "Link",
+   "label": "Phiếu xuất",
+   "options": "Delivery Note",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "distributed_qty",
+   "fieldtype": "Float",
+   "label": "SL phân phối"
+  },
+  {
+   "fieldname": "recovered_qty",
+   "fieldtype": "Float",
+   "label": "SL thu hồi"
+  },
+  {
+   "fieldname": "remaining_qty",
+   "fieldtype": "Float",
+   "label": "SL còn lại"
+  },
+  {
+   "fieldname": "customer_response_status",
+   "fieldtype": "Select",
+   "label": "Phản hồi KH",
+   "options": "\nĐã liên hệ\nĐã thu hồi\nKhông liên hệ được\nTừ chối"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Recall",
+ "name": "FSMS Recall Distribution",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

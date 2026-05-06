@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "action_description",
+  "responsible",
+  "col_a",
+  "due_date",
+  "done_date",
+  "status",
+  "effectiveness",
+  "evidence"
+ ],
+ "fields": [
+  {
+   "fieldname": "action_description",
+   "fieldtype": "Small Text",
+   "label": "Hành động",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "responsible",
+   "fieldtype": "Link",
+   "label": "Phụ trách",
+   "options": "Employee",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Hạn"
+  },
+  {
+   "fieldname": "done_date",
+   "fieldtype": "Date",
+   "label": "Hoàn thành"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Trạng thái",
+   "options": "Mở\nĐang thực hiện\nHoàn thành",
+   "default": "Mở"
+  },
+  {
+   "fieldname": "effectiveness",
+   "fieldtype": "Select",
+   "label": "Hiệu lực",
+   "options": "\nHiệu quả\nMột phần\nKhông"
+  },
+  {
+   "fieldname": "evidence",
+   "fieldtype": "Attach",
+   "label": "Bằng chứng"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Context Risk",
+ "name": "FSMS Risk Action",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

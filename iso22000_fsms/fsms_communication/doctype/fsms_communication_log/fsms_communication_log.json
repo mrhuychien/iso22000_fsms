@@ -1,0 +1,161 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "header_section",
+  "log_date",
+  "direction",
+  "counterparty_type",
+  "col_a",
+  "counterparty_link_doctype",
+  "counterparty_link_name",
+  "content_section",
+  "subject",
+  "content",
+  "medium",
+  "attachment",
+  "follow_up_required",
+  "linked_ncr"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "LL.{YYYY}.-.####",
+   "default": "LL.{YYYY}.-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "header_section",
+   "fieldtype": "Section Break",
+   "label": "Log truyền thông"
+  },
+  {
+   "fieldname": "log_date",
+   "fieldtype": "Date",
+   "label": "Ngày",
+   "default": "Today",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "direction",
+   "fieldtype": "Select",
+   "label": "Hướng",
+   "options": "Internal\nOutbound\nInbound",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "counterparty_type",
+   "fieldtype": "Select",
+   "label": "Đối tác",
+   "options": "NV nội bộ\nKH\nNCC\nQLNN\nKhác",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "counterparty_link_doctype",
+   "fieldtype": "Link",
+   "label": "DocType đối tác",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "counterparty_link_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Bản ghi đối tác",
+   "options": "counterparty_link_doctype"
+  },
+  {
+   "fieldname": "content_section",
+   "fieldtype": "Section Break",
+   "label": "Nội dung"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Chủ đề",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "content",
+   "fieldtype": "Long Text",
+   "label": "Nội dung"
+  },
+  {
+   "fieldname": "medium",
+   "fieldtype": "Select",
+   "label": "Phương tiện",
+   "options": "Email\nPhone\nMeeting\nLetter\nZalo\nKhác"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "File"
+  },
+  {
+   "fieldname": "follow_up_required",
+   "fieldtype": "Check",
+   "label": "Cần theo dõi"
+  },
+  {
+   "fieldname": "linked_ncr",
+   "fieldtype": "Link",
+   "label": "NCR liên kết",
+   "options": "FSMS NCR"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Communication",
+ "name": "FSMS Communication Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "subject",
+ "track_changes": 1
+}

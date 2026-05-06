@@ -1,0 +1,194 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "header_section",
+  "cal_no",
+  "cal_date",
+  "equipment",
+  "col_a",
+  "cal_type",
+  "external_org",
+  "accreditation_attached",
+  "result_section",
+  "cal_result",
+  "cal_certificate_no",
+  "cal_certificate_attached",
+  "validity_period_months",
+  "next_cal_due_date",
+  "linked_ncr",
+  "workflow_section",
+  "workflow_state",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "HC.{YYYY}.-.###",
+   "default": "HC.{YYYY}.-.###",
+   "reqd": 1
+  },
+  {
+   "fieldname": "header_section",
+   "fieldtype": "Section Break",
+   "label": "Hồ sơ hiệu chuẩn"
+  },
+  {
+   "fieldname": "cal_no",
+   "fieldtype": "Data",
+   "label": "Số phiếu",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cal_date",
+   "fieldtype": "Date",
+   "label": "Ngày HC",
+   "default": "Today",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "equipment",
+   "fieldtype": "Link",
+   "label": "Thiết bị",
+   "options": "FSMS Measurement Equipment",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cal_type",
+   "fieldtype": "Select",
+   "label": "Loại HC",
+   "options": "KĐ NN\nHC nội bộ\nHC ngoại",
+   "reqd": 1
+  },
+  {
+   "fieldname": "external_org",
+   "fieldtype": "Data",
+   "label": "Đơn vị HC ngoài"
+  },
+  {
+   "fieldname": "accreditation_attached",
+   "fieldtype": "Attach",
+   "label": "Chứng nhận ISO 17025"
+  },
+  {
+   "fieldname": "result_section",
+   "fieldtype": "Section Break",
+   "label": "Kết quả"
+  },
+  {
+   "fieldname": "cal_result",
+   "fieldtype": "Select",
+   "label": "Kết quả",
+   "options": "Đạt\nKhông đạt\nĐạt sau hiệu chỉnh",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cal_certificate_no",
+   "fieldtype": "Data",
+   "label": "Số chứng chỉ HC"
+  },
+  {
+   "fieldname": "cal_certificate_attached",
+   "fieldtype": "Attach",
+   "label": "Chứng chỉ HC"
+  },
+  {
+   "fieldname": "validity_period_months",
+   "fieldtype": "Int",
+   "label": "Hiệu lực (tháng)"
+  },
+  {
+   "fieldname": "next_cal_due_date",
+   "fieldtype": "Date",
+   "label": "Lần HC kế tiếp",
+   "read_only": 1
+  },
+  {
+   "fieldname": "linked_ncr",
+   "fieldtype": "Link",
+   "label": "NCR liên kết",
+   "options": "FSMS NCR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "workflow_section",
+   "fieldtype": "Section Break",
+   "label": "Workflow"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "label": "Trạng thái",
+   "options": "Workflow State",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "FSMS Calibration Record",
+   "read_only": 1,
+   "no_copy": 1,
+   "print_hide": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Equipment",
+ "name": "FSMS Calibration Record",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "is_submittable": 1,
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "cal_no",
+ "track_changes": 1
+}

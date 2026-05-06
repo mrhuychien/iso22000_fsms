@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "internal_section",
+  "internal_matrix",
+  "external_section",
+  "external_matrix"
+ ],
+ "fields": [
+  {
+   "fieldname": "internal_section",
+   "fieldtype": "Section Break",
+   "label": "Truyền thông nội bộ"
+  },
+  {
+   "fieldname": "internal_matrix",
+   "fieldtype": "Table",
+   "label": "Internal",
+   "options": "FSMS Communication Internal Item"
+  },
+  {
+   "fieldname": "external_section",
+   "fieldtype": "Section Break",
+   "label": "Truyền thông bên ngoài"
+  },
+  {
+   "fieldname": "external_matrix",
+   "fieldtype": "Table",
+   "label": "External",
+   "options": "FSMS Communication External Item"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Communication",
+ "name": "FSMS Communication Plan",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "issingle": 1,
+ "track_changes": 1
+}

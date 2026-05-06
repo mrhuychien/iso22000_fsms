@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "record_code",
+  "record_name",
+  "responsible_department",
+  "responsible_position",
+  "storage_location",
+  "col_a",
+  "retention_period_years",
+  "disposal_method"
+ ],
+ "fields": [
+  {
+   "fieldname": "record_code",
+   "fieldtype": "Data",
+   "label": "Mã hồ sơ",
+   "unique": 1,
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "record_name",
+   "fieldtype": "Data",
+   "label": "Tên hồ sơ",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "responsible_department",
+   "fieldtype": "Link",
+   "label": "Phòng ban",
+   "options": "Department",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "responsible_position",
+   "fieldtype": "Data",
+   "label": "Vị trí phụ trách"
+  },
+  {
+   "fieldname": "storage_location",
+   "fieldtype": "Data",
+   "label": "Nơi lưu trữ"
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "retention_period_years",
+   "fieldtype": "Int",
+   "label": "Thời hạn lưu (năm)"
+  },
+  {
+   "fieldname": "disposal_method",
+   "fieldtype": "Select",
+   "label": "Phương thức hủy",
+   "options": "Hủy\nLưu trữ vĩnh viễn\nSố hóa"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Document Control",
+ "name": "FSMS Records Register",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "autoname": "field:record_code",
+ "naming_rule": "By fieldname",
+ "title_field": "record_name",
+ "track_changes": 1
+}

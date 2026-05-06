@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "test_date",
+  "test_name",
+  "result",
+  "col_a",
+  "is_pass",
+  "evidence"
+ ],
+ "fields": [
+  {
+   "fieldname": "test_date",
+   "fieldtype": "Date",
+   "label": "Ngày",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "test_name",
+   "fieldtype": "Data",
+   "label": "Chỉ tiêu",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Data",
+   "label": "Kết quả",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_pass",
+   "fieldtype": "Check",
+   "label": "Đạt"
+  },
+  {
+   "fieldname": "evidence",
+   "fieldtype": "Attach",
+   "label": "Bằng chứng"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Sample",
+ "name": "FSMS Sample Quality Test",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

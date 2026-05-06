@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "haccp_plan",
+  "ccp_no",
+  "scheduled_date",
+  "col_a",
+  "monitor",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "haccp_plan",
+   "fieldtype": "Link",
+   "label": "HACCP Plan",
+   "options": "FSMS HACCP Plan",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "ccp_no",
+   "fieldtype": "Data",
+   "label": "CCP No",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "scheduled_date",
+   "fieldtype": "Date",
+   "label": "Ngày lên lịch",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "monitor",
+   "fieldtype": "Link",
+   "label": "Người giám sát",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Trạng thái",
+   "options": "Mở\nĐã thực hiện",
+   "default": "Mở"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS HACCP",
+ "name": "FSMS CCP Monitoring Schedule",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "ccp_no",
+ "track_changes": 1
+}

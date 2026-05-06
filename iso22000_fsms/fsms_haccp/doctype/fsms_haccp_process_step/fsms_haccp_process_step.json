@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "step_no",
+  "step_name",
+  "description",
+  "col_a",
+  "parameters",
+  "is_ccp_candidate"
+ ],
+ "fields": [
+  {
+   "fieldname": "step_no",
+   "fieldtype": "Int",
+   "label": "STT",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "step_name",
+   "fieldtype": "Data",
+   "label": "Tên công đoạn",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Mô tả",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "parameters",
+   "fieldtype": "Long Text",
+   "label": "Thông số"
+  },
+  {
+   "fieldname": "is_ccp_candidate",
+   "fieldtype": "Check",
+   "label": "Là CCP candidate"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS HACCP",
+ "name": "FSMS HACCP Process Step",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

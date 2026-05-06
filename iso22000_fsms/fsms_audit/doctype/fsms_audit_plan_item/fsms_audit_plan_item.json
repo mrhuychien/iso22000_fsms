@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "auditor",
+  "auditee_department",
+  "auditee_employee",
+  "col_a",
+  "clause",
+  "time_slot",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "auditor",
+   "fieldtype": "Link",
+   "label": "Đánh giá viên",
+   "options": "Employee",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "auditee_department",
+   "fieldtype": "Link",
+   "label": "Phòng ban được đánh giá",
+   "options": "Department",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "auditee_employee",
+   "fieldtype": "Link",
+   "label": "Đại diện đơn vị",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "clause",
+   "fieldtype": "Data",
+   "label": "Điều khoản ISO/QT",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "time_slot",
+   "fieldtype": "Data",
+   "label": "Thời gian"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Ghi chú"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Audit",
+ "name": "FSMS Audit Plan Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

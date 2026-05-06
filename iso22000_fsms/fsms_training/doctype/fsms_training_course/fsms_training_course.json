@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "course_code",
+  "course_name",
+  "category",
+  "detail_section",
+  "objectives",
+  "target_audience",
+  "col_a",
+  "duration_hours",
+  "frequency_required",
+  "passing_score",
+  "attached_material"
+ ],
+ "fields": [
+  {
+   "fieldname": "course_code",
+   "fieldtype": "Data",
+   "label": "Mã khóa",
+   "unique": 1,
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "course_name",
+   "fieldtype": "Data",
+   "label": "Tên khóa",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Phân loại",
+   "options": "ATTP cơ bản\nHACCP\nGMP\nPRP\nRecall drill\nInternal audit\nKhác",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "detail_section",
+   "fieldtype": "Section Break",
+   "label": "Chi tiết"
+  },
+  {
+   "fieldname": "objectives",
+   "fieldtype": "Long Text",
+   "label": "Mục tiêu"
+  },
+  {
+   "fieldname": "target_audience",
+   "fieldtype": "Small Text",
+   "label": "Đối tượng học"
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "duration_hours",
+   "fieldtype": "Float",
+   "label": "Thời lượng (giờ)"
+  },
+  {
+   "fieldname": "frequency_required",
+   "fieldtype": "Select",
+   "label": "Tần suất bắt buộc",
+   "options": "Once\nAnnual\nBi-annual"
+  },
+  {
+   "fieldname": "passing_score",
+   "fieldtype": "Float",
+   "label": "Điểm đạt"
+  },
+  {
+   "fieldname": "attached_material",
+   "fieldtype": "Attach",
+   "label": "Tài liệu"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Training",
+ "name": "FSMS Training Course",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "autoname": "field:course_code",
+ "naming_rule": "By fieldname",
+ "title_field": "course_name",
+ "track_changes": 1
+}

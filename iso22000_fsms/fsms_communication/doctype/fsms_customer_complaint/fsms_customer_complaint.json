@@ -1,0 +1,233 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "header_section",
+  "complaint_no",
+  "complaint_date",
+  "customer",
+  "col_a",
+  "complaint_channel",
+  "severity",
+  "content_section",
+  "complaint_subject",
+  "affected_item",
+  "affected_batch",
+  "cascade_section",
+  "auto_create_recall_event",
+  "auto_create_ncr",
+  "col_b",
+  "linked_recall_event",
+  "linked_ncr",
+  "resolution_section",
+  "resolution_text",
+  "resolution_date",
+  "customer_satisfied",
+  "workflow_section",
+  "workflow_state",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "KN-KH.{YYYY}.-.####",
+   "default": "KN-KH.{YYYY}.-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "header_section",
+   "fieldtype": "Section Break",
+   "label": "Khiếu nại KH"
+  },
+  {
+   "fieldname": "complaint_no",
+   "fieldtype": "Data",
+   "label": "Số phiếu",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "complaint_date",
+   "fieldtype": "Date",
+   "label": "Ngày",
+   "default": "Today",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "KH",
+   "options": "Customer",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "complaint_channel",
+   "fieldtype": "Select",
+   "label": "Kênh tiếp nhận",
+   "options": "Hotline\nEmail\nĐại diện KD\nCơ quan QLNN\nMạng xã hội",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "severity",
+   "fieldtype": "Select",
+   "label": "Mức độ",
+   "options": "Cấp 1\nCấp 2\nCấp 3",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "content_section",
+   "fieldtype": "Section Break",
+   "label": "Nội dung"
+  },
+  {
+   "fieldname": "complaint_subject",
+   "fieldtype": "Long Text",
+   "label": "Chủ đề khiếu nại"
+  },
+  {
+   "fieldname": "affected_item",
+   "fieldtype": "Link",
+   "label": "Sản phẩm liên quan",
+   "options": "Item"
+  },
+  {
+   "fieldname": "affected_batch",
+   "fieldtype": "Link",
+   "label": "Batch liên quan",
+   "options": "Batch"
+  },
+  {
+   "fieldname": "cascade_section",
+   "fieldtype": "Section Break",
+   "label": "Cascade"
+  },
+  {
+   "fieldname": "auto_create_recall_event",
+   "fieldtype": "Check",
+   "label": "Tự tạo Recall Event"
+  },
+  {
+   "fieldname": "auto_create_ncr",
+   "fieldtype": "Check",
+   "label": "Tự tạo NCR",
+   "default": 1
+  },
+  {
+   "fieldname": "col_b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "linked_recall_event",
+   "fieldtype": "Link",
+   "label": "Recall Event",
+   "options": "FSMS Recall Event",
+   "read_only": 1
+  },
+  {
+   "fieldname": "linked_ncr",
+   "fieldtype": "Link",
+   "label": "NCR",
+   "options": "FSMS NCR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "resolution_section",
+   "fieldtype": "Section Break",
+   "label": "Giải quyết"
+  },
+  {
+   "fieldname": "resolution_text",
+   "fieldtype": "Long Text",
+   "label": "Giải pháp"
+  },
+  {
+   "fieldname": "resolution_date",
+   "fieldtype": "Date",
+   "label": "Ngày giải quyết"
+  },
+  {
+   "fieldname": "customer_satisfied",
+   "fieldtype": "Check",
+   "label": "KH hài lòng"
+  },
+  {
+   "fieldname": "workflow_section",
+   "fieldtype": "Section Break",
+   "label": "Workflow"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "label": "Trạng thái",
+   "options": "Workflow State",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "FSMS Customer Complaint",
+   "read_only": 1,
+   "no_copy": 1,
+   "print_hide": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Communication",
+ "name": "FSMS Customer Complaint",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "is_submittable": 1,
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "complaint_no",
+ "track_changes": 1
+}

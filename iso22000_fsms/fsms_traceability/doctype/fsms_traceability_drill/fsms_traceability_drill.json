@@ -1,0 +1,213 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "header_section",
+  "drill_no",
+  "drill_date",
+  "selected_batch",
+  "timing_section",
+  "start_time",
+  "target_completion_time",
+  "actual_completion_time",
+  "col_a",
+  "time_taken_minutes",
+  "is_within_target",
+  "links_section",
+  "forward_links",
+  "backward_links",
+  "outcome_section",
+  "drill_outcome",
+  "gaps_identified",
+  "linked_ncr",
+  "workflow_section",
+  "workflow_state",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "DT-TXNG.{YYYY}.-.##",
+   "default": "DT-TXNG.{YYYY}.-.##",
+   "reqd": 1
+  },
+  {
+   "fieldname": "header_section",
+   "fieldtype": "Section Break",
+   "label": "Diễn tập truy xuất"
+  },
+  {
+   "fieldname": "drill_no",
+   "fieldtype": "Data",
+   "label": "Số diễn tập",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "drill_date",
+   "fieldtype": "Date",
+   "label": "Ngày",
+   "default": "Today",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "selected_batch",
+   "fieldtype": "Link",
+   "label": "Batch chọn",
+   "options": "Batch",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "timing_section",
+   "fieldtype": "Section Break",
+   "label": "Thời gian"
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "label": "Bắt đầu"
+  },
+  {
+   "fieldname": "target_completion_time",
+   "fieldtype": "Datetime",
+   "label": "Mục tiêu hoàn thành"
+  },
+  {
+   "fieldname": "actual_completion_time",
+   "fieldtype": "Datetime",
+   "label": "Hoàn thành thực tế"
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "time_taken_minutes",
+   "fieldtype": "Int",
+   "label": "Thời gian thực hiện (phút)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "is_within_target",
+   "fieldtype": "Check",
+   "label": "Đạt mục tiêu",
+   "read_only": 1
+  },
+  {
+   "fieldname": "links_section",
+   "fieldtype": "Section Break",
+   "label": "Trace links"
+  },
+  {
+   "fieldname": "forward_links",
+   "fieldtype": "Table",
+   "label": "Forward",
+   "options": "FSMS Trace Forward Link"
+  },
+  {
+   "fieldname": "backward_links",
+   "fieldtype": "Table",
+   "label": "Backward",
+   "options": "FSMS Trace Backward Link"
+  },
+  {
+   "fieldname": "outcome_section",
+   "fieldtype": "Section Break",
+   "label": "Kết quả"
+  },
+  {
+   "fieldname": "drill_outcome",
+   "fieldtype": "Select",
+   "label": "Kết quả",
+   "options": "Đạt — đúng giờ + đầy đủ\nĐạt một phần\nKhông đạt",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "gaps_identified",
+   "fieldtype": "Long Text",
+   "label": "Khoảng trống phát hiện"
+  },
+  {
+   "fieldname": "linked_ncr",
+   "fieldtype": "Link",
+   "label": "NCR liên kết",
+   "options": "FSMS NCR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "workflow_section",
+   "fieldtype": "Section Break",
+   "label": "Workflow"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "label": "Trạng thái",
+   "options": "Workflow State",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "FSMS Traceability Drill",
+   "read_only": 1,
+   "no_copy": 1,
+   "print_hide": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Traceability",
+ "name": "FSMS Traceability Drill",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "is_submittable": 1,
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "drill_no",
+ "track_changes": 1
+}

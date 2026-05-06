@@ -1,0 +1,313 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "header_section",
+  "plan_no",
+  "item",
+  "plan_version",
+  "col_a",
+  "effective_date",
+  "next_review_date",
+  "team_section",
+  "team_members",
+  "scope_section",
+  "intended_use",
+  "target_consumer",
+  "process_flow_attachment",
+  "steps_section",
+  "process_steps",
+  "hazard_section",
+  "hazard_analysis",
+  "ccp_section",
+  "ccps",
+  "oprp_section",
+  "oprps",
+  "validation_section",
+  "validation_records",
+  "linked_recall_plan",
+  "signature_section",
+  "prepared_by",
+  "prepared_on",
+  "prepared_signature",
+  "column_break_sig1",
+  "reviewed_by",
+  "reviewed_on",
+  "reviewed_signature",
+  "column_break_sig2",
+  "approved_by",
+  "approved_on",
+  "approved_signature",
+  "workflow_section",
+  "workflow_state",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "header_section",
+   "fieldtype": "Section Break",
+   "label": "Kế hoạch HACCP"
+  },
+  {
+   "fieldname": "plan_no",
+   "fieldtype": "Data",
+   "label": "Số kế hoạch",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Sản phẩm",
+   "options": "Item",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "plan_version",
+   "fieldtype": "Data",
+   "label": "Phiên bản"
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "effective_date",
+   "fieldtype": "Date",
+   "label": "Ngày hiệu lực"
+  },
+  {
+   "fieldname": "next_review_date",
+   "fieldtype": "Date",
+   "label": "Ngày soát xét tiếp"
+  },
+  {
+   "fieldname": "team_section",
+   "fieldtype": "Section Break",
+   "label": "Đội HACCP"
+  },
+  {
+   "fieldname": "team_members",
+   "fieldtype": "Table",
+   "label": "Đội HACCP",
+   "options": "FSMS HACCP Team Member"
+  },
+  {
+   "fieldname": "scope_section",
+   "fieldtype": "Section Break",
+   "label": "Phạm vi"
+  },
+  {
+   "fieldname": "intended_use",
+   "fieldtype": "Long Text",
+   "label": "Mục đích sử dụng"
+  },
+  {
+   "fieldname": "target_consumer",
+   "fieldtype": "Long Text",
+   "label": "Đối tượng tiêu dùng"
+  },
+  {
+   "fieldname": "process_flow_attachment",
+   "fieldtype": "Attach Image",
+   "label": "Sơ đồ quy trình"
+  },
+  {
+   "fieldname": "steps_section",
+   "fieldtype": "Section Break",
+   "label": "Công đoạn"
+  },
+  {
+   "fieldname": "process_steps",
+   "fieldtype": "Table",
+   "label": "Công đoạn",
+   "options": "FSMS HACCP Process Step"
+  },
+  {
+   "fieldname": "hazard_section",
+   "fieldtype": "Section Break",
+   "label": "Phân tích mối nguy"
+  },
+  {
+   "fieldname": "hazard_analysis",
+   "fieldtype": "Table",
+   "label": "Mối nguy",
+   "options": "FSMS HACCP Hazard"
+  },
+  {
+   "fieldname": "ccp_section",
+   "fieldtype": "Section Break",
+   "label": "CCP"
+  },
+  {
+   "fieldname": "ccps",
+   "fieldtype": "Table",
+   "label": "CCP",
+   "options": "FSMS HACCP CCP"
+  },
+  {
+   "fieldname": "oprp_section",
+   "fieldtype": "Section Break",
+   "label": "OPRP"
+  },
+  {
+   "fieldname": "oprps",
+   "fieldtype": "Table",
+   "label": "OPRP",
+   "options": "FSMS HACCP OPRP"
+  },
+  {
+   "fieldname": "validation_section",
+   "fieldtype": "Section Break",
+   "label": "Tham tra"
+  },
+  {
+   "fieldname": "validation_records",
+   "fieldtype": "Table",
+   "label": "Tham tra",
+   "options": "FSMS HACCP Validation Record"
+  },
+  {
+   "fieldname": "linked_recall_plan",
+   "fieldtype": "Link",
+   "label": "Recall Plan",
+   "options": "FSMS Recall Plan"
+  },
+  {
+   "fieldname": "signature_section",
+   "fieldtype": "Section Break",
+   "label": "Chữ ký"
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Link",
+   "label": "Người soạn",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "prepared_on",
+   "fieldtype": "Datetime",
+   "label": "Ngày soạn",
+   "read_only": 1
+  },
+  {
+   "fieldname": "prepared_signature",
+   "fieldtype": "Attach Image",
+   "label": "Chữ ký người soạn"
+  },
+  {
+   "fieldname": "column_break_sig1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reviewed_by",
+   "fieldtype": "Link",
+   "label": "Người soát xét",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "reviewed_on",
+   "fieldtype": "Datetime",
+   "label": "Ngày soát xét",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reviewed_signature",
+   "fieldtype": "Attach Image",
+   "label": "Chữ ký người soát xét"
+  },
+  {
+   "fieldname": "column_break_sig2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Người phê duyệt",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "approved_on",
+   "fieldtype": "Datetime",
+   "label": "Ngày phê duyệt",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_signature",
+   "fieldtype": "Attach Image",
+   "label": "Chữ ký người phê duyệt"
+  },
+  {
+   "fieldname": "workflow_section",
+   "fieldtype": "Section Break",
+   "label": "Workflow"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "label": "Trạng thái",
+   "options": "Workflow State",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "FSMS HACCP Plan",
+   "read_only": 1,
+   "no_copy": 1,
+   "print_hide": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS HACCP",
+ "name": "FSMS HACCP Plan",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "is_submittable": 1,
+ "autoname": "format:HACCP.{item}.-.##",
+ "naming_rule": "Expression",
+ "title_field": "item",
+ "search_fields": "plan_no,item,plan_version,workflow_state",
+ "track_changes": 1
+}

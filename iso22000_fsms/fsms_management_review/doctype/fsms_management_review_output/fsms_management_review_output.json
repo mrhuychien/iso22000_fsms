@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "output_type",
+  "decision_text",
+  "col_a",
+  "responsible",
+  "due_date",
+  "linked_ncr"
+ ],
+ "fields": [
+  {
+   "fieldname": "output_type",
+   "fieldtype": "Select",
+   "label": "Loại output",
+   "options": "Quyết định cải tiến hiệu lực FSMS\nCập nhật FSMS\nResource needs\nCập nhật mục tiêu\nKhác",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "decision_text",
+   "fieldtype": "Long Text",
+   "label": "Quyết định",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "responsible",
+   "fieldtype": "Link",
+   "label": "Người phụ trách",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Hạn"
+  },
+  {
+   "fieldname": "linked_ncr",
+   "fieldtype": "Link",
+   "label": "NCR phát sinh",
+   "options": "FSMS NCR"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Management Review",
+ "name": "FSMS Management Review Output",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

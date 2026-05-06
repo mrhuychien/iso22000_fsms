@@ -1,0 +1,207 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "header_section",
+  "work_order",
+  "production_date",
+  "shift",
+  "col_a",
+  "production_team_lead",
+  "target_batch",
+  "production_line",
+  "haccp_section",
+  "haccp_plan",
+  "prp_checklist_required",
+  "links_section",
+  "linked_monitoring",
+  "linked_finished_inspection",
+  "traceability_pull_link",
+  "status_section",
+  "status",
+  "workflow_section",
+  "workflow_state",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "LSX.{YYYY}.-.####",
+   "default": "LSX.{YYYY}.-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "header_section",
+   "fieldtype": "Section Break",
+   "label": "Lệnh sản xuất"
+  },
+  {
+   "fieldname": "work_order",
+   "fieldtype": "Link",
+   "label": "Work Order",
+   "options": "Work Order",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "production_date",
+   "fieldtype": "Date",
+   "label": "Ngày SX",
+   "default": "Today",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "label": "Ca",
+   "options": "Sáng\nChiều\nĐêm",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "production_team_lead",
+   "fieldtype": "Link",
+   "label": "Tổ trưởng",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "target_batch",
+   "fieldtype": "Link",
+   "label": "Batch SX",
+   "options": "Batch"
+  },
+  {
+   "fieldname": "production_line",
+   "fieldtype": "Data",
+   "label": "Dây chuyền"
+  },
+  {
+   "fieldname": "haccp_section",
+   "fieldtype": "Section Break",
+   "label": "HACCP & PRP"
+  },
+  {
+   "fieldname": "haccp_plan",
+   "fieldtype": "Link",
+   "label": "HACCP Plan",
+   "options": "FSMS HACCP Plan"
+  },
+  {
+   "fieldname": "prp_checklist_required",
+   "fieldtype": "Check",
+   "label": "Yêu cầu PRP checklist"
+  },
+  {
+   "fieldname": "links_section",
+   "fieldtype": "Section Break",
+   "label": "Liên kết"
+  },
+  {
+   "fieldname": "linked_monitoring",
+   "fieldtype": "Link",
+   "label": "Sổ giám sát SX",
+   "options": "FSMS Production Process Monitoring"
+  },
+  {
+   "fieldname": "linked_finished_inspection",
+   "fieldtype": "Link",
+   "label": "Phiếu KCS thành phẩm",
+   "options": "FSMS Finished Product Inspection"
+  },
+  {
+   "fieldname": "traceability_pull_link",
+   "fieldtype": "Link",
+   "label": "Trace ngược",
+   "options": "FSMS Traceability Trace"
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Trạng thái"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Trạng thái",
+   "options": "Lên kế hoạch\nĐang SX\nHoàn thành\nKCS\nNhập kho\nĐã đóng",
+   "default": "Lên kế hoạch",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "workflow_section",
+   "fieldtype": "Section Break",
+   "label": "Workflow"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "label": "Trạng thái",
+   "options": "Workflow State",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "FSMS Production Order",
+   "read_only": 1,
+   "no_copy": 1,
+   "print_hide": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Production",
+ "name": "FSMS Production Order",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "is_submittable": 1,
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "work_order",
+ "track_changes": 1
+}

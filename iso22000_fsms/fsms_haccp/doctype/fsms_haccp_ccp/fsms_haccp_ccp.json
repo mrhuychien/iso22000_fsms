@@ -1,0 +1,131 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "ccp_no",
+  "process_step",
+  "hazard_controlled",
+  "col_a",
+  "critical_limit",
+  "acceptance_min",
+  "acceptance_max",
+  "monitor_section",
+  "monitoring_what",
+  "monitoring_how",
+  "monitoring_frequency",
+  "monitoring_who",
+  "col_b",
+  "corrective_action",
+  "verification_method",
+  "verification_frequency",
+  "record_keeping",
+  "linked_measurement_equipment"
+ ],
+ "fields": [
+  {
+   "fieldname": "ccp_no",
+   "fieldtype": "Data",
+   "label": "CCP No",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "process_step",
+   "fieldtype": "Data",
+   "label": "Công đoạn"
+  },
+  {
+   "fieldname": "hazard_controlled",
+   "fieldtype": "Data",
+   "label": "Mối nguy",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "critical_limit",
+   "fieldtype": "Data",
+   "label": "Giới hạn"
+  },
+  {
+   "fieldname": "acceptance_min",
+   "fieldtype": "Float",
+   "label": "Min"
+  },
+  {
+   "fieldname": "acceptance_max",
+   "fieldtype": "Float",
+   "label": "Max"
+  },
+  {
+   "fieldname": "monitor_section",
+   "fieldtype": "Section Break",
+   "label": "Giám sát"
+  },
+  {
+   "fieldname": "monitoring_what",
+   "fieldtype": "Small Text",
+   "label": "Giám sát gì"
+  },
+  {
+   "fieldname": "monitoring_how",
+   "fieldtype": "Small Text",
+   "label": "Phương pháp"
+  },
+  {
+   "fieldname": "monitoring_frequency",
+   "fieldtype": "Data",
+   "label": "Tần suất"
+  },
+  {
+   "fieldname": "monitoring_who",
+   "fieldtype": "Link",
+   "label": "Người giám sát",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "col_b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "corrective_action",
+   "fieldtype": "Long Text",
+   "label": "Hành động khắc phục"
+  },
+  {
+   "fieldname": "verification_method",
+   "fieldtype": "Small Text",
+   "label": "Phương pháp tham tra"
+  },
+  {
+   "fieldname": "verification_frequency",
+   "fieldtype": "Data",
+   "label": "Tần suất tham tra"
+  },
+  {
+   "fieldname": "record_keeping",
+   "fieldtype": "Long Text",
+   "label": "Lưu hồ sơ"
+  },
+  {
+   "fieldname": "linked_measurement_equipment",
+   "fieldtype": "Link",
+   "label": "Thiết bị đo",
+   "options": "FSMS Measurement Equipment"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS HACCP",
+ "name": "FSMS HACCP CCP",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

@@ -1,0 +1,41 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "equipment_link_dt",
+  "equipment_link_name",
+  "note"
+ ],
+ "fields": [
+  {
+   "fieldname": "equipment_link_dt",
+   "fieldtype": "Link",
+   "label": "DocType",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "equipment_link_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Equipment",
+   "options": "equipment_link_dt",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Data",
+   "label": "Ghi chú"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Emergency",
+ "name": "FSMS Emergency Scenario Equipment",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

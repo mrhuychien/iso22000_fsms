@@ -1,0 +1,36 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "istable": 1,
+ "field_order": [
+  "seq",
+  "action_description",
+  "responsible",
+  "column_break_meta",
+  "due_date",
+  "done_date",
+  "status",
+  "evidence"
+ ],
+ "fields": [
+  {"fieldname": "seq", "fieldtype": "Int", "label": "STT", "in_list_view": 1},
+  {"fieldname": "action_description", "fieldtype": "Small Text", "label": "Mô tả hành động", "in_list_view": 1, "reqd": 1},
+  {"fieldname": "responsible", "fieldtype": "Link", "label": "Người phụ trách", "options": "Employee", "in_list_view": 1},
+  {"fieldname": "column_break_meta", "fieldtype": "Column Break"},
+  {"fieldname": "due_date", "fieldtype": "Date", "label": "Hạn", "in_list_view": 1},
+  {"fieldname": "done_date", "fieldtype": "Date", "label": "Ngày hoàn thành"},
+  {"fieldname": "status", "fieldtype": "Select", "label": "Trạng thái", "options": "Mở\nĐang thực hiện\nHoàn thành\nHủy", "default": "Mở", "in_list_view": 1},
+  {"fieldname": "evidence", "fieldtype": "Attach", "label": "Bằng chứng"}
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS NCR",
+ "name": "FSMS NCR Action Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

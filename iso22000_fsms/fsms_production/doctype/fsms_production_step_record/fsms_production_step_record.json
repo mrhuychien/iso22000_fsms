@@ -1,0 +1,120 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "step_seq",
+  "process_step",
+  "start_time",
+  "end_time",
+  "col_a",
+  "operator",
+  "parameter_value",
+  "parameter_unit",
+  "acceptance_min",
+  "acceptance_max",
+  "col_b",
+  "is_within_limit",
+  "is_ccp",
+  "is_oprp",
+  "corrective_action_taken",
+  "linked_ncr"
+ ],
+ "fields": [
+  {
+   "fieldname": "step_seq",
+   "fieldtype": "Int",
+   "label": "STT",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "process_step",
+   "fieldtype": "Data",
+   "label": "Công đoạn",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "label": "Bắt đầu"
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Datetime",
+   "label": "Kết thúc"
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "operator",
+   "fieldtype": "Link",
+   "label": "Người vận hành",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "parameter_value",
+   "fieldtype": "Float",
+   "label": "Giá trị đo",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "parameter_unit",
+   "fieldtype": "Data",
+   "label": "Đơn vị"
+  },
+  {
+   "fieldname": "acceptance_min",
+   "fieldtype": "Float",
+   "label": "Min chấp nhận"
+  },
+  {
+   "fieldname": "acceptance_max",
+   "fieldtype": "Float",
+   "label": "Max chấp nhận"
+  },
+  {
+   "fieldname": "col_b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_within_limit",
+   "fieldtype": "Check",
+   "label": "Trong giới hạn",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "is_ccp",
+   "fieldtype": "Check",
+   "label": "CCP"
+  },
+  {
+   "fieldname": "is_oprp",
+   "fieldtype": "Check",
+   "label": "OPRP"
+  },
+  {
+   "fieldname": "corrective_action_taken",
+   "fieldtype": "Long Text",
+   "label": "Hành động khắc phục"
+  },
+  {
+   "fieldname": "linked_ncr",
+   "fieldtype": "Link",
+   "label": "NCR",
+   "options": "FSMS NCR"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Production",
+ "name": "FSMS Production Step Record",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "target_batch",
+  "material_item",
+  "material_batch",
+  "col_a",
+  "supplier",
+  "supplier_lot_no",
+  "purchase_receipt",
+  "received_date",
+  "qty_used_in_target_batch"
+ ],
+ "fields": [
+  {
+   "fieldname": "target_batch",
+   "fieldtype": "Link",
+   "label": "Batch SX",
+   "options": "Batch",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "material_item",
+   "fieldtype": "Link",
+   "label": "Item NL",
+   "options": "Item",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "material_batch",
+   "fieldtype": "Link",
+   "label": "Batch NL",
+   "options": "Batch",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "NCC",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "supplier_lot_no",
+   "fieldtype": "Data",
+   "label": "Số lô NCC"
+  },
+  {
+   "fieldname": "purchase_receipt",
+   "fieldtype": "Link",
+   "label": "Phiếu nhập kho",
+   "options": "Purchase Receipt"
+  },
+  {
+   "fieldname": "received_date",
+   "fieldtype": "Date",
+   "label": "Ngày nhận"
+  },
+  {
+   "fieldname": "qty_used_in_target_batch",
+   "fieldtype": "Float",
+   "label": "SL dùng trong lô SX"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Traceability",
+ "name": "FSMS Trace Backward Link",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

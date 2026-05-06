@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "inspection_method",
+  "sampling_rate",
+  "col_a",
+  "acceptance_criteria",
+  "frequency"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "inspection_method",
+   "fieldtype": "Small Text",
+   "label": "Phương pháp KT",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sampling_rate",
+   "fieldtype": "Data",
+   "label": "Mức lấy mẫu"
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "acceptance_criteria",
+   "fieldtype": "Small Text",
+   "label": "Tiêu chí chấp nhận",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Data",
+   "label": "Tần suất"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Supplier",
+ "name": "FSMS Material QC Plan Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

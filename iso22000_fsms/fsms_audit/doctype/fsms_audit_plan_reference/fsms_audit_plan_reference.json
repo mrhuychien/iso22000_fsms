@@ -1,0 +1,29 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "audit_plan"
+ ],
+ "fields": [
+  {
+   "fieldname": "audit_plan",
+   "fieldtype": "Link",
+   "label": "Audit Plan",
+   "options": "FSMS Audit Plan",
+   "in_list_view": 1,
+   "reqd": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Audit",
+ "name": "FSMS Audit Plan Reference",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

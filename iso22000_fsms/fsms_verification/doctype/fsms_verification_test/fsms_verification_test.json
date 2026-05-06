@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "object",
+  "method",
+  "acceptance_criteria",
+  "col_a",
+  "actual_result",
+  "pass_fail",
+  "evidence",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "object",
+   "fieldtype": "Link",
+   "label": "Đối tượng",
+   "options": "FSMS Verification Object",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "method",
+   "fieldtype": "Small Text",
+   "label": "Phương pháp",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "acceptance_criteria",
+   "fieldtype": "Small Text",
+   "label": "Tiêu chí chấp nhận"
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actual_result",
+   "fieldtype": "Small Text",
+   "label": "Kết quả thực tế"
+  },
+  {
+   "fieldname": "pass_fail",
+   "fieldtype": "Select",
+   "label": "Đạt / Không đạt",
+   "options": "\nĐạt\nKhông đạt",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "evidence",
+   "fieldtype": "Attach",
+   "label": "Bằng chứng"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Ghi chú"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Verification",
+ "name": "FSMS Verification Test",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

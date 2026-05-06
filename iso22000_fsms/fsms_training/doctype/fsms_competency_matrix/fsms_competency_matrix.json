@@ -1,0 +1,77 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "matrix_year",
+  "matrix_section",
+  "matrix_table"
+ ],
+ "fields": [
+  {
+   "fieldname": "matrix_year",
+   "fieldtype": "Int",
+   "label": "Năm",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "matrix_section",
+   "fieldtype": "Section Break",
+   "label": "Ma trận năng lực"
+  },
+  {
+   "fieldname": "matrix_table",
+   "fieldtype": "Table",
+   "label": "Designation × Course",
+   "options": "FSMS Competency Matrix Item"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Training",
+ "name": "FSMS Competency Matrix",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "autoname": "format:CM.{matrix_year}",
+ "naming_rule": "Expression",
+ "title_field": "matrix_year",
+ "track_changes": 1
+}

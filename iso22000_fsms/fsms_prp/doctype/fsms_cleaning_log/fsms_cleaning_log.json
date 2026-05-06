@@ -1,0 +1,141 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "header_section",
+  "log_date",
+  "area_or_equipment",
+  "cleaning_type",
+  "chemical_section",
+  "chemicals_used",
+  "people_section",
+  "cleaner",
+  "verifier",
+  "col_a",
+  "result"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "VS.{YYYY}.-.####",
+   "default": "VS.{YYYY}.-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "header_section",
+   "fieldtype": "Section Break",
+   "label": "Sổ vệ sinh"
+  },
+  {
+   "fieldname": "log_date",
+   "fieldtype": "Date",
+   "label": "Ngày",
+   "default": "Today",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "area_or_equipment",
+   "fieldtype": "Data",
+   "label": "Khu vực/Thiết bị",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cleaning_type",
+   "fieldtype": "Select",
+   "label": "Loại vệ sinh",
+   "options": "Hằng ngày\nHằng tuần\nSau ca\nSâu",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "chemical_section",
+   "fieldtype": "Section Break",
+   "label": "Hóa chất"
+  },
+  {
+   "fieldname": "chemicals_used",
+   "fieldtype": "Table",
+   "label": "Hóa chất",
+   "options": "FSMS Cleaning Chemical"
+  },
+  {
+   "fieldname": "people_section",
+   "fieldtype": "Section Break",
+   "label": "Người thực hiện"
+  },
+  {
+   "fieldname": "cleaner",
+   "fieldtype": "Link",
+   "label": "Người vệ sinh",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "verifier",
+   "fieldtype": "Link",
+   "label": "Người giám sát",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Select",
+   "label": "Kết quả",
+   "options": "Đạt\nCần làm lại",
+   "in_list_view": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS PRP",
+ "name": "FSMS Cleaning Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "area_or_equipment",
+ "track_changes": 1
+}

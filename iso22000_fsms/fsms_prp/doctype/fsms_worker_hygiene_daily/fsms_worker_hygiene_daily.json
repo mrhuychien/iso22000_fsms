@@ -1,0 +1,158 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "header_section",
+  "inspection_date",
+  "shift",
+  "inspector",
+  "items_section",
+  "worker_inspections",
+  "totals_section",
+  "total_workers",
+  "total_passed",
+  "total_failed",
+  "linked_ncr",
+  "workflow_section",
+  "workflow_state"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "VSCN.{YYYY}.-.####",
+   "default": "VSCN.{YYYY}.-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "header_section",
+   "fieldtype": "Section Break",
+   "label": "Sổ vệ sinh CN hàng ngày"
+  },
+  {
+   "fieldname": "inspection_date",
+   "fieldtype": "Date",
+   "label": "Ngày",
+   "default": "Today",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "label": "Ca",
+   "options": "Sáng\nChiều\nĐêm",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "inspector",
+   "fieldtype": "Link",
+   "label": "Người kiểm tra",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "items_section",
+   "fieldtype": "Section Break",
+   "label": "Kết quả kiểm tra"
+  },
+  {
+   "fieldname": "worker_inspections",
+   "fieldtype": "Table",
+   "label": "CN",
+   "options": "FSMS Worker Hygiene Item"
+  },
+  {
+   "fieldname": "totals_section",
+   "fieldtype": "Section Break",
+   "label": "Tổng hợp"
+  },
+  {
+   "fieldname": "total_workers",
+   "fieldtype": "Int",
+   "label": "Tổng CN",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_passed",
+   "fieldtype": "Int",
+   "label": "Đạt",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_failed",
+   "fieldtype": "Int",
+   "label": "Không đạt",
+   "read_only": 1
+  },
+  {
+   "fieldname": "linked_ncr",
+   "fieldtype": "Link",
+   "label": "NCR liên kết",
+   "options": "FSMS NCR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "workflow_section",
+   "fieldtype": "Section Break",
+   "label": "Workflow"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "label": "Trạng thái",
+   "options": "Workflow State",
+   "read_only": 1,
+   "in_list_view": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS PRP",
+ "name": "FSMS Worker Hygiene Daily",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "inspection_date",
+ "track_changes": 1
+}

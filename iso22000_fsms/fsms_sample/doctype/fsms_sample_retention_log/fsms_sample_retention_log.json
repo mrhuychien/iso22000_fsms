@@ -1,0 +1,205 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "header_section",
+  "sample_date",
+  "production_order",
+  "batch",
+  "item",
+  "col_a",
+  "sample_qty",
+  "sample_unit",
+  "disposal_section",
+  "expected_disposal_date",
+  "actual_disposal_date",
+  "disposal_method",
+  "disposal_evidence",
+  "people_section",
+  "taken_by",
+  "taken_by_signature",
+  "col_b",
+  "disposed_by",
+  "disposed_by_signature",
+  "notes",
+  "quality_section",
+  "quality_test_during_retention"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "LM.{YYYY}.-.####",
+   "default": "LM.{YYYY}.-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "header_section",
+   "fieldtype": "Section Break",
+   "label": "Sổ lưu mẫu"
+  },
+  {
+   "fieldname": "sample_date",
+   "fieldtype": "Date",
+   "label": "Ngày lấy mẫu",
+   "default": "Today",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "production_order",
+   "fieldtype": "Link",
+   "label": "Lệnh SX",
+   "options": "FSMS Production Order"
+  },
+  {
+   "fieldname": "batch",
+   "fieldtype": "Link",
+   "label": "Batch",
+   "options": "Batch",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sample_qty",
+   "fieldtype": "Float",
+   "label": "SL mẫu"
+  },
+  {
+   "fieldname": "sample_unit",
+   "fieldtype": "Data",
+   "label": "Đơn vị"
+  },
+  {
+   "fieldname": "disposal_section",
+   "fieldtype": "Section Break",
+   "label": "Hủy mẫu"
+  },
+  {
+   "fieldname": "expected_disposal_date",
+   "fieldtype": "Date",
+   "label": "Ngày hủy dự kiến"
+  },
+  {
+   "fieldname": "actual_disposal_date",
+   "fieldtype": "Date",
+   "label": "Ngày hủy thực tế"
+  },
+  {
+   "fieldname": "disposal_method",
+   "fieldtype": "Small Text",
+   "label": "Phương pháp hủy"
+  },
+  {
+   "fieldname": "disposal_evidence",
+   "fieldtype": "Attach",
+   "label": "Bằng chứng hủy"
+  },
+  {
+   "fieldname": "people_section",
+   "fieldtype": "Section Break",
+   "label": "Người liên quan"
+  },
+  {
+   "fieldname": "taken_by",
+   "fieldtype": "Link",
+   "label": "Người lấy mẫu",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "taken_by_signature",
+   "fieldtype": "Attach Image",
+   "label": "Chữ ký"
+  },
+  {
+   "fieldname": "col_b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "disposed_by",
+   "fieldtype": "Link",
+   "label": "Người hủy",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "disposed_by_signature",
+   "fieldtype": "Attach Image",
+   "label": "Chữ ký"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Ghi chú"
+  },
+  {
+   "fieldname": "quality_section",
+   "fieldtype": "Section Break",
+   "label": "Test giữa kỳ"
+  },
+  {
+   "fieldname": "quality_test_during_retention",
+   "fieldtype": "Table",
+   "label": "Test",
+   "options": "FSMS Sample Quality Test"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Sample",
+ "name": "FSMS Sample Retention Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "batch",
+ "track_changes": 1
+}

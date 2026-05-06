@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "template_name",
+  "template_clause",
+  "version",
+  "items_section",
+  "items"
+ ],
+ "fields": [
+  {
+   "fieldname": "template_name",
+   "fieldtype": "Data",
+   "label": "Tên template",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "template_clause",
+   "fieldtype": "Data",
+   "label": "Điều khoản",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Phiên bản"
+  },
+  {
+   "fieldname": "items_section",
+   "fieldtype": "Section Break",
+   "label": "Câu hỏi checklist"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Câu hỏi",
+   "options": "FSMS Audit Checklist Item"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Audit",
+ "name": "FSMS Audit Checklist Template",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "autoname": "field:template_name",
+ "naming_rule": "By fieldname",
+ "title_field": "template_name",
+ "track_changes": 1
+}

@@ -1,0 +1,146 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "supplier",
+  "category",
+  "col_a",
+  "is_pd_approved",
+  "approval_date",
+  "approval_expiry_date",
+  "certs_section",
+  "iso_certificates",
+  "regulatory_licenses",
+  "eval_section",
+  "last_evaluation_date",
+  "last_evaluation_score",
+  "last_evaluation_grade",
+  "col_b",
+  "current_status",
+  "disqualification_reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Loại NCC",
+   "options": "FSMS Supplier Category",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_pd_approved",
+   "fieldtype": "Check",
+   "label": "Đã PD chấp thuận"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Ngày chấp thuận"
+  },
+  {
+   "fieldname": "approval_expiry_date",
+   "fieldtype": "Date",
+   "label": "Hạn chấp thuận"
+  },
+  {
+   "fieldname": "certs_section",
+   "fieldtype": "Section Break",
+   "label": "Chứng nhận ISO/HACCP"
+  },
+  {
+   "fieldname": "iso_certificates",
+   "fieldtype": "Table",
+   "label": "Chứng nhận",
+   "options": "FSMS Supplier ISO Certificate"
+  },
+  {
+   "fieldname": "regulatory_licenses",
+   "fieldtype": "Attach",
+   "label": "Giấy phép hoạt động"
+  },
+  {
+   "fieldname": "eval_section",
+   "fieldtype": "Section Break",
+   "label": "Đánh giá gần nhất"
+  },
+  {
+   "fieldname": "last_evaluation_date",
+   "fieldtype": "Date",
+   "label": "Lần đánh giá gần nhất"
+  },
+  {
+   "fieldname": "last_evaluation_score",
+   "fieldtype": "Float",
+   "label": "Điểm gần nhất"
+  },
+  {
+   "fieldname": "last_evaluation_grade",
+   "fieldtype": "Select",
+   "label": "Hạng",
+   "options": "\nA\nB\nC\nD",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_status",
+   "fieldtype": "Select",
+   "label": "Trạng thái",
+   "options": "Đang sử dụng\nTạm ngưng\nLoại bỏ\nMới",
+   "default": "Mới",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "disqualification_reason",
+   "fieldtype": "Long Text",
+   "label": "Lý do loại bỏ"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Supplier",
+ "name": "FSMS Supplier Profile",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "supplier",
+ "search_fields": "supplier,category,current_status",
+ "track_changes": 1
+}

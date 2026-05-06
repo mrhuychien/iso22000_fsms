@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "requirement_text",
+  "current_compliance_status",
+  "col_a",
+  "action_plan",
+  "responsible",
+  "due_date",
+  "linked_objective"
+ ],
+ "fields": [
+  {
+   "fieldname": "requirement_text",
+   "fieldtype": "Small Text",
+   "label": "Yêu cầu",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "current_compliance_status",
+   "fieldtype": "Select",
+   "label": "Trạng thái",
+   "options": "Đáp ứng\nMột phần\nChưa\nN/A",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "action_plan",
+   "fieldtype": "Small Text",
+   "label": "Kế hoạch hành động"
+  },
+  {
+   "fieldname": "responsible",
+   "fieldtype": "Link",
+   "label": "Người phụ trách",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Hạn"
+  },
+  {
+   "fieldname": "linked_objective",
+   "fieldtype": "Link",
+   "label": "Mục tiêu liên kết",
+   "options": "FSMS Objective"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Context Risk",
+ "name": "FSMS Interested Party Requirement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

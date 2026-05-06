@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "seq",
+  "clause",
+  "question",
+  "expected_evidence",
+  "col_fill",
+  "compliance_level",
+  "evidence_observed",
+  "attached_evidence"
+ ],
+ "fields": [
+  {
+   "fieldname": "seq",
+   "fieldtype": "Int",
+   "label": "STT",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "clause",
+   "fieldtype": "Data",
+   "label": "Điều khoản",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "question",
+   "fieldtype": "Small Text",
+   "label": "Câu hỏi",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "expected_evidence",
+   "fieldtype": "Small Text",
+   "label": "Bằng chứng kỳ vọng"
+  },
+  {
+   "fieldname": "col_fill",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "compliance_level",
+   "fieldtype": "Select",
+   "label": "Mức tuân thủ",
+   "options": "\nC\nNC Major\nNC Minor\nObs\nN/A",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "evidence_observed",
+   "fieldtype": "Long Text",
+   "label": "Bằng chứng quan sát"
+  },
+  {
+   "fieldname": "attached_evidence",
+   "fieldtype": "Attach",
+   "label": "File đính kèm"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Audit",
+ "name": "FSMS Audit Checklist Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

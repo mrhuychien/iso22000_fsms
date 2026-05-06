@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "worker",
+  "health_card_valid",
+  "uniform_clean",
+  "col_a",
+  "personal_hygiene",
+  "hand_wash_compliance",
+  "no_illness_symptoms",
+  "total_pass",
+  "col_b",
+  "notes_if_fail",
+  "corrective_action"
+ ],
+ "fields": [
+  {
+   "fieldname": "worker",
+   "fieldtype": "Link",
+   "label": "Công nhân",
+   "options": "Employee",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "health_card_valid",
+   "fieldtype": "Check",
+   "label": "Thẻ SK còn hạn",
+   "default": 1
+  },
+  {
+   "fieldname": "uniform_clean",
+   "fieldtype": "Check",
+   "label": "Đồng phục sạch",
+   "default": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "personal_hygiene",
+   "fieldtype": "Check",
+   "label": "Vệ sinh cá nhân",
+   "default": 1
+  },
+  {
+   "fieldname": "hand_wash_compliance",
+   "fieldtype": "Check",
+   "label": "Rửa tay đúng quy trình",
+   "default": 1
+  },
+  {
+   "fieldname": "no_illness_symptoms",
+   "fieldtype": "Check",
+   "label": "Không triệu chứng bệnh",
+   "default": 1
+  },
+  {
+   "fieldname": "total_pass",
+   "fieldtype": "Check",
+   "label": "Tổng đạt",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes_if_fail",
+   "fieldtype": "Small Text",
+   "label": "Ghi chú khi không đạt"
+  },
+  {
+   "fieldname": "corrective_action",
+   "fieldtype": "Small Text",
+   "label": "Hành động khắc phục"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS PRP",
+ "name": "FSMS Worker Hygiene Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

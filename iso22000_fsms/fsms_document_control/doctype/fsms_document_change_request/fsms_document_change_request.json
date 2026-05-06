@@ -1,0 +1,282 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "header_section",
+  "request_no",
+  "request_date",
+  "requestor",
+  "col_a",
+  "target_document_type",
+  "target_document_dt",
+  "target_document",
+  "change_type",
+  "revision_section",
+  "current_revision",
+  "proposed_revision",
+  "content_section",
+  "reason",
+  "proposed_changes",
+  "impact_assessment",
+  "attachments",
+  "signature_section",
+  "prepared_by",
+  "prepared_on",
+  "prepared_signature",
+  "column_break_sig1",
+  "reviewed_by",
+  "reviewed_on",
+  "reviewed_signature",
+  "column_break_sig2",
+  "approved_by",
+  "approved_on",
+  "approved_signature",
+  "workflow_section",
+  "workflow_state",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "YCSDTL.{YYYY}.-.###",
+   "default": "YCSDTL.{YYYY}.-.###",
+   "reqd": 1
+  },
+  {
+   "fieldname": "header_section",
+   "fieldtype": "Section Break",
+   "label": "Thông tin chung"
+  },
+  {
+   "fieldname": "request_no",
+   "fieldtype": "Data",
+   "label": "Số phiếu",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "label": "Ngày yêu cầu",
+   "default": "Today",
+   "reqd": 1
+  },
+  {
+   "fieldname": "requestor",
+   "fieldtype": "Link",
+   "label": "Người đề xuất",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target_document_type",
+   "fieldtype": "Select",
+   "label": "Loại tài liệu",
+   "options": "Nội bộ\nBên ngoài",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_document_dt",
+   "fieldtype": "Link",
+   "label": "DocType đích",
+   "options": "DocType",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_document",
+   "fieldtype": "Dynamic Link",
+   "label": "Tài liệu đích",
+   "options": "target_document_dt"
+  },
+  {
+   "fieldname": "change_type",
+   "fieldtype": "Select",
+   "label": "Loại thay đổi",
+   "options": "Sửa đổi\nHủy bỏ\nPhát hành mới",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "revision_section",
+   "fieldtype": "Section Break",
+   "label": "Phiên bản"
+  },
+  {
+   "fieldname": "current_revision",
+   "fieldtype": "Int",
+   "label": "Phiên bản hiện hành"
+  },
+  {
+   "fieldname": "proposed_revision",
+   "fieldtype": "Int",
+   "label": "Phiên bản đề xuất"
+  },
+  {
+   "fieldname": "content_section",
+   "fieldtype": "Section Break",
+   "label": "Nội dung"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Long Text",
+   "label": "Lý do thay đổi"
+  },
+  {
+   "fieldname": "proposed_changes",
+   "fieldtype": "Long Text",
+   "label": "Nội dung đề xuất"
+  },
+  {
+   "fieldname": "impact_assessment",
+   "fieldtype": "Long Text",
+   "label": "Đánh giá tác động"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "Tài liệu đính kèm"
+  },
+  {
+   "fieldname": "signature_section",
+   "fieldtype": "Section Break",
+   "label": "Chữ ký"
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Link",
+   "label": "Người soạn",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "prepared_on",
+   "fieldtype": "Datetime",
+   "label": "Ngày soạn",
+   "read_only": 1
+  },
+  {
+   "fieldname": "prepared_signature",
+   "fieldtype": "Attach Image",
+   "label": "Chữ ký người soạn"
+  },
+  {
+   "fieldname": "column_break_sig1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reviewed_by",
+   "fieldtype": "Link",
+   "label": "Người soát xét",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "reviewed_on",
+   "fieldtype": "Datetime",
+   "label": "Ngày soát xét",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reviewed_signature",
+   "fieldtype": "Attach Image",
+   "label": "Chữ ký người soát xét"
+  },
+  {
+   "fieldname": "column_break_sig2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Người phê duyệt",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "approved_on",
+   "fieldtype": "Datetime",
+   "label": "Ngày phê duyệt",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_signature",
+   "fieldtype": "Attach Image",
+   "label": "Chữ ký người phê duyệt"
+  },
+  {
+   "fieldname": "workflow_section",
+   "fieldtype": "Section Break",
+   "label": "Workflow"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "label": "Trạng thái",
+   "options": "Workflow State",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "FSMS Document Change Request",
+   "read_only": 1,
+   "no_copy": 1,
+   "print_hide": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Document Control",
+ "name": "FSMS Document Change Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "is_submittable": 1,
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "request_no",
+ "search_fields": "request_no,requestor,change_type",
+ "track_changes": 1
+}

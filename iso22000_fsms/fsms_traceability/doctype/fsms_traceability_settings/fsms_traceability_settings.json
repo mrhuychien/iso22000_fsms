@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "target_trace_time_minutes",
+  "mandatory_drill_frequency_months",
+  "col_a",
+  "last_drill_date",
+  "last_drill_result"
+ ],
+ "fields": [
+  {
+   "fieldname": "target_trace_time_minutes",
+   "fieldtype": "Int",
+   "label": "Thời gian truy xuất mục tiêu (phút)",
+   "default": 120
+  },
+  {
+   "fieldname": "mandatory_drill_frequency_months",
+   "fieldtype": "Int",
+   "label": "Tần suất diễn tập (tháng)",
+   "default": 6
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_drill_date",
+   "fieldtype": "Date",
+   "label": "Lần diễn tập gần nhất"
+  },
+  {
+   "fieldname": "last_drill_result",
+   "fieldtype": "Select",
+   "label": "Kết quả gần nhất",
+   "options": "\nĐạt\nKhông đạt"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Traceability",
+ "name": "FSMS Traceability Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "issingle": 1,
+ "track_changes": 1
+}

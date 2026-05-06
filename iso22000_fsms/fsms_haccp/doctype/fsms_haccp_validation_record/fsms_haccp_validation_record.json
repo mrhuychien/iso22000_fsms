@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "verification_report",
+  "validation_date",
+  "col_a",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "verification_report",
+   "fieldtype": "Link",
+   "label": "Báo cáo tham tra",
+   "options": "FSMS Verification Report",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "validation_date",
+   "fieldtype": "Date",
+   "label": "Ngày",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Ghi chú"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS HACCP",
+ "name": "FSMS HACCP Validation Record",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

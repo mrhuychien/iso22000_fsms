@@ -1,0 +1,127 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "process_step",
+  "hazard_type",
+  "hazard_description",
+  "col_a",
+  "severity",
+  "likelihood",
+  "risk_level",
+  "is_significant",
+  "existing_controls",
+  "decision_tree_section",
+  "decision_tree_q1",
+  "decision_tree_q2",
+  "decision_tree_q3",
+  "decision_tree_q4",
+  "col_b",
+  "is_ccp",
+  "is_oprp"
+ ],
+ "fields": [
+  {
+   "fieldname": "process_step",
+   "fieldtype": "Data",
+   "label": "Công đoạn",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "hazard_type",
+   "fieldtype": "Select",
+   "label": "Loại mối nguy",
+   "options": "Sinh học\nHóa học\nVật lý\nDị ứng",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "hazard_description",
+   "fieldtype": "Small Text",
+   "label": "Mô tả mối nguy",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "severity",
+   "fieldtype": "Int",
+   "label": "Severity (1–4)"
+  },
+  {
+   "fieldname": "likelihood",
+   "fieldtype": "Int",
+   "label": "Likelihood (1–4)"
+  },
+  {
+   "fieldname": "risk_level",
+   "fieldtype": "Int",
+   "label": "Mức rủi ro",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "is_significant",
+   "fieldtype": "Check",
+   "label": "Đáng kể"
+  },
+  {
+   "fieldname": "existing_controls",
+   "fieldtype": "Long Text",
+   "label": "Biện pháp kiểm soát hiện tại"
+  },
+  {
+   "fieldname": "decision_tree_section",
+   "fieldtype": "Section Break",
+   "label": "Decision Tree"
+  },
+  {
+   "fieldname": "decision_tree_q1",
+   "fieldtype": "Check",
+   "label": "Q1"
+  },
+  {
+   "fieldname": "decision_tree_q2",
+   "fieldtype": "Check",
+   "label": "Q2"
+  },
+  {
+   "fieldname": "decision_tree_q3",
+   "fieldtype": "Check",
+   "label": "Q3"
+  },
+  {
+   "fieldname": "decision_tree_q4",
+   "fieldtype": "Check",
+   "label": "Q4"
+  },
+  {
+   "fieldname": "col_b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_ccp",
+   "fieldtype": "Check",
+   "label": "Là CCP"
+  },
+  {
+   "fieldname": "is_oprp",
+   "fieldtype": "Check",
+   "label": "Là OPRP"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS HACCP",
+ "name": "FSMS HACCP Hazard",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

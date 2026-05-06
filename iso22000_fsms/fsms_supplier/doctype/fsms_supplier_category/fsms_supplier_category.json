@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "category_code",
+  "description",
+  "col_a",
+  "evaluation_required",
+  "evaluation_frequency_months"
+ ],
+ "fields": [
+  {
+   "fieldname": "category_code",
+   "fieldtype": "Data",
+   "label": "Mã loại",
+   "unique": 1,
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "label": "Mô tả",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "evaluation_required",
+   "fieldtype": "Check",
+   "label": "Bắt buộc đánh giá",
+   "default": 1
+  },
+  {
+   "fieldname": "evaluation_frequency_months",
+   "fieldtype": "Int",
+   "label": "Tần suất (tháng)",
+   "default": 12
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Supplier",
+ "name": "FSMS Supplier Category",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "autoname": "field:category_code",
+ "naming_rule": "By fieldname",
+ "title_field": "category_code",
+ "track_changes": 1
+}

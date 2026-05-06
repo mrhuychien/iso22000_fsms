@@ -1,0 +1,161 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "equipment_code",
+  "equipment_name",
+  "linked_asset",
+  "col_a",
+  "measurement_type",
+  "measurement_range",
+  "accuracy_class",
+  "manufacturer",
+  "model",
+  "serial_no",
+  "cal_section",
+  "calibration_method",
+  "calibration_frequency",
+  "last_calibration_date",
+  "next_calibration_date",
+  "current_status",
+  "ccp_section",
+  "linked_ccp"
+ ],
+ "fields": [
+  {
+   "fieldname": "equipment_code",
+   "fieldtype": "Data",
+   "label": "Mã thiết bị",
+   "unique": 1,
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "equipment_name",
+   "fieldtype": "Data",
+   "label": "Tên thiết bị",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "linked_asset",
+   "fieldtype": "Link",
+   "label": "Asset",
+   "options": "Asset"
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "measurement_type",
+   "fieldtype": "Select",
+   "label": "Loại đo",
+   "options": "Khối lượng\nNhiệt độ\nĐộ ẩm\nÁp suất\npH\nLực\nKhác",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "measurement_range",
+   "fieldtype": "Data",
+   "label": "Dải đo"
+  },
+  {
+   "fieldname": "accuracy_class",
+   "fieldtype": "Data",
+   "label": "Cấp chính xác"
+  },
+  {
+   "fieldname": "manufacturer",
+   "fieldtype": "Data",
+   "label": "NSX"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "serial_no",
+   "fieldtype": "Data",
+   "label": "Serial"
+  },
+  {
+   "fieldname": "cal_section",
+   "fieldtype": "Section Break",
+   "label": "Hiệu chuẩn"
+  },
+  {
+   "fieldname": "calibration_method",
+   "fieldtype": "Select",
+   "label": "Phương pháp",
+   "options": "Kiểm định nhà nước\nHiệu chuẩn nội bộ\nHiệu chuẩn ngoại"
+  },
+  {
+   "fieldname": "calibration_frequency",
+   "fieldtype": "Select",
+   "label": "Tần suất",
+   "options": "6 tháng\nNăm\n2 năm\nTheo lô"
+  },
+  {
+   "fieldname": "last_calibration_date",
+   "fieldtype": "Date",
+   "label": "Lần HC gần nhất"
+  },
+  {
+   "fieldname": "next_calibration_date",
+   "fieldtype": "Date",
+   "label": "Lần HC kế tiếp"
+  },
+  {
+   "fieldname": "current_status",
+   "fieldtype": "Select",
+   "label": "Trạng thái",
+   "options": "Hợp chuẩn\nHết hạn\nHỏng\nĐã thanh lý",
+   "default": "Hợp chuẩn",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "ccp_section",
+   "fieldtype": "Section Break",
+   "label": "CCP liên kết"
+  },
+  {
+   "fieldname": "linked_ccp",
+   "fieldtype": "Long Text",
+   "label": "Mã CCP áp dụng"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Equipment",
+ "name": "FSMS Measurement Equipment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "autoname": "field:equipment_code",
+ "naming_rule": "By fieldname",
+ "title_field": "equipment_name",
+ "track_changes": 1
+}

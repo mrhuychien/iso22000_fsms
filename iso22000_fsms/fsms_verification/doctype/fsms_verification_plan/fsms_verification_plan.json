@@ -1,0 +1,231 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "header_section",
+  "plan_no",
+  "plan_year",
+  "plan_period",
+  "col_a",
+  "external_lab_engaged",
+  "external_lab_name",
+  "external_lab_accreditation",
+  "objects_section",
+  "objects_to_verify",
+  "signature_section",
+  "prepared_by",
+  "prepared_on",
+  "prepared_signature",
+  "column_break_sig1",
+  "reviewed_by",
+  "reviewed_on",
+  "reviewed_signature",
+  "column_break_sig2",
+  "approved_by",
+  "approved_on",
+  "approved_signature",
+  "workflow_section",
+  "workflow_state",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "KH-TT.{YYYY}.-.##",
+   "default": "KH-TT.{YYYY}.-.##",
+   "reqd": 1
+  },
+  {
+   "fieldname": "header_section",
+   "fieldtype": "Section Break",
+   "label": "Thông tin"
+  },
+  {
+   "fieldname": "plan_no",
+   "fieldtype": "Data",
+   "label": "Số kế hoạch",
+   "read_only": 1
+  },
+  {
+   "fieldname": "plan_year",
+   "fieldtype": "Int",
+   "label": "Năm",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "plan_period",
+   "fieldtype": "Select",
+   "label": "Kỳ",
+   "options": "Q1\nQ2\nQ3\nQ4\nNăm",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "external_lab_engaged",
+   "fieldtype": "Check",
+   "label": "Có thuê PTN ngoài"
+  },
+  {
+   "fieldname": "external_lab_name",
+   "fieldtype": "Data",
+   "label": "Tên PTN"
+  },
+  {
+   "fieldname": "external_lab_accreditation",
+   "fieldtype": "Attach",
+   "label": "Chứng nhận ISO 17025"
+  },
+  {
+   "fieldname": "objects_section",
+   "fieldtype": "Section Break",
+   "label": "Đối tượng tham tra"
+  },
+  {
+   "fieldname": "objects_to_verify",
+   "fieldtype": "Table",
+   "label": "Đối tượng",
+   "options": "FSMS Verification Object"
+  },
+  {
+   "fieldname": "signature_section",
+   "fieldtype": "Section Break",
+   "label": "Chữ ký"
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Link",
+   "label": "Người soạn",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "prepared_on",
+   "fieldtype": "Datetime",
+   "label": "Ngày soạn",
+   "read_only": 1
+  },
+  {
+   "fieldname": "prepared_signature",
+   "fieldtype": "Attach Image",
+   "label": "Chữ ký người soạn"
+  },
+  {
+   "fieldname": "column_break_sig1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reviewed_by",
+   "fieldtype": "Link",
+   "label": "Người soát xét",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "reviewed_on",
+   "fieldtype": "Datetime",
+   "label": "Ngày soát xét",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reviewed_signature",
+   "fieldtype": "Attach Image",
+   "label": "Chữ ký người soát xét"
+  },
+  {
+   "fieldname": "column_break_sig2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Người phê duyệt",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "approved_on",
+   "fieldtype": "Datetime",
+   "label": "Ngày phê duyệt",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_signature",
+   "fieldtype": "Attach Image",
+   "label": "Chữ ký người phê duyệt"
+  },
+  {
+   "fieldname": "workflow_section",
+   "fieldtype": "Section Break",
+   "label": "Workflow"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "label": "Trạng thái",
+   "options": "Workflow State",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "FSMS Verification Plan",
+   "read_only": 1,
+   "no_copy": 1,
+   "print_hide": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Verification",
+ "name": "FSMS Verification Plan",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "is_submittable": 1,
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "plan_no",
+ "track_changes": 1
+}

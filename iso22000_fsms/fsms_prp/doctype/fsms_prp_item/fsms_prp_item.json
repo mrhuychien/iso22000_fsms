@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "prp_code",
+  "description",
+  "col_a",
+  "monitoring_method",
+  "frequency",
+  "acceptance_criteria",
+  "responsible",
+  "linked_template",
+  "is_template"
+ ],
+ "fields": [
+  {
+   "fieldname": "prp_code",
+   "fieldtype": "Select",
+   "label": "PRP Code",
+   "options": "PRP1-Construction\nPRP2-Layout\nPRP3-Utilities\nPRP4-Waste\nPRP5-Equipment\nPRP6-Material\nPRP7-Cross-contam\nPRP8-Cleaning\nPRP9-Pest\nPRP10-Personnel\nPRP11-Rework",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "label": "Mô tả"
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "monitoring_method",
+   "fieldtype": "Long Text",
+   "label": "Phương pháp giám sát"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Data",
+   "label": "Tần suất"
+  },
+  {
+   "fieldname": "acceptance_criteria",
+   "fieldtype": "Small Text",
+   "label": "Tiêu chí"
+  },
+  {
+   "fieldname": "responsible",
+   "fieldtype": "Link",
+   "label": "Người phụ trách",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "linked_template",
+   "fieldtype": "Link",
+   "label": "PRP Checklist Template",
+   "options": "FSMS PRP Checklist Template"
+  },
+  {
+   "fieldname": "is_template",
+   "fieldtype": "Check",
+   "label": "Là template fixture"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS PRP",
+ "name": "FSMS PRP Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

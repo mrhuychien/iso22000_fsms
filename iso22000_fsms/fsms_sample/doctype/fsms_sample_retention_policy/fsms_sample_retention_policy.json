@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "policy_section",
+  "policy_version",
+  "effective_date",
+  "col_a",
+  "retention_period_months",
+  "sample_size_per_batch",
+  "sample_size_unit",
+  "storage_section",
+  "storage_location",
+  "storage_temperature_min",
+  "storage_temperature_max",
+  "col_b",
+  "disposal_method",
+  "responsible",
+  "attached_master"
+ ],
+ "fields": [
+  {
+   "fieldname": "policy_section",
+   "fieldtype": "Section Break",
+   "label": "Chính sách lưu mẫu (QĐ.01)"
+  },
+  {
+   "fieldname": "policy_version",
+   "fieldtype": "Data",
+   "label": "Phiên bản"
+  },
+  {
+   "fieldname": "effective_date",
+   "fieldtype": "Date",
+   "label": "Ngày hiệu lực"
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "retention_period_months",
+   "fieldtype": "Int",
+   "label": "Thời gian lưu (tháng)",
+   "default": 12
+  },
+  {
+   "fieldname": "sample_size_per_batch",
+   "fieldtype": "Float",
+   "label": "Khối lượng mẫu / lô"
+  },
+  {
+   "fieldname": "sample_size_unit",
+   "fieldtype": "Data",
+   "label": "Đơn vị (g/ml)",
+   "default": "g"
+  },
+  {
+   "fieldname": "storage_section",
+   "fieldtype": "Section Break",
+   "label": "Lưu trữ"
+  },
+  {
+   "fieldname": "storage_location",
+   "fieldtype": "Data",
+   "label": "Vị trí lưu mẫu"
+  },
+  {
+   "fieldname": "storage_temperature_min",
+   "fieldtype": "Float",
+   "label": "Nhiệt độ Min (°C)"
+  },
+  {
+   "fieldname": "storage_temperature_max",
+   "fieldtype": "Float",
+   "label": "Nhiệt độ Max (°C)"
+  },
+  {
+   "fieldname": "col_b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "disposal_method",
+   "fieldtype": "Long Text",
+   "label": "Phương pháp hủy mẫu"
+  },
+  {
+   "fieldname": "responsible",
+   "fieldtype": "Link",
+   "label": "Người phụ trách",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "attached_master",
+   "fieldtype": "Attach",
+   "label": "File gốc"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Sample",
+ "name": "FSMS Sample Retention Policy",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "issingle": 1,
+ "track_changes": 1
+}

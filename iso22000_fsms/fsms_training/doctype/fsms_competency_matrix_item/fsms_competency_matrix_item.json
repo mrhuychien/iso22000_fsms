@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "designation",
+  "course",
+  "col_a",
+  "required",
+  "refresher_cycle_months"
+ ],
+ "fields": [
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Chức danh",
+   "options": "Designation",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "course",
+   "fieldtype": "Link",
+   "label": "Khóa",
+   "options": "FSMS Training Course",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "required",
+   "fieldtype": "Check",
+   "label": "Bắt buộc",
+   "default": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "refresher_cycle_months",
+   "fieldtype": "Int",
+   "label": "Đào tạo lại (tháng)"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Training",
+ "name": "FSMS Competency Matrix Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

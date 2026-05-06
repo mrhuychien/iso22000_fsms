@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "attended",
+  "col_a",
+  "pre_test_score",
+  "post_test_score",
+  "passed",
+  "certificate",
+  "next_refresher_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Nhân viên",
+   "options": "Employee",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "attended",
+   "fieldtype": "Check",
+   "label": "Có mặt",
+   "default": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pre_test_score",
+   "fieldtype": "Float",
+   "label": "Điểm pre-test"
+  },
+  {
+   "fieldname": "post_test_score",
+   "fieldtype": "Float",
+   "label": "Điểm post-test",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "passed",
+   "fieldtype": "Check",
+   "label": "Đạt",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "certificate",
+   "fieldtype": "Attach",
+   "label": "Chứng chỉ"
+  },
+  {
+   "fieldname": "next_refresher_date",
+   "fieldtype": "Date",
+   "label": "Đào tạo lại"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Training",
+ "name": "FSMS Training Attendance",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

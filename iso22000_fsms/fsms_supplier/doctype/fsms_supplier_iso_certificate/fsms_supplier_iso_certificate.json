@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "cert_type",
+  "cert_no",
+  "col_a",
+  "valid_until",
+  "attachment"
+ ],
+ "fields": [
+  {
+   "fieldname": "cert_type",
+   "fieldtype": "Data",
+   "label": "Loại chứng nhận",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cert_no",
+   "fieldtype": "Data",
+   "label": "Số chứng nhận",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "valid_until",
+   "fieldtype": "Date",
+   "label": "Hiệu lực đến",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "File"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Supplier",
+ "name": "FSMS Supplier ISO Certificate",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

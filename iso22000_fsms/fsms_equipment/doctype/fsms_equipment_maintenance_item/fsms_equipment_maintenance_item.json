@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "scheduled_date",
+  "actual_date",
+  "col_a",
+  "technician",
+  "notes",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "scheduled_date",
+   "fieldtype": "Date",
+   "label": "Ngày kế hoạch",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "actual_date",
+   "fieldtype": "Date",
+   "label": "Ngày thực hiện"
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "technician",
+   "fieldtype": "Link",
+   "label": "Kỹ thuật viên",
+   "options": "Employee",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Ghi chú"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Trạng thái",
+   "options": "Mở\nHoàn thành\nHủy",
+   "default": "Mở",
+   "in_list_view": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Equipment",
+ "name": "FSMS Equipment Maintenance Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

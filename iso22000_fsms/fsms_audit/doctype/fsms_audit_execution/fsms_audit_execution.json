@@ -1,0 +1,186 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "header_section",
+  "audit_plan",
+  "audit_date",
+  "auditee_department",
+  "col_a",
+  "auditor",
+  "auditee_signature",
+  "auditor_signature",
+  "checklist_section",
+  "checklist_used",
+  "responses",
+  "findings_section",
+  "findings",
+  "auto_create_ncr",
+  "workflow_section",
+  "workflow_state",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "BB.ĐG.{YYYY}.-.###",
+   "default": "BB.ĐG.{YYYY}.-.###",
+   "reqd": 1
+  },
+  {
+   "fieldname": "header_section",
+   "fieldtype": "Section Break",
+   "label": "Phiên đánh giá"
+  },
+  {
+   "fieldname": "audit_plan",
+   "fieldtype": "Link",
+   "label": "Audit Plan",
+   "options": "FSMS Audit Plan",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "audit_date",
+   "fieldtype": "Date",
+   "label": "Ngày đánh giá",
+   "default": "Today",
+   "reqd": 1
+  },
+  {
+   "fieldname": "auditee_department",
+   "fieldtype": "Link",
+   "label": "Phòng ban",
+   "options": "Department",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auditor",
+   "fieldtype": "Link",
+   "label": "Đánh giá viên",
+   "options": "Employee",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "auditee_signature",
+   "fieldtype": "Attach Image",
+   "label": "Chữ ký đại diện"
+  },
+  {
+   "fieldname": "auditor_signature",
+   "fieldtype": "Attach Image",
+   "label": "Chữ ký đánh giá viên"
+  },
+  {
+   "fieldname": "checklist_section",
+   "fieldtype": "Section Break",
+   "label": "Checklist"
+  },
+  {
+   "fieldname": "checklist_used",
+   "fieldtype": "Link",
+   "label": "Template",
+   "options": "FSMS Audit Checklist Template"
+  },
+  {
+   "fieldname": "responses",
+   "fieldtype": "Table",
+   "label": "Phản hồi",
+   "options": "FSMS Audit Checklist Item"
+  },
+  {
+   "fieldname": "findings_section",
+   "fieldtype": "Section Break",
+   "label": "Phát hiện"
+  },
+  {
+   "fieldname": "findings",
+   "fieldtype": "Table",
+   "label": "Findings",
+   "options": "FSMS Audit Finding"
+  },
+  {
+   "fieldname": "auto_create_ncr",
+   "fieldtype": "Check",
+   "label": "Tự tạo NCR khi NC Major/Minor",
+   "default": 1
+  },
+  {
+   "fieldname": "workflow_section",
+   "fieldtype": "Section Break",
+   "label": "Workflow"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "label": "Trạng thái",
+   "options": "Workflow State",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "FSMS Audit Execution",
+   "read_only": 1,
+   "no_copy": 1,
+   "print_hide": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Audit",
+ "name": "FSMS Audit Execution",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "is_submittable": 1,
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "audit_plan",
+ "track_changes": 1
+}

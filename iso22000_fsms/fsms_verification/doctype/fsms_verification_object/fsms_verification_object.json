@@ -1,0 +1,77 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "object_type",
+  "linked_doctype",
+  "linked_name",
+  "col_a",
+  "verification_method",
+  "frequency",
+  "responsible",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "object_type",
+   "fieldtype": "Select",
+   "label": "Đối tượng",
+   "options": "Hạ tầng SX/Bảo quản\nHACCP — Mô tả SP\nHACCP — Sơ đồ QT\nHACCP — Bố trí mặt bằng\nHACCP — Phân loại khu vực\nHACCP — Phân tích mối nguy\nHACCP — CCP, CP\nKế hoạch HACCP\nKế hoạch OPRP\nHồ sơ giám sát\nChương trình PRP\nQuy phạm SX\nHiệu chuẩn\nĐào tạo\nSức khỏe NV\nHạn SD",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "linked_doctype",
+   "fieldtype": "Link",
+   "label": "DocType",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "linked_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Tên đối tượng",
+   "options": "linked_doctype"
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "verification_method",
+   "fieldtype": "Long Text",
+   "label": "Phương pháp tham tra"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Select",
+   "label": "Tần suất",
+   "options": "Tháng\nQuý\n6 tháng\nNăm"
+  },
+  {
+   "fieldname": "responsible",
+   "fieldtype": "Link",
+   "label": "Người phụ trách",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Trạng thái",
+   "options": "Chưa thực hiện\nĐang thực hiện\nHoàn thành",
+   "default": "Chưa thực hiện",
+   "in_list_view": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Verification",
+ "name": "FSMS Verification Object",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

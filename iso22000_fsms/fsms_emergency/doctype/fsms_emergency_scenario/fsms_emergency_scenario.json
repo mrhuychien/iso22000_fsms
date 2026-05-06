@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "scenario_code",
+  "scenario_name",
+  "scenario_type",
+  "proc_section",
+  "response_procedure",
+  "attached_file",
+  "team_section",
+  "responsible_team",
+  "equipment_section",
+  "equipment_required"
+ ],
+ "fields": [
+  {
+   "fieldname": "scenario_code",
+   "fieldtype": "Data",
+   "label": "Mã kịch bản",
+   "unique": 1,
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "scenario_name",
+   "fieldtype": "Data",
+   "label": "Tên kịch bản",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "scenario_type",
+   "fieldtype": "Select",
+   "label": "Loại",
+   "options": "Thiên tai\nCháy nổ\nMất điện\nDịch bệnh\nThông tin SP",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "proc_section",
+   "fieldtype": "Section Break",
+   "label": "Quy trình ứng phó"
+  },
+  {
+   "fieldname": "response_procedure",
+   "fieldtype": "Long Text",
+   "label": "Quy trình"
+  },
+  {
+   "fieldname": "attached_file",
+   "fieldtype": "Attach",
+   "label": "File phụ lục"
+  },
+  {
+   "fieldname": "team_section",
+   "fieldtype": "Section Break",
+   "label": "Đội ứng phó"
+  },
+  {
+   "fieldname": "responsible_team",
+   "fieldtype": "Table",
+   "label": "Đội",
+   "options": "FSMS Emergency Scenario Member"
+  },
+  {
+   "fieldname": "equipment_section",
+   "fieldtype": "Section Break",
+   "label": "Trang thiết bị"
+  },
+  {
+   "fieldname": "equipment_required",
+   "fieldtype": "Table",
+   "label": "Thiết bị",
+   "options": "FSMS Emergency Scenario Equipment"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Emergency",
+ "name": "FSMS Emergency Scenario",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "autoname": "field:scenario_code",
+ "naming_rule": "By fieldname",
+ "title_field": "scenario_name",
+ "track_changes": 1
+}

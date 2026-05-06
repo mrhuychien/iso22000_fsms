@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "hazard_ref",
+  "q1",
+  "q2",
+  "col_a",
+  "q3",
+  "q4",
+  "decision"
+ ],
+ "fields": [
+  {
+   "fieldname": "hazard_ref",
+   "fieldtype": "Data",
+   "label": "Mối nguy"
+  },
+  {
+   "fieldname": "q1",
+   "fieldtype": "Check",
+   "label": "Q1 — Có biện pháp kiểm soát?"
+  },
+  {
+   "fieldname": "q2",
+   "fieldtype": "Check",
+   "label": "Q2 — Bước này loại trừ mối nguy?"
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "q3",
+   "fieldtype": "Check",
+   "label": "Q3 — Nguy cơ vượt mức?"
+  },
+  {
+   "fieldname": "q4",
+   "fieldtype": "Check",
+   "label": "Q4 — Bước sau loại trừ mối nguy?"
+  },
+  {
+   "fieldname": "decision",
+   "fieldtype": "Select",
+   "label": "Kết luận",
+   "options": "\nCCP\nOPRP\nNot Significant"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS HACCP",
+ "name": "FSMS HACCP Decision Tree",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

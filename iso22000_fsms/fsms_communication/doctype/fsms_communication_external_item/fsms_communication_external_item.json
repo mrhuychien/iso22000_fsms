@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "topic",
+  "counterparty_type",
+  "trigger",
+  "col_a",
+  "method",
+  "responsible"
+ ],
+ "fields": [
+  {
+   "fieldname": "topic",
+   "fieldtype": "Data",
+   "label": "Chủ đề",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "counterparty_type",
+   "fieldtype": "Select",
+   "label": "Bên đối tác",
+   "options": "KH\nNCC\nQLNN\nKhác",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "trigger",
+   "fieldtype": "Data",
+   "label": "Trigger",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "method",
+   "fieldtype": "Select",
+   "label": "Phương thức",
+   "options": "Email\nPhone\nMeeting\nLetter\nZalo\nKhác"
+  },
+  {
+   "fieldname": "responsible",
+   "fieldtype": "Link",
+   "label": "Người phụ trách",
+   "options": "Employee"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Communication",
+ "name": "FSMS Communication External Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

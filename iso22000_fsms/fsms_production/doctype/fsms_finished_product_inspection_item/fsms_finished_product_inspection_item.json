@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "test_name",
+  "standard_value",
+  "actual_value",
+  "col_a",
+  "is_pass",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "test_name",
+   "fieldtype": "Data",
+   "label": "Chỉ tiêu",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "standard_value",
+   "fieldtype": "Data",
+   "label": "Tiêu chuẩn",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "actual_value",
+   "fieldtype": "Data",
+   "label": "Kết quả thực tế",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_pass",
+   "fieldtype": "Check",
+   "label": "Đạt",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Ghi chú"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Production",
+ "name": "FSMS Finished Product Inspection Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

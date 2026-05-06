@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "target_batch",
+  "delivery_note",
+  "customer",
+  "col_a",
+  "delivered_date",
+  "delivered_qty",
+  "currently_recovered_qty"
+ ],
+ "fields": [
+  {
+   "fieldname": "target_batch",
+   "fieldtype": "Link",
+   "label": "Batch SX",
+   "options": "Batch",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "delivery_note",
+   "fieldtype": "Link",
+   "label": "Phiếu xuất",
+   "options": "Delivery Note"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "KH",
+   "options": "Customer",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "delivered_date",
+   "fieldtype": "Date",
+   "label": "Ngày giao"
+  },
+  {
+   "fieldname": "delivered_qty",
+   "fieldtype": "Float",
+   "label": "SL giao"
+  },
+  {
+   "fieldname": "currently_recovered_qty",
+   "fieldtype": "Float",
+   "label": "SL đã thu hồi"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Traceability",
+ "name": "FSMS Trace Forward Link",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

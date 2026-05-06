@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "revision_no",
+  "change_request",
+  "revision_date",
+  "col_a",
+  "summary"
+ ],
+ "fields": [
+  {
+   "fieldname": "revision_no",
+   "fieldtype": "Int",
+   "label": "Lần sửa",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "change_request",
+   "fieldtype": "Link",
+   "label": "Phiếu thay đổi",
+   "options": "FSMS Document Change Request",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "revision_date",
+   "fieldtype": "Date",
+   "label": "Ngày phát hành",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "Small Text",
+   "label": "Tóm tắt",
+   "in_list_view": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Document Control",
+ "name": "FSMS Document Change Log",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

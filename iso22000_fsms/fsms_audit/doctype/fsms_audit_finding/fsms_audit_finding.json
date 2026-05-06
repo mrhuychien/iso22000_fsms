@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "finding_type",
+  "finding_description",
+  "clause_violated",
+  "col_a",
+  "responsible_department",
+  "linked_ncr"
+ ],
+ "fields": [
+  {
+   "fieldname": "finding_type",
+   "fieldtype": "Select",
+   "label": "Loại",
+   "options": "NC Major\nNC Minor\nObservation\nOFI",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "finding_description",
+   "fieldtype": "Long Text",
+   "label": "Mô tả phát hiện",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "clause_violated",
+   "fieldtype": "Data",
+   "label": "Điều khoản vi phạm"
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "responsible_department",
+   "fieldtype": "Link",
+   "label": "Phòng ban liên quan",
+   "options": "Department"
+  },
+  {
+   "fieldname": "linked_ncr",
+   "fieldtype": "Link",
+   "label": "NCR liên kết",
+   "options": "FSMS NCR",
+   "read_only": 1,
+   "in_list_view": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Audit",
+ "name": "FSMS Audit Finding",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

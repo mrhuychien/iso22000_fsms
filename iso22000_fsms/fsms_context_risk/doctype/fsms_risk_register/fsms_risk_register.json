@@ -1,0 +1,240 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "header_section",
+  "risk_no",
+  "risk_year",
+  "risk_description",
+  "col_a",
+  "risk_category",
+  "risk_owner",
+  "risk_owner_employee",
+  "scoring_section",
+  "score_a_likelihood",
+  "score_b_consequence",
+  "score_c_severity",
+  "score_d_detectability",
+  "col_b",
+  "total_score",
+  "risk_level",
+  "strategy_section",
+  "treatment_strategy",
+  "actions_section",
+  "actions",
+  "review_section",
+  "last_review_date",
+  "next_review_date",
+  "linked_ncr",
+  "workflow_section",
+  "workflow_state"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "RR.{YYYY}.-.###",
+   "default": "RR.{YYYY}.-.###",
+   "reqd": 1
+  },
+  {
+   "fieldname": "header_section",
+   "fieldtype": "Section Break",
+   "label": "Đăng ký rủi ro"
+  },
+  {
+   "fieldname": "risk_no",
+   "fieldtype": "Data",
+   "label": "Số rủi ro",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "risk_year",
+   "fieldtype": "Int",
+   "label": "Năm",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "risk_description",
+   "fieldtype": "Long Text",
+   "label": "Mô tả rủi ro",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "risk_category",
+   "fieldtype": "Select",
+   "label": "Phân loại",
+   "options": "ATTP\nTài chính\nPháp lý\nVận hành\nThiên tai\nNCC\nKhác",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "risk_owner",
+   "fieldtype": "Link",
+   "label": "Phòng ban chủ trì",
+   "options": "Department",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "risk_owner_employee",
+   "fieldtype": "Link",
+   "label": "Người phụ trách",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "scoring_section",
+   "fieldtype": "Section Break",
+   "label": "Chấm điểm A+B+C+D"
+  },
+  {
+   "fieldname": "score_a_likelihood",
+   "fieldtype": "Int",
+   "label": "A — Khả năng (1–4)"
+  },
+  {
+   "fieldname": "score_b_consequence",
+   "fieldtype": "Int",
+   "label": "B — Hậu quả (1–4)"
+  },
+  {
+   "fieldname": "score_c_severity",
+   "fieldtype": "Int",
+   "label": "C — Nghiêm trọng (1–4)"
+  },
+  {
+   "fieldname": "score_d_detectability",
+   "fieldtype": "Int",
+   "label": "D — Khả năng phát hiện (1–4)"
+  },
+  {
+   "fieldname": "col_b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_score",
+   "fieldtype": "Int",
+   "label": "Tổng điểm",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "risk_level",
+   "fieldtype": "Select",
+   "label": "Mức rủi ro",
+   "options": "\nTheo dõi\nKiểm soát\nỨng phó kịp thời",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "strategy_section",
+   "fieldtype": "Section Break",
+   "label": "Chiến lược"
+  },
+  {
+   "fieldname": "treatment_strategy",
+   "fieldtype": "Select",
+   "label": "Chiến lược xử lý",
+   "options": "Tránh\nGiảm thiểu\nChuyển giao\nChấp nhận"
+  },
+  {
+   "fieldname": "actions_section",
+   "fieldtype": "Section Break",
+   "label": "Hành động"
+  },
+  {
+   "fieldname": "actions",
+   "fieldtype": "Table",
+   "label": "Hành động",
+   "options": "FSMS Risk Action"
+  },
+  {
+   "fieldname": "review_section",
+   "fieldtype": "Section Break",
+   "label": "Soát xét"
+  },
+  {
+   "fieldname": "last_review_date",
+   "fieldtype": "Date",
+   "label": "Lần soát xét gần nhất"
+  },
+  {
+   "fieldname": "next_review_date",
+   "fieldtype": "Date",
+   "label": "Lần soát xét kế"
+  },
+  {
+   "fieldname": "linked_ncr",
+   "fieldtype": "Table",
+   "label": "NCR đã phát sinh",
+   "options": "FSMS Recall NCR Link"
+  },
+  {
+   "fieldname": "workflow_section",
+   "fieldtype": "Section Break",
+   "label": "Workflow"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "label": "Trạng thái",
+   "options": "Workflow State",
+   "read_only": 1,
+   "in_list_view": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Context Risk",
+ "name": "FSMS Risk Register",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "risk_no",
+ "search_fields": "risk_no,risk_description,risk_category,risk_level",
+ "track_changes": 1
+}

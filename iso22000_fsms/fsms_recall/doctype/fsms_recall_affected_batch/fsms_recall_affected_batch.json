@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "batch",
+  "item",
+  "production_date",
+  "expiry_date",
+  "col_a",
+  "total_produced_qty",
+  "currently_in_stock_qty",
+  "distributed_qty",
+  "customer_returned_qty",
+  "recovered_qty",
+  "recovery_rate_pct"
+ ],
+ "fields": [
+  {
+   "fieldname": "batch",
+   "fieldtype": "Link",
+   "label": "Batch",
+   "options": "Batch",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "production_date",
+   "fieldtype": "Date",
+   "label": "Ngày SX"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Hạn sử dụng"
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_produced_qty",
+   "fieldtype": "Float",
+   "label": "SL đã SX"
+  },
+  {
+   "fieldname": "currently_in_stock_qty",
+   "fieldtype": "Float",
+   "label": "Tồn kho hiện tại"
+  },
+  {
+   "fieldname": "distributed_qty",
+   "fieldtype": "Float",
+   "label": "Đã phân phối"
+  },
+  {
+   "fieldname": "customer_returned_qty",
+   "fieldtype": "Float",
+   "label": "KH trả về"
+  },
+  {
+   "fieldname": "recovered_qty",
+   "fieldtype": "Float",
+   "label": "Đã thu hồi",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "recovery_rate_pct",
+   "fieldtype": "Float",
+   "label": "Tỷ lệ thu hồi (%)",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Recall",
+ "name": "FSMS Recall Affected Batch",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

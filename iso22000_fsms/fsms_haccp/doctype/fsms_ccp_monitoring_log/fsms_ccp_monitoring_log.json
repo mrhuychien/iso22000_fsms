@@ -1,0 +1,192 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "header_section",
+  "log_date",
+  "production_order",
+  "ccp",
+  "col_a",
+  "measurement_value",
+  "measurement_unit",
+  "is_within_limit",
+  "monitor",
+  "ca_section",
+  "corrective_action_taken",
+  "linked_ncr",
+  "verify_section",
+  "verifier",
+  "verification_date",
+  "workflow_section",
+  "workflow_state",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "CCP.{YYYY}.-.####",
+   "default": "CCP.{YYYY}.-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "header_section",
+   "fieldtype": "Section Break",
+   "label": "Giám sát CCP"
+  },
+  {
+   "fieldname": "log_date",
+   "fieldtype": "Date",
+   "label": "Ngày",
+   "default": "Today",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "production_order",
+   "fieldtype": "Link",
+   "label": "Lệnh SX",
+   "options": "FSMS Production Order"
+  },
+  {
+   "fieldname": "ccp",
+   "fieldtype": "Data",
+   "label": "CCP",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "measurement_value",
+   "fieldtype": "Float",
+   "label": "Giá trị đo",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "measurement_unit",
+   "fieldtype": "Data",
+   "label": "Đơn vị"
+  },
+  {
+   "fieldname": "is_within_limit",
+   "fieldtype": "Check",
+   "label": "Trong giới hạn",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "monitor",
+   "fieldtype": "Link",
+   "label": "Người giám sát",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "ca_section",
+   "fieldtype": "Section Break",
+   "label": "Hành động khắc phục"
+  },
+  {
+   "fieldname": "corrective_action_taken",
+   "fieldtype": "Long Text",
+   "label": "Hành động khắc phục"
+  },
+  {
+   "fieldname": "linked_ncr",
+   "fieldtype": "Link",
+   "label": "NCR liên kết",
+   "options": "FSMS NCR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "verify_section",
+   "fieldtype": "Section Break",
+   "label": "Tham tra"
+  },
+  {
+   "fieldname": "verifier",
+   "fieldtype": "Link",
+   "label": "Người tham tra",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "verification_date",
+   "fieldtype": "Date",
+   "label": "Ngày tham tra"
+  },
+  {
+   "fieldname": "workflow_section",
+   "fieldtype": "Section Break",
+   "label": "Workflow"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "label": "Trạng thái",
+   "options": "Workflow State",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "FSMS CCP Monitoring Log",
+   "read_only": 1,
+   "no_copy": 1,
+   "print_hide": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS HACCP",
+ "name": "FSMS CCP Monitoring Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "is_submittable": 1,
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "ccp",
+ "track_changes": 1
+}

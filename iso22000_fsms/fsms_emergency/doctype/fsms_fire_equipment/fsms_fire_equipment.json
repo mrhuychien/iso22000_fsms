@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "equipment_code",
+  "equipment_name",
+  "equipment_type",
+  "col_a",
+  "manufacturer",
+  "purchase_date",
+  "expiry_date",
+  "last_inspection_date",
+  "next_inspection_date",
+  "location",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "equipment_code",
+   "fieldtype": "Data",
+   "label": "Mã thiết bị",
+   "unique": 1,
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "equipment_name",
+   "fieldtype": "Data",
+   "label": "Tên thiết bị",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "equipment_type",
+   "fieldtype": "Select",
+   "label": "Loại",
+   "options": "Bình chữa cháy\nVòi nước\nBáo cháy\nChỉ dẫn\nCứu hộ",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "manufacturer",
+   "fieldtype": "Data",
+   "label": "NSX"
+  },
+  {
+   "fieldname": "purchase_date",
+   "fieldtype": "Date",
+   "label": "Ngày mua"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Hạn"
+  },
+  {
+   "fieldname": "last_inspection_date",
+   "fieldtype": "Date",
+   "label": "Lần kiểm tra gần nhất"
+  },
+  {
+   "fieldname": "next_inspection_date",
+   "fieldtype": "Date",
+   "label": "Kiểm tra tiếp"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Vị trí"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Trạng thái",
+   "options": "OK\nCần kiểm tra\nHỏng\nHết hạn",
+   "default": "OK",
+   "in_list_view": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Emergency",
+ "name": "FSMS Fire Equipment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "autoname": "field:equipment_code",
+ "naming_rule": "By fieldname",
+ "title_field": "equipment_name",
+ "track_changes": 1
+}

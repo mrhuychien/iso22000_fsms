@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "topic",
+  "from_department",
+  "to_department",
+  "col_a",
+  "frequency",
+  "method"
+ ],
+ "fields": [
+  {
+   "fieldname": "topic",
+   "fieldtype": "Data",
+   "label": "Chủ đề",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "from_department",
+   "fieldtype": "Link",
+   "label": "Từ phòng ban",
+   "options": "Department",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "to_department",
+   "fieldtype": "Link",
+   "label": "Đến phòng ban",
+   "options": "Department",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Data",
+   "label": "Tần suất"
+  },
+  {
+   "fieldname": "method",
+   "fieldtype": "Select",
+   "label": "Phương thức",
+   "options": "Email\nPhone\nMeeting\nLetter\nZalo\nKhác"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Communication",
+ "name": "FSMS Communication Internal Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

@@ -1,0 +1,155 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "doc_code",
+  "doc_name",
+  "doc_category",
+  "parent_procedure",
+  "revision_section",
+  "current_revision",
+  "effective_date",
+  "next_review_date",
+  "col_meta",
+  "owner_department",
+  "owner_employee",
+  "retention_years",
+  "file_section",
+  "attached_file",
+  "obsolete",
+  "history_section",
+  "change_history"
+ ],
+ "fields": [
+  {
+   "fieldname": "doc_code",
+   "fieldtype": "Data",
+   "label": "Mã tài liệu",
+   "unique": 1,
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "doc_name",
+   "fieldtype": "Data",
+   "label": "Tên tài liệu",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "doc_category",
+   "fieldtype": "Link",
+   "label": "Loại tài liệu",
+   "options": "FSMS Document Category",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "parent_procedure",
+   "fieldtype": "Link",
+   "label": "Thuộc quy trình",
+   "options": "FSMS Document Register Internal"
+  },
+  {
+   "fieldname": "revision_section",
+   "fieldtype": "Section Break",
+   "label": "Phiên bản"
+  },
+  {
+   "fieldname": "current_revision",
+   "fieldtype": "Int",
+   "label": "Phiên bản hiện hành",
+   "default": 1
+  },
+  {
+   "fieldname": "effective_date",
+   "fieldtype": "Date",
+   "label": "Ngày hiệu lực"
+  },
+  {
+   "fieldname": "next_review_date",
+   "fieldtype": "Date",
+   "label": "Ngày soát xét tiếp theo"
+  },
+  {
+   "fieldname": "col_meta",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "owner_department",
+   "fieldtype": "Link",
+   "label": "Phòng ban chủ trì",
+   "options": "Department"
+  },
+  {
+   "fieldname": "owner_employee",
+   "fieldtype": "Link",
+   "label": "Người phụ trách",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "retention_years",
+   "fieldtype": "Int",
+   "label": "Thời hạn lưu (năm)"
+  },
+  {
+   "fieldname": "file_section",
+   "fieldtype": "Section Break",
+   "label": "File & trạng thái"
+  },
+  {
+   "fieldname": "attached_file",
+   "fieldtype": "Attach",
+   "label": "File đính kèm"
+  },
+  {
+   "fieldname": "obsolete",
+   "fieldtype": "Check",
+   "label": "Đã hết hiệu lực"
+  },
+  {
+   "fieldname": "history_section",
+   "fieldtype": "Section Break",
+   "label": "Lịch sử thay đổi"
+  },
+  {
+   "fieldname": "change_history",
+   "fieldtype": "Table",
+   "label": "Lịch sử",
+   "options": "FSMS Document Change Log"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Document Control",
+ "name": "FSMS Document Register Internal",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "autoname": "field:doc_code",
+ "naming_rule": "By fieldname",
+ "title_field": "doc_name",
+ "search_fields": "doc_code,doc_name,doc_category",
+ "track_changes": 1
+}

@@ -1,0 +1,152 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "header_section",
+  "party_name",
+  "party_type",
+  "relevance_to_fsms",
+  "req_section",
+  "requirements",
+  "review_section",
+  "review_year",
+  "next_review_date",
+  "col_a",
+  "responsible_employee",
+  "workflow_section",
+  "workflow_state"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "BQT.###",
+   "default": "BQT.###",
+   "reqd": 1
+  },
+  {
+   "fieldname": "header_section",
+   "fieldtype": "Section Break",
+   "label": "Bên quan tâm"
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Data",
+   "label": "Tên",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "party_type",
+   "fieldtype": "Select",
+   "label": "Loại",
+   "options": "Khách hàng trực tiếp\nNhà cung cấp\nNhà thầu phụ\nChính quyền sở tại\nCơ quan pháp luật\nCổ đông\nNgười lao động\nĐối thủ cạnh tranh\nKhác",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "relevance_to_fsms",
+   "fieldtype": "Long Text",
+   "label": "Liên quan đến FSMS"
+  },
+  {
+   "fieldname": "req_section",
+   "fieldtype": "Section Break",
+   "label": "Yêu cầu"
+  },
+  {
+   "fieldname": "requirements",
+   "fieldtype": "Table",
+   "label": "Yêu cầu",
+   "options": "FSMS Interested Party Requirement"
+  },
+  {
+   "fieldname": "review_section",
+   "fieldtype": "Section Break",
+   "label": "Soát xét"
+  },
+  {
+   "fieldname": "review_year",
+   "fieldtype": "Int",
+   "label": "Năm soát xét"
+  },
+  {
+   "fieldname": "next_review_date",
+   "fieldtype": "Date",
+   "label": "Lần soát xét kế tiếp"
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "responsible_employee",
+   "fieldtype": "Link",
+   "label": "Người phụ trách",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "workflow_section",
+   "fieldtype": "Section Break",
+   "label": "Workflow"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "label": "Trạng thái",
+   "options": "Workflow State",
+   "read_only": 1,
+   "in_list_view": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Context Risk",
+ "name": "FSMS Interested Party",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "party_name",
+ "search_fields": "party_name,party_type",
+ "track_changes": 1
+}

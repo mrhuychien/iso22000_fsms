@@ -1,0 +1,42 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "chemical_item",
+  "concentration",
+  "contact_time_min"
+ ],
+ "fields": [
+  {
+   "fieldname": "chemical_item",
+   "fieldtype": "Link",
+   "label": "Hóa chất",
+   "options": "Item",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "concentration",
+   "fieldtype": "Data",
+   "label": "Nồng độ",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "contact_time_min",
+   "fieldtype": "Float",
+   "label": "Thời gian tiếp xúc (phút)"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS PRP",
+ "name": "FSMS Cleaning Chemical",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

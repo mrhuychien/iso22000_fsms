@@ -1,0 +1,200 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "header_section",
+  "inspection_date",
+  "production_order",
+  "batch",
+  "item",
+  "col_a",
+  "qty_inspected",
+  "qty_passed",
+  "qty_failed",
+  "tests_section",
+  "inspection_table",
+  "decision_section",
+  "decision",
+  "kcs_inspector",
+  "linked_ncr",
+  "release_to_warehouse_date",
+  "workflow_section",
+  "workflow_state",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "KCS-TP.{YYYY}.-.####",
+   "default": "KCS-TP.{YYYY}.-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "header_section",
+   "fieldtype": "Section Break",
+   "label": "KCS thành phẩm"
+  },
+  {
+   "fieldname": "inspection_date",
+   "fieldtype": "Date",
+   "label": "Ngày",
+   "default": "Today",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "production_order",
+   "fieldtype": "Link",
+   "label": "Lệnh SX",
+   "options": "FSMS Production Order",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "batch",
+   "fieldtype": "Link",
+   "label": "Batch",
+   "options": "Batch"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "qty_inspected",
+   "fieldtype": "Float",
+   "label": "SL kiểm tra"
+  },
+  {
+   "fieldname": "qty_passed",
+   "fieldtype": "Float",
+   "label": "SL đạt"
+  },
+  {
+   "fieldname": "qty_failed",
+   "fieldtype": "Float",
+   "label": "SL loại"
+  },
+  {
+   "fieldname": "tests_section",
+   "fieldtype": "Section Break",
+   "label": "Chỉ tiêu kiểm tra"
+  },
+  {
+   "fieldname": "inspection_table",
+   "fieldtype": "Table",
+   "label": "Chỉ tiêu",
+   "options": "FSMS Finished Product Inspection Item"
+  },
+  {
+   "fieldname": "decision_section",
+   "fieldtype": "Section Break",
+   "label": "Quyết định"
+  },
+  {
+   "fieldname": "decision",
+   "fieldtype": "Select",
+   "label": "Quyết định",
+   "options": "Đạt\nTreo\nLoại",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "kcs_inspector",
+   "fieldtype": "Link",
+   "label": "KCS",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "linked_ncr",
+   "fieldtype": "Link",
+   "label": "NCR",
+   "options": "FSMS NCR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "release_to_warehouse_date",
+   "fieldtype": "Date",
+   "label": "Ngày nhập kho"
+  },
+  {
+   "fieldname": "workflow_section",
+   "fieldtype": "Section Break",
+   "label": "Workflow"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "label": "Trạng thái",
+   "options": "Workflow State",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "FSMS Finished Product Inspection",
+   "read_only": 1,
+   "no_copy": 1,
+   "print_hide": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Production",
+ "name": "FSMS Finished Product Inspection",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "is_submittable": 1,
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "batch",
+ "track_changes": 1
+}

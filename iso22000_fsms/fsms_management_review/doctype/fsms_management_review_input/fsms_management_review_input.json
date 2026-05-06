@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "input_topic",
+  "input_data_summary",
+  "col_a",
+  "linked_doctype",
+  "linked_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "input_topic",
+   "fieldtype": "Select",
+   "label": "Nội dung input",
+   "options": "Trạng thái CAR từ kỳ trước\nThay đổi nội bộ + bên ngoài\nHiệu lực FSMS\nTrends + KPI\nĐánh giá NCC\nAudit results\nRecall events\nNC + correction\nVerification results\nRisk + cơ hội\nĐào tạo + năng lực\nResource sufficiency\nCommunication\nKhác",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "input_data_summary",
+   "fieldtype": "Long Text",
+   "label": "Tóm tắt dữ liệu",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "linked_doctype",
+   "fieldtype": "Link",
+   "label": "DocType liên kết",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "linked_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Bản ghi liên kết",
+   "options": "linked_doctype"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Management Review",
+ "name": "FSMS Management Review Input",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "istable": 1
+}

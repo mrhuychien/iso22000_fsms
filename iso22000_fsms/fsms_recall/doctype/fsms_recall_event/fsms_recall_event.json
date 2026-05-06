@@ -1,0 +1,232 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "header_section",
+  "event_no",
+  "event_date",
+  "trigger_source",
+  "col_a",
+  "defect_severity",
+  "recall_level",
+  "desc_section",
+  "defect_description",
+  "affected_section",
+  "affected_items",
+  "affected_batches",
+  "dist_section",
+  "distributions",
+  "team_section",
+  "recall_team",
+  "links_section",
+  "recall_plan",
+  "recall_report",
+  "linked_ncr",
+  "workflow_section",
+  "workflow_state",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "THSP.{YYYY}.-.##",
+   "default": "THSP.{YYYY}.-.##",
+   "reqd": 1
+  },
+  {
+   "fieldname": "header_section",
+   "fieldtype": "Section Break",
+   "label": "Thông tin sự kiện"
+  },
+  {
+   "fieldname": "event_no",
+   "fieldtype": "Data",
+   "label": "Số sự kiện",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "event_date",
+   "fieldtype": "Date",
+   "label": "Ngày phát sinh",
+   "default": "Today",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "trigger_source",
+   "fieldtype": "Select",
+   "label": "Nguồn phát hiện",
+   "options": "Cơ quan QLNN\nKhiếu nại KH\nPhát hiện nội bộ\nSự cố kỹ thuật",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "defect_severity",
+   "fieldtype": "Select",
+   "label": "Mức độ",
+   "options": "Cấp 1\nCấp 2\nCấp 3",
+   "reqd": 1
+  },
+  {
+   "fieldname": "recall_level",
+   "fieldtype": "Select",
+   "label": "Mức thu hồi",
+   "options": "A\nB\nC",
+   "reqd": 1
+  },
+  {
+   "fieldname": "desc_section",
+   "fieldtype": "Section Break",
+   "label": "Mô tả"
+  },
+  {
+   "fieldname": "defect_description",
+   "fieldtype": "Long Text",
+   "label": "Mô tả lỗi"
+  },
+  {
+   "fieldname": "affected_section",
+   "fieldtype": "Section Break",
+   "label": "Sản phẩm ảnh hưởng"
+  },
+  {
+   "fieldname": "affected_items",
+   "fieldtype": "Table",
+   "label": "Item liên quan",
+   "options": "FSMS Recall Affected Item"
+  },
+  {
+   "fieldname": "affected_batches",
+   "fieldtype": "Table",
+   "label": "Lô liên quan",
+   "options": "FSMS Recall Affected Batch"
+  },
+  {
+   "fieldname": "dist_section",
+   "fieldtype": "Section Break",
+   "label": "Phân phối"
+  },
+  {
+   "fieldname": "distributions",
+   "fieldtype": "Table",
+   "label": "Phân phối",
+   "options": "FSMS Recall Distribution"
+  },
+  {
+   "fieldname": "team_section",
+   "fieldtype": "Section Break",
+   "label": "Đoàn thu hồi"
+  },
+  {
+   "fieldname": "recall_team",
+   "fieldtype": "Table",
+   "label": "Thành viên",
+   "options": "FSMS Recall Team Member"
+  },
+  {
+   "fieldname": "links_section",
+   "fieldtype": "Section Break",
+   "label": "Tài liệu liên kết"
+  },
+  {
+   "fieldname": "recall_plan",
+   "fieldtype": "Link",
+   "label": "Kế hoạch thu hồi",
+   "options": "FSMS Recall Plan",
+   "read_only": 1
+  },
+  {
+   "fieldname": "recall_report",
+   "fieldtype": "Link",
+   "label": "Báo cáo thu hồi",
+   "options": "FSMS Recall Report",
+   "read_only": 1
+  },
+  {
+   "fieldname": "linked_ncr",
+   "fieldtype": "Link",
+   "label": "NCR phát sinh",
+   "options": "FSMS NCR",
+   "read_only": 1
+  },
+  {
+   "fieldname": "workflow_section",
+   "fieldtype": "Section Break",
+   "label": "Workflow"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "label": "Trạng thái",
+   "options": "Workflow State",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "FSMS Recall Event",
+   "read_only": 1,
+   "no_copy": 1,
+   "print_hide": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Recall",
+ "name": "FSMS Recall Event",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "is_submittable": 1,
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "event_no",
+ "search_fields": "event_no,trigger_source,recall_level,workflow_state",
+ "track_changes": 1
+}

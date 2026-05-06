@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "creation": "2026-05-06 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "header_section",
+  "log_date",
+  "equipment",
+  "event_type",
+  "col_a",
+  "description",
+  "cost_section",
+  "cost",
+  "downtime_hours",
+  "performed_by",
+  "result",
+  "next_scheduled_date",
+  "attached_invoice"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "SO-BDSC.{YYYY}.-.###",
+   "default": "SO-BDSC.{YYYY}.-.###",
+   "reqd": 1
+  },
+  {
+   "fieldname": "header_section",
+   "fieldtype": "Section Break",
+   "label": "Bảo dưỡng/Sửa chữa"
+  },
+  {
+   "fieldname": "log_date",
+   "fieldtype": "Date",
+   "label": "Ngày",
+   "default": "Today",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "equipment",
+   "fieldtype": "Link",
+   "label": "Thiết bị",
+   "options": "FSMS Production Equipment",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "event_type",
+   "fieldtype": "Select",
+   "label": "Loại",
+   "options": "BD\nSC\nVệ sinh",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "label": "Mô tả"
+  },
+  {
+   "fieldname": "cost_section",
+   "fieldtype": "Section Break",
+   "label": "Chi phí"
+  },
+  {
+   "fieldname": "cost",
+   "fieldtype": "Currency",
+   "label": "Chi phí"
+  },
+  {
+   "fieldname": "downtime_hours",
+   "fieldtype": "Float",
+   "label": "Downtime (giờ)"
+  },
+  {
+   "fieldname": "performed_by",
+   "fieldtype": "Data",
+   "label": "Người/đơn vị thực hiện"
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Select",
+   "label": "Kết quả",
+   "options": "OK\nChưa khắc phục\nCần đầu tư mới"
+  },
+  {
+   "fieldname": "next_scheduled_date",
+   "fieldtype": "Date",
+   "label": "Lần kế tiếp"
+  },
+  {
+   "fieldname": "attached_invoice",
+   "fieldtype": "Attach",
+   "label": "Hóa đơn"
+  }
+ ],
+ "links": [],
+ "modified": "2026-05-06 00:00:00",
+ "modified_by": "Administrator",
+ "module": "FSMS Equipment",
+ "name": "FSMS Equipment Maintenance Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "print": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FSMS Internal Auditor",
+   "read": 1,
+   "print": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "equipment",
+ "track_changes": 1
+}
