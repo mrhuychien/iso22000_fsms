@@ -1,0 +1,10 @@
+<p><b>CẢNH BÁO RECALL</b></p>
+<p>Sự kiện thu hồi <b>{{ doc.name }}</b> vừa được khởi tạo.</p>
+<table cellpadding="6" cellspacing="0" style="border-collapse:collapse">
+  <tr><td><b>Mức nghiêm trọng:</b></td><td>{{ doc.defect_severity }}</td></tr>
+  <tr><td><b>Mức thu hồi:</b></td><td>{{ doc.recall_level }}</td></tr>
+  <tr><td><b>Nguồn phát hiện:</b></td><td>{{ doc.trigger_source }}</td></tr>
+  <tr><td><b>Mô tả:</b></td><td>{{ doc.defect_description or '' }}</td></tr>
+</table>
+<p>Vui lòng vào hệ thống để duyệt kế hoạch thu hồi trong vòng 24h.</p>
+<p><a href="{{ frappe.utils.get_url() }}/app/fsms-recall-event/{{ doc.name }}">Mở sự kiện →</a></p>

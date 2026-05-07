@@ -1,0 +1,50 @@
+[
+ {
+  "doctype": "FSMS NCR Source",
+  "source_code": "AUDIT",
+  "source_name_vi": "Đánh giá nội bộ",
+  "source_doctype": "FSMS Audit Execution",
+  "default_severity": "Major"
+ },
+ {
+  "doctype": "FSMS NCR Source",
+  "source_code": "CCP_FAIL",
+  "source_name_vi": "CCP vượt giới hạn",
+  "source_doctype": "FSMS CCP Monitoring Log",
+  "default_severity": "Critical"
+ },
+ {
+  "doctype": "FSMS NCR Source",
+  "source_code": "COMPLAINT",
+  "source_name_vi": "Khiếu nại khách hàng",
+  "source_doctype": "FSMS Customer Complaint",
+  "default_severity": "Major"
+ },
+ {
+  "doctype": "FSMS NCR Source",
+  "source_code": "MATERIAL_REJECT",
+  "source_name_vi": "NL/VT bị loại",
+  "source_doctype": "FSMS Material Inspection Log",
+  "default_severity": "Minor"
+ },
+ {
+  "doctype": "FSMS NCR Source",
+  "source_code": "CAL_FAIL",
+  "source_name_vi": "Hiệu chuẩn thiết bị không đạt",
+  "source_doctype": "FSMS Calibration Record",
+  "default_severity": "Major"
+ },
+ {
+  "doctype": "FSMS NCR Source",
+  "source_code": "PROD_NC",
+  "source_name_vi": "Sự không phù hợp trong SX",
+  "source_doctype": "FSMS Production Nonconformity",
+  "default_severity": "Minor"
+ },
+ {
+  "doctype": "FSMS NCR Source",
+  "source_code": "INTERNAL",
+  "source_name_vi": "Báo cáo nội bộ",
+  "default_severity": "Minor"
+ }
+]

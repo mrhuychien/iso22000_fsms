@@ -1,0 +1,3 @@
+<p>Kế hoạch đánh giá <b>{{ doc.name }}</b> sẽ khởi động vào ngày <b>{{ frappe.utils.formatdate(doc.audit_date_from) }}</b>.</p>
+<p>Phạm vi: {{ doc.audit_scope or '' }}</p>
+<p><a href="{{ frappe.utils.get_url() }}/app/fsms-audit-plan/{{ doc.name }}">Mở kế hoạch →</a></p>

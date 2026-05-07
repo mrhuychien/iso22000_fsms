@@ -1,0 +1,98 @@
+[
+ {
+  "doctype": "Workspace",
+  "name": "FSMS",
+  "label": "Bảng điều khiển ATTP",
+  "title": "Bảng điều khiển ATTP",
+  "module": "ISO 22000 FSMS",
+  "icon": "shield",
+  "public": 1,
+  "is_hidden": 0,
+  "links": [
+   {
+    "label": "Phiếu yêu cầu hành động khắc phục",
+    "type": "Link",
+    "link_type": "DocType",
+    "link_to": "FSMS NCR"
+   },
+   {
+    "label": "Sự kiện thu hồi",
+    "type": "Link",
+    "link_type": "DocType",
+    "link_to": "FSMS Recall Event"
+   },
+   {
+    "label": "Kế hoạch HACCP",
+    "type": "Link",
+    "link_type": "DocType",
+    "link_to": "FSMS HACCP Plan"
+   },
+   {
+    "label": "Đăng ký rủi ro",
+    "type": "Link",
+    "link_type": "DocType",
+    "link_to": "FSMS Risk Register"
+   },
+   {
+    "label": "Đánh giá nội bộ",
+    "type": "Link",
+    "link_type": "DocType",
+    "link_to": "FSMS Audit Plan"
+   },
+   {
+    "label": "Đánh giá NCC",
+    "type": "Link",
+    "link_type": "DocType",
+    "link_to": "FSMS Supplier Evaluation"
+   },
+   {
+    "label": "Hiệu chuẩn thiết bị đo",
+    "type": "Link",
+    "link_type": "DocType",
+    "link_to": "FSMS Calibration Record"
+   },
+   {
+    "label": "Lưu mẫu",
+    "type": "Link",
+    "link_type": "DocType",
+    "link_to": "FSMS Sample Retention Log"
+   },
+   {
+    "label": "Khiếu nại khách hàng",
+    "type": "Link",
+    "link_type": "DocType",
+    "link_to": "FSMS Customer Complaint"
+   },
+   {
+    "label": "Truy xuất nguồn gốc",
+    "type": "Link",
+    "link_type": "DocType",
+    "link_to": "FSMS Traceability Trace"
+   },
+   {
+    "label": "Sổ tay ATTP",
+    "type": "Link",
+    "link_type": "DocType",
+    "link_to": "FSMS Manual"
+   },
+   {
+    "label": "Mục tiêu ATTP",
+    "type": "Link",
+    "link_type": "DocType",
+    "link_to": "FSMS Objective"
+   }
+  ],
+  "shortcuts": [
+   {
+    "label": "FSMS Settings",
+    "type": "DocType",
+    "link_to": "FSMS Settings"
+   },
+   {
+    "label": "Tạo NCR mới",
+    "type": "DocType",
+    "link_to": "FSMS NCR"
+   }
+  ]
+ }
+]

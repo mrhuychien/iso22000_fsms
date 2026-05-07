@@ -1,0 +1,44 @@
+[
+ {
+  "doctype": "FSMS Document Category",
+  "category_code": "QT",
+  "category_name": "Quy trình hệ thống",
+  "default_retention_years": 10,
+  "review_frequency_months": 12
+ },
+ {
+  "doctype": "FSMS Document Category",
+  "category_code": "BM",
+  "category_name": "Biểu mẫu",
+  "default_retention_years": 5,
+  "review_frequency_months": 24
+ },
+ {
+  "doctype": "FSMS Document Category",
+  "category_code": "HD",
+  "category_name": "Hướng dẫn công việc",
+  "default_retention_years": 5,
+  "review_frequency_months": 24
+ },
+ {
+  "doctype": "FSMS Document Category",
+  "category_code": "PL",
+  "category_name": "Phụ lục",
+  "default_retention_years": 5,
+  "review_frequency_months": 24
+ },
+ {
+  "doctype": "FSMS Document Category",
+  "category_code": "QĐ",
+  "category_name": "Quy định / Quyết định",
+  "default_retention_years": 10,
+  "review_frequency_months": 12
+ },
+ {
+  "doctype": "FSMS Document Category",
+  "category_code": "KH",
+  "category_name": "Kế hoạch",
+  "default_retention_years": 10,
+  "review_frequency_months": 12
+ }
+]

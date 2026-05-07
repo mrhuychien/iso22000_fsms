@@ -1,0 +1,3 @@
+<p>NCR <b>{{ doc.name }}</b> đã quá hạn hoàn thành ({{ frappe.utils.formatdate(doc.proposed_completion_date) }}) mà chưa đóng.</p>
+<p>Người được giao: <b>{{ doc.assigned_to or 'Chưa giao' }}</b>. Vui lòng cập nhật tiến độ.</p>
+<p><a href="{{ frappe.utils.get_url() }}/app/fsms-ncr/{{ doc.name }}">Mở phiếu →</a></p>

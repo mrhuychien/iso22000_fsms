@@ -1,0 +1,10 @@
+<p>Kính gửi {% if doc.affected_department %}<b>{{ doc.affected_department }}</b>{% else %}quý đồng nghiệp{% endif %},</p>
+<p>Phiếu yêu cầu hành động khắc phục số <b>{{ doc.name }}</b> đang chờ phê duyệt phương án.</p>
+<table cellspacing="0" cellpadding="6" style="border-collapse:collapse">
+  <tr><td><b>Mức độ:</b></td><td>{{ doc.severity }}</td></tr>
+  <tr><td><b>Nguồn:</b></td><td>{{ doc.ncr_source or '' }}</td></tr>
+  <tr><td><b>Mô tả:</b></td><td>{{ doc.nonconformity_description or '' }}</td></tr>
+  <tr><td><b>Người đề xuất:</b></td><td>{{ doc.requestor or '' }}</td></tr>
+  <tr><td><b>Ngày đề xuất:</b></td><td>{{ frappe.utils.formatdate(doc.requestor_date) if doc.requestor_date else '' }}</td></tr>
+</table>
+<p><a href="{{ frappe.utils.get_url() }}/app/fsms-ncr/{{ doc.name }}">Mở phiếu →</a></p>

@@ -1,0 +1,2 @@
+<p>Rủi ro <b>{{ doc.name }}</b> ({{ doc.risk_category }}) đến hạn soát xét vào {{ frappe.utils.formatdate(doc.next_review_date) }}.</p>
+<p>Mức rủi ro hiện tại: <b>{{ doc.risk_level or '' }}</b> (tổng điểm {{ doc.total_score }})</p>

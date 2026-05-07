@@ -1,0 +1,73 @@
+[
+ {
+  "doctype": "Dashboard Chart",
+  "chart_name": "FSMS NCR Trend 12 Months",
+  "chart_type": "Group By",
+  "document_type": "FSMS NCR",
+  "based_on": "ncr_date",
+  "time_interval": "Monthly",
+  "timespan": "Last Year",
+  "group_by_based_on": "severity",
+  "group_by_type": "Count",
+  "type": "Bar",
+  "is_public": 1,
+  "is_standard": 1,
+  "module": "ISO 22000 FSMS"
+ },
+ {
+  "doctype": "Dashboard Chart",
+  "chart_name": "FSMS Audit Findings by Department",
+  "chart_type": "Group By",
+  "document_type": "FSMS Audit Finding",
+  "group_by_based_on": "responsible_department",
+  "group_by_type": "Count",
+  "type": "Donut",
+  "is_public": 1,
+  "is_standard": 1,
+  "module": "ISO 22000 FSMS"
+ },
+ {
+  "doctype": "Dashboard Chart",
+  "chart_name": "FSMS Risk Heatmap",
+  "chart_type": "Group By",
+  "document_type": "FSMS Risk Register",
+  "group_by_based_on": "risk_level",
+  "group_by_type": "Count",
+  "type": "Heatmap",
+  "is_public": 1,
+  "is_standard": 1,
+  "module": "ISO 22000 FSMS"
+ },
+ {
+  "doctype": "Dashboard Chart",
+  "chart_name": "FSMS Calibration Compliance",
+  "chart_type": "Custom",
+  "document_type": "FSMS Measurement Equipment",
+  "type": "Bar",
+  "is_public": 1,
+  "is_standard": 1,
+  "module": "ISO 22000 FSMS"
+ },
+ {
+  "doctype": "Dashboard Chart",
+  "chart_name": "FSMS Training Compliance",
+  "chart_type": "Custom",
+  "document_type": "FSMS Training Session",
+  "type": "Bar",
+  "is_public": 1,
+  "is_standard": 1,
+  "module": "ISO 22000 FSMS"
+ },
+ {
+  "doctype": "Dashboard Chart",
+  "chart_name": "FSMS Supplier Grade Distribution",
+  "chart_type": "Group By",
+  "document_type": "FSMS Supplier Profile",
+  "group_by_based_on": "last_evaluation_grade",
+  "group_by_type": "Count",
+  "type": "Pie",
+  "is_public": 1,
+  "is_standard": 1,
+  "module": "ISO 22000 FSMS"
+ }
+]

@@ -1,0 +1,3 @@
+<p>Kế hoạch HACCP <b>{{ doc.name }}</b> cho sản phẩm <b>{{ doc.item }}</b> đã được phát hành chính thức.</p>
+<p>Phiên bản: {{ doc.plan_version }} · Hiệu lực từ: {{ frappe.utils.formatdate(doc.effective_date) }}</p>
+<p><a href="{{ frappe.utils.get_url() }}/app/fsms-haccp-plan/{{ doc.name }}">Xem chi tiết →</a></p>

@@ -1,0 +1,251 @@
+[
+ {
+  "doctype": "Notification",
+  "name": "FSMS NCR Pending Approval",
+  "subject": "[FSMS] NCR {{ doc.name }} chờ phê duyệt — {{ doc.severity }}",
+  "document_type": "FSMS NCR",
+  "event": "Value Change",
+  "channel": "Email",
+  "message": "{% include 'iso22000_fsms/templates/notifications/ncr_pending_approval.html' %}",
+  "send_to_all_assignees": 0,
+  "is_standard": 1,
+  "module": "ISO 22000 FSMS",
+  "recipients": [
+   {
+    "receiver_by_role": "FSMS Manager"
+   },
+   {
+    "receiver_by_document_field": "affected_department"
+   }
+  ],
+  "enabled": 1,
+  "condition": "doc.workflow_state == 'Chờ phê duyệt'",
+  "value_changed": "workflow_state"
+ },
+ {
+  "doctype": "Notification",
+  "name": "FSMS NCR Overdue",
+  "subject": "[FSMS] NCR {{ doc.name }} quá hạn",
+  "document_type": "FSMS NCR",
+  "event": "Method",
+  "channel": "Email",
+  "message": "{% include 'iso22000_fsms/templates/notifications/ncr_overdue.html' %}",
+  "send_to_all_assignees": 0,
+  "is_standard": 1,
+  "module": "ISO 22000 FSMS",
+  "recipients": [
+   {
+    "receiver_by_document_field": "assigned_to"
+   },
+   {
+    "receiver_by_role": "FSMS Manager"
+   }
+  ],
+  "enabled": 1
+ },
+ {
+  "doctype": "Notification",
+  "name": "FSMS Recall Event Initiated",
+  "subject": "[FSMS] Sự kiện thu hồi {{ doc.name }} — Mức {{ doc.recall_level }}",
+  "document_type": "FSMS Recall Event",
+  "event": "New",
+  "channel": "Email",
+  "message": "{% include 'iso22000_fsms/templates/notifications/recall_event_initiated.html' %}",
+  "send_to_all_assignees": 0,
+  "is_standard": 1,
+  "module": "ISO 22000 FSMS",
+  "recipients": [
+   {
+    "receiver_by_role": "FSMS Director"
+   },
+   {
+    "receiver_by_role": "FSMS Manager"
+   }
+  ],
+  "enabled": 1
+ },
+ {
+  "doctype": "Notification",
+  "name": "FSMS HACCP Plan Published",
+  "subject": "[FSMS] HACCP Plan {{ doc.name }} đã được phát hành",
+  "document_type": "FSMS HACCP Plan",
+  "event": "Value Change",
+  "channel": "Email",
+  "message": "{% include 'iso22000_fsms/templates/notifications/haccp_published.html' %}",
+  "send_to_all_assignees": 0,
+  "is_standard": 1,
+  "module": "ISO 22000 FSMS",
+  "recipients": [
+   {
+    "receiver_by_role": "FSMS Production Lead"
+   },
+   {
+    "receiver_by_role": "FSMS QC Officer"
+   }
+  ],
+  "enabled": 1,
+  "condition": "doc.workflow_state == 'Published'",
+  "value_changed": "workflow_state"
+ },
+ {
+  "doctype": "Notification",
+  "name": "FSMS CCP Out Of Limit",
+  "subject": "[FSMS] CCP {{ doc.ccp }} vượt giới hạn",
+  "document_type": "FSMS CCP Monitoring Log",
+  "event": "Save",
+  "channel": "Email",
+  "message": "{% include 'iso22000_fsms/templates/notifications/ccp_out_of_limit.html' %}",
+  "send_to_all_assignees": 0,
+  "is_standard": 1,
+  "module": "ISO 22000 FSMS",
+  "recipients": [
+   {
+    "receiver_by_role": "FSMS Manager"
+   },
+   {
+    "receiver_by_role": "FSMS Production Lead"
+   }
+  ],
+  "enabled": 1,
+  "condition": "doc.is_within_limit == 0"
+ },
+ {
+  "doctype": "Notification",
+  "name": "FSMS Calibration Due",
+  "subject": "[FSMS] Hiệu chuẩn thiết bị {{ doc.equipment_code }} sắp đến hạn",
+  "document_type": "FSMS Measurement Equipment",
+  "event": "Method",
+  "channel": "Email",
+  "message": "{% include 'iso22000_fsms/templates/notifications/calibration_due.html' %}",
+  "send_to_all_assignees": 0,
+  "is_standard": 1,
+  "module": "ISO 22000 FSMS",
+  "recipients": [
+   {
+    "receiver_by_role": "FSMS QC Officer"
+   }
+  ],
+  "enabled": 1
+ },
+ {
+  "doctype": "Notification",
+  "name": "FSMS Calibration Failed",
+  "subject": "[FSMS] Hiệu chuẩn không đạt — {{ doc.equipment }}",
+  "document_type": "FSMS Calibration Record",
+  "event": "Save",
+  "channel": "Email",
+  "message": "{% include 'iso22000_fsms/templates/notifications/calibration_failed.html' %}",
+  "send_to_all_assignees": 0,
+  "is_standard": 1,
+  "module": "ISO 22000 FSMS",
+  "recipients": [
+   {
+    "receiver_by_role": "FSMS Manager"
+   }
+  ],
+  "enabled": 1,
+  "condition": "doc.cal_result == 'Không đạt'"
+ },
+ {
+  "doctype": "Notification",
+  "name": "FSMS Document Review Due",
+  "subject": "[FSMS] Tài liệu {{ doc.doc_code }} sắp đến hạn soát xét",
+  "document_type": "FSMS Document Register Internal",
+  "event": "Days Before",
+  "channel": "Email",
+  "message": "{% include 'iso22000_fsms/templates/notifications/document_review_due.html' %}",
+  "send_to_all_assignees": 0,
+  "is_standard": 1,
+  "module": "ISO 22000 FSMS",
+  "recipients": [
+   {
+    "receiver_by_document_field": "owner_employee"
+   },
+   {
+    "receiver_by_role": "FSMS Manager"
+   }
+  ],
+  "enabled": 1
+ },
+ {
+  "doctype": "Notification",
+  "name": "FSMS Audit Plan Kickoff",
+  "subject": "[FSMS] Kế hoạch đánh giá {{ doc.name }} sắp khởi động",
+  "document_type": "FSMS Audit Plan",
+  "event": "Days Before",
+  "channel": "Email",
+  "message": "{% include 'iso22000_fsms/templates/notifications/audit_kickoff.html' %}",
+  "send_to_all_assignees": 0,
+  "is_standard": 1,
+  "module": "ISO 22000 FSMS",
+  "recipients": [
+   {
+    "receiver_by_role": "FSMS Internal Auditor"
+   },
+   {
+    "receiver_by_role": "FSMS Manager"
+   }
+  ],
+  "enabled": 1
+ },
+ {
+  "doctype": "Notification",
+  "name": "FSMS Sample Disposal Due",
+  "subject": "[FSMS] Mẫu lưu {{ doc.name }} đến hạn hủy",
+  "document_type": "FSMS Sample Retention Log",
+  "event": "Method",
+  "channel": "Email",
+  "message": "{% include 'iso22000_fsms/templates/notifications/sample_disposal_due.html' %}",
+  "send_to_all_assignees": 0,
+  "is_standard": 1,
+  "module": "ISO 22000 FSMS",
+  "recipients": [
+   {
+    "receiver_by_role": "FSMS QC Officer"
+   }
+  ],
+  "enabled": 1
+ },
+ {
+  "doctype": "Notification",
+  "name": "FSMS Risk Review Due",
+  "subject": "[FSMS] Rủi ro {{ doc.name }} đến hạn soát xét",
+  "document_type": "FSMS Risk Register",
+  "event": "Days Before",
+  "channel": "Email",
+  "message": "{% include 'iso22000_fsms/templates/notifications/risk_review_due.html' %}",
+  "send_to_all_assignees": 0,
+  "is_standard": 1,
+  "module": "ISO 22000 FSMS",
+  "recipients": [
+   {
+    "receiver_by_document_field": "risk_owner_employee"
+   },
+   {
+    "receiver_by_role": "FSMS Manager"
+   }
+  ],
+  "enabled": 1
+ },
+ {
+  "doctype": "Notification",
+  "name": "FSMS Customer Complaint New",
+  "subject": "[FSMS] Khiếu nại mới — {{ doc.name }}",
+  "document_type": "FSMS Customer Complaint",
+  "event": "New",
+  "channel": "Email",
+  "message": "{% include 'iso22000_fsms/templates/notifications/complaint_new.html' %}",
+  "send_to_all_assignees": 0,
+  "is_standard": 1,
+  "module": "ISO 22000 FSMS",
+  "recipients": [
+   {
+    "receiver_by_role": "FSMS Sales Lead"
+   },
+   {
+    "receiver_by_role": "FSMS Manager"
+   }
+  ],
+  "enabled": 1
+ }
+]

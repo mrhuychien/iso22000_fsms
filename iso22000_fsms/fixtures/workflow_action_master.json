@@ -1,0 +1,158 @@
+[
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Gửi phân tích"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Gửi phê duyệt"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Phê duyệt"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Yêu cầu sửa"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Approve"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Reject"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Submit for Review"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Publish"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Mark Obsolete"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Initiate Revision"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Hoàn thành thực hiện"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Đạt - đóng phiếu"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Không đạt - chuyển tiếp"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "GD phê duyệt thu hồi"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Đã thu hồi vật lý"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Bắt đầu báo cáo"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "GD ký duyệt báo cáo"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Notify Auditees"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Start Audit"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Submit Findings"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Close Audit"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Schedule Calibration"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Submit Calibration Result"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Verify Calibration"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Send Inspection"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Submit Inspection"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Verify Inspection"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Schedule Drill"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Execute Drill"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Submit Drill Report"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Open"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Investigate"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Resolve"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Close"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Plan"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Execute"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Submit Report"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Review"
+ },
+ {
+  "doctype": "Workflow Action Master",
+  "workflow_action_name": "Re-issue"
+ }
+]

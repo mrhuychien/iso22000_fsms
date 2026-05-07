@@ -1,0 +1,90 @@
+[
+ {
+  "doctype": "FSMS PRP Item",
+  "prp_code": "PRP1-Construction",
+  "description": "Construction and layout of buildings",
+  "monitoring_method": "Quan sát hạ tầng, ghi chép hiện trạng",
+  "frequency": "Năm",
+  "is_template": 1
+ },
+ {
+  "doctype": "FSMS PRP Item",
+  "prp_code": "PRP2-Layout",
+  "description": "Layout of premises and workspace",
+  "monitoring_method": "Sơ đồ + checklist",
+  "frequency": "Năm",
+  "is_template": 1
+ },
+ {
+  "doctype": "FSMS PRP Item",
+  "prp_code": "PRP3-Utilities",
+  "description": "Utilities — air, water, energy",
+  "monitoring_method": "Test mẫu nước, đo độ ẩm, áp suất",
+  "frequency": "Tuần",
+  "is_template": 1
+ },
+ {
+  "doctype": "FSMS PRP Item",
+  "prp_code": "PRP4-Waste",
+  "description": "Waste disposal",
+  "monitoring_method": "Quan sát + ghi sổ chất thải",
+  "frequency": "Ngày",
+  "is_template": 1
+ },
+ {
+  "doctype": "FSMS PRP Item",
+  "prp_code": "PRP5-Equipment",
+  "description": "Equipment suitability, cleaning, maintenance",
+  "monitoring_method": "Kiểm tra thiết bị + lịch BD",
+  "frequency": "Tuần",
+  "is_template": 1
+ },
+ {
+  "doctype": "FSMS PRP Item",
+  "prp_code": "PRP6-Material",
+  "description": "Management of purchased materials",
+  "monitoring_method": "Kiểm tra COA + nhập kho",
+  "frequency": "Mỗi đợt nhập",
+  "is_template": 1
+ },
+ {
+  "doctype": "FSMS PRP Item",
+  "prp_code": "PRP7-Cross-contam",
+  "description": "Measures for prevention of cross-contamination",
+  "monitoring_method": "Quan sát + GMP audit",
+  "frequency": "Tuần",
+  "is_template": 1
+ },
+ {
+  "doctype": "FSMS PRP Item",
+  "prp_code": "PRP8-Cleaning",
+  "description": "Cleaning and sanitizing",
+  "monitoring_method": "Sổ vệ sinh + ATP swab",
+  "frequency": "Ngày",
+  "is_template": 1
+ },
+ {
+  "doctype": "FSMS PRP Item",
+  "prp_code": "PRP9-Pest",
+  "description": "Pest control",
+  "monitoring_method": "Sổ diệt côn trùng + bẫy",
+  "frequency": "Tuần",
+  "is_template": 1
+ },
+ {
+  "doctype": "FSMS PRP Item",
+  "prp_code": "PRP10-Personnel",
+  "description": "Personnel hygiene and employee facilities",
+  "monitoring_method": "Sổ vệ sinh CN + sức khỏe",
+  "frequency": "Ngày",
+  "is_template": 1
+ },
+ {
+  "doctype": "FSMS PRP Item",
+  "prp_code": "PRP11-Rework",
+  "description": "Rework",
+  "monitoring_method": "Sổ rework + truy xuất",
+  "frequency": "Mỗi lần rework",
+  "is_template": 1
+ }
+]

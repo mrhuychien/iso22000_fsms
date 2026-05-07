@@ -1,0 +1,5 @@
+<p><b>CẢNH BÁO CCP VƯỢT GIỚI HẠN</b></p>
+<p>Lượt giám sát CCP <b>{{ doc.ccp }}</b> ngày {{ frappe.utils.formatdate(doc.log_date) }} ghi nhận giá trị <b>{{ doc.measurement_value }} {{ doc.measurement_unit or '' }}</b>.</p>
+<p>Lệnh sản xuất: {{ doc.production_order or '' }}</p>
+<p>Vui lòng vào hệ thống để xác minh hành động khắc phục.</p>
+<p><a href="{{ frappe.utils.get_url() }}/app/fsms-ccp-monitoring-log/{{ doc.name }}">Mở phiếu →</a></p>

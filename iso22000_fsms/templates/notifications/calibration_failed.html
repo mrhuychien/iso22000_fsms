@@ -1,0 +1,3 @@
+<p>Hồ sơ hiệu chuẩn <b>{{ doc.name }}</b> cho thiết bị <b>{{ doc.equipment }}</b> ngày {{ frappe.utils.formatdate(doc.cal_date) }} có kết quả: <b>Không đạt</b>.</p>
+<p>NCR liên quan đã được tạo: {{ doc.linked_ncr or '(đang xử lý)' }}.</p>
+<p><a href="{{ frappe.utils.get_url() }}/app/fsms-calibration-record/{{ doc.name }}">Mở hồ sơ →</a></p>

@@ -1,0 +1,50 @@
+[
+ {
+  "doctype": "Dashboard",
+  "name": "FSMS Director Dashboard",
+  "dashboard_name": "FSMS Director Dashboard",
+  "module": "ISO 22000 FSMS",
+  "is_default": 0,
+  "is_standard": 1,
+  "charts": [
+   {
+    "chart": "FSMS NCR Trend 12 Months",
+    "width": "Half"
+   },
+   {
+    "chart": "FSMS Audit Findings by Department",
+    "width": "Half"
+   },
+   {
+    "chart": "FSMS Risk Heatmap",
+    "width": "Full"
+   },
+   {
+    "chart": "FSMS Calibration Compliance",
+    "width": "Half"
+   },
+   {
+    "chart": "FSMS Training Compliance",
+    "width": "Half"
+   },
+   {
+    "chart": "FSMS Supplier Grade Distribution",
+    "width": "Full"
+   }
+  ],
+  "cards": [
+   {
+    "card": "FSMS Open NCR Count"
+   },
+   {
+    "card": "FSMS NCR On-time Closure Rate"
+   },
+   {
+    "card": "FSMS Recall Events YTD"
+   },
+   {
+    "card": "FSMS Audit Findings Closure Rate"
+   }
+  ]
+ }
+]

@@ -1,0 +1,9 @@
+<p>Khiếu nại mới từ KH <b>{{ doc.customer }}</b> vừa được tiếp nhận.</p>
+<table cellpadding="6" cellspacing="0" style="border-collapse:collapse">
+  <tr><td><b>Kênh:</b></td><td>{{ doc.complaint_channel }}</td></tr>
+  <tr><td><b>Mức độ:</b></td><td>{{ doc.severity }}</td></tr>
+  <tr><td><b>Sản phẩm:</b></td><td>{{ doc.affected_item or '' }}</td></tr>
+  <tr><td><b>Lô:</b></td><td>{{ doc.affected_batch or '' }}</td></tr>
+</table>
+<p>Nội dung: {{ doc.complaint_subject or '' }}</p>
+<p><a href="{{ frappe.utils.get_url() }}/app/fsms-customer-complaint/{{ doc.name }}">Mở khiếu nại →</a></p>

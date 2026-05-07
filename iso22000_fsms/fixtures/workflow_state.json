@@ -1,0 +1,167 @@
+[
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Draft",
+  "style": "Primary"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Reviewed",
+  "style": "Warning"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Pending Approval",
+  "style": "Warning"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Approved",
+  "style": "Success"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Published",
+  "style": "Success"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Under Revision",
+  "style": "Warning"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Obsolete",
+  "style": "Primary"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Closed",
+  "style": "Primary"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Đóng",
+  "style": "Primary"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Đề xuất",
+  "style": "Primary"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Phân tích",
+  "style": "Warning"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Chờ phê duyệt",
+  "style": "Warning"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Đang thực hiện",
+  "style": "Success"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Đang xác minh",
+  "style": "Warning"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Đã đóng",
+  "style": "Success"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Chuyển tiếp",
+  "style": "Danger"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Phát sinh",
+  "style": "Primary"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Lập kế hoạch",
+  "style": "Warning"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Đang thu hồi",
+  "style": "Danger"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Bảo quản",
+  "style": "Warning"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Báo cáo",
+  "style": "Warning"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Notified",
+  "style": "Warning"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Executing",
+  "style": "Success"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Reported",
+  "style": "Warning"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Submitted",
+  "style": "Warning"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Verified",
+  "style": "Success"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Hoàn thành",
+  "style": "Success"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Đang xảy ra",
+  "style": "Danger"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Đã xử lý",
+  "style": "Warning"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Đã báo cáo",
+  "style": "Success"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Mới",
+  "style": "Primary"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Đang xử lý",
+  "style": "Warning"
+ },
+ {
+  "doctype": "Workflow State",
+  "workflow_state_name": "Đã giải quyết",
+  "style": "Success"
+ }
+]

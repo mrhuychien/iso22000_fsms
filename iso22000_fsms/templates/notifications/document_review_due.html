@@ -1,0 +1,2 @@
+<p>Tài liệu <b>{{ doc.doc_code }} — {{ doc.doc_name }}</b> sắp đến hạn soát xét vào ngày <b>{{ frappe.utils.formatdate(doc.next_review_date) }}</b>.</p>
+<p>Người phụ trách: {{ doc.owner_employee or '(chưa gán)' }}.</p>

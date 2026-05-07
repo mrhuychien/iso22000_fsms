@@ -1,0 +1,98 @@
+[
+ {
+  "doctype": "Email Template",
+  "name": "FSMS NCR Notification",
+  "subject": "[FSMS] NCR {{ doc.name }}",
+  "response": "<p>Phiếu NCR <b>{{ doc.name }}</b> trạng thái <b>{{ doc.workflow_state }}</b>.</p>",
+  "use_html": 1,
+  "module": "ISO 22000 FSMS"
+ },
+ {
+  "doctype": "Email Template",
+  "name": "FSMS Recall Notification",
+  "subject": "[FSMS] Recall {{ doc.name }}",
+  "response": "<p>Sự kiện thu hồi <b>{{ doc.name }}</b> mức <b>{{ doc.recall_level }}</b>.</p>",
+  "use_html": 1,
+  "module": "ISO 22000 FSMS"
+ },
+ {
+  "doctype": "Email Template",
+  "name": "FSMS Audit Notification",
+  "subject": "[FSMS] Audit {{ doc.name }}",
+  "response": "<p>Kế hoạch đánh giá <b>{{ doc.name }}</b> sắp khởi động.</p>",
+  "use_html": 1,
+  "module": "ISO 22000 FSMS"
+ },
+ {
+  "doctype": "Email Template",
+  "name": "FSMS Document Review",
+  "subject": "[FSMS] Tài liệu cần soát xét {{ doc.doc_code }}",
+  "response": "<p>Tài liệu <b>{{ doc.doc_code }}</b> sắp đến hạn soát xét vào {{ doc.next_review_date }}.</p>",
+  "use_html": 1,
+  "module": "ISO 22000 FSMS"
+ },
+ {
+  "doctype": "Email Template",
+  "name": "FSMS Calibration Due",
+  "subject": "[FSMS] Hiệu chuẩn cần thực hiện",
+  "response": "<p>Thiết bị <b>{{ doc.equipment_code }}</b> đến hạn hiệu chuẩn.</p>",
+  "use_html": 1,
+  "module": "ISO 22000 FSMS"
+ },
+ {
+  "doctype": "Email Template",
+  "name": "FSMS HACCP Update",
+  "subject": "[FSMS] HACCP cập nhật {{ doc.name }}",
+  "response": "<p>Kế hoạch HACCP <b>{{ doc.name }}</b> trạng thái <b>{{ doc.workflow_state }}</b>.</p>",
+  "use_html": 1,
+  "module": "ISO 22000 FSMS"
+ },
+ {
+  "doctype": "Email Template",
+  "name": "FSMS CCP Breach",
+  "subject": "[FSMS] CCP vượt giới hạn",
+  "response": "<p>CCP <b>{{ doc.ccp }}</b> đo được {{ doc.measurement_value }} {{ doc.measurement_unit }}.</p>",
+  "use_html": 1,
+  "module": "ISO 22000 FSMS"
+ },
+ {
+  "doctype": "Email Template",
+  "name": "FSMS Sample Disposal",
+  "subject": "[FSMS] Hủy mẫu lưu",
+  "response": "<p>Mẫu <b>{{ doc.name }}</b> đến hạn hủy vào {{ doc.expected_disposal_date }}.</p>",
+  "use_html": 1,
+  "module": "ISO 22000 FSMS"
+ },
+ {
+  "doctype": "Email Template",
+  "name": "FSMS Risk Review",
+  "subject": "[FSMS] Rủi ro cần soát xét",
+  "response": "<p>Rủi ro <b>{{ doc.name }}</b> đến hạn soát xét.</p>",
+  "use_html": 1,
+  "module": "ISO 22000 FSMS"
+ },
+ {
+  "doctype": "Email Template",
+  "name": "FSMS Complaint Ack",
+  "subject": "[FSMS] Đã tiếp nhận khiếu nại",
+  "response": "<p>Khiếu nại <b>{{ doc.name }}</b> đã được tiếp nhận và đang xử lý.</p>",
+  "use_html": 1,
+  "module": "ISO 22000 FSMS"
+ },
+ {
+  "doctype": "Email Template",
+  "name": "FSMS Training Reminder",
+  "subject": "[FSMS] Nhắc tham dự đào tạo",
+  "response": "<p>Bạn được phân công tham dự khóa đào tạo {{ doc.course }}.</p>",
+  "use_html": 1,
+  "module": "ISO 22000 FSMS"
+ },
+ {
+  "doctype": "Email Template",
+  "name": "FSMS Mgmt Review Invite",
+  "subject": "[FSMS] Mời họp xem xét lãnh đạo {{ doc.name }}",
+  "response": "<p>Cuộc họp <b>{{ doc.name }}</b> diễn ra ngày {{ doc.review_date }}.</p>",
+  "use_html": 1,
+  "module": "ISO 22000 FSMS"
+ }
+]

@@ -1,0 +1,389 @@
+[
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Item",
+  "role": "FSMS Manager",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1,
+  "email": 1,
+  "report": 1,
+  "export": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Item",
+  "role": "FSMS QC Officer",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1,
+  "email": 1,
+  "report": 1,
+  "export": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Item",
+  "role": "FSMS Internal Auditor",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1,
+  "email": 1,
+  "report": 1,
+  "export": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Batch",
+  "role": "FSMS Manager",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Batch",
+  "role": "FSMS Director",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Batch",
+  "role": "FSMS Internal Auditor",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Batch",
+  "role": "FSMS Production Lead",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Batch",
+  "role": "FSMS Planning Lead",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Batch",
+  "role": "FSMS Sales Lead",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Batch",
+  "role": "FSMS Accounting Lead",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Batch",
+  "role": "FSMS QC Officer",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Batch",
+  "role": "FSMS Team Member",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Batch",
+  "role": "FSMS Employee",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Customer",
+  "role": "FSMS Manager",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1,
+  "email": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Customer",
+  "role": "FSMS Sales Lead",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1,
+  "email": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Customer",
+  "role": "FSMS QC Officer",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1,
+  "email": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Supplier",
+  "role": "FSMS Manager",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1,
+  "email": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Supplier",
+  "role": "FSMS Planning Lead",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1,
+  "email": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Supplier",
+  "role": "FSMS QC Officer",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1,
+  "email": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Employee",
+  "role": "FSMS Manager",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Employee",
+  "role": "Production Department Head",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Employee",
+  "role": "Sales Department Head",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Employee",
+  "role": "Planning Department Head",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Employee",
+  "role": "Accounting Department Head",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Department",
+  "role": "FSMS Manager",
+  "permlevel": 0,
+  "read": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Department",
+  "role": "FSMS Director",
+  "permlevel": 0,
+  "read": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Department",
+  "role": "FSMS Internal Auditor",
+  "permlevel": 0,
+  "read": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Department",
+  "role": "FSMS Production Lead",
+  "permlevel": 0,
+  "read": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Department",
+  "role": "FSMS Planning Lead",
+  "permlevel": 0,
+  "read": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Department",
+  "role": "FSMS Sales Lead",
+  "permlevel": 0,
+  "read": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Department",
+  "role": "FSMS Accounting Lead",
+  "permlevel": 0,
+  "read": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Department",
+  "role": "FSMS QC Officer",
+  "permlevel": 0,
+  "read": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Department",
+  "role": "FSMS Team Member",
+  "permlevel": 0,
+  "read": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Department",
+  "role": "FSMS Employee",
+  "permlevel": 0,
+  "read": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Asset",
+  "role": "FSMS Manager",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Asset",
+  "role": "FSMS Production Lead",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Asset",
+  "role": "FSMS QC Officer",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Work Order",
+  "role": "FSMS Manager",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Work Order",
+  "role": "FSMS Production Lead",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Work Order",
+  "role": "FSMS QC Officer",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Purchase Receipt",
+  "role": "FSMS Manager",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Purchase Receipt",
+  "role": "FSMS Production Lead",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Purchase Receipt",
+  "role": "FSMS Planning Lead",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Purchase Receipt",
+  "role": "FSMS QC Officer",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Delivery Note",
+  "role": "FSMS Manager",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Delivery Note",
+  "role": "FSMS Sales Lead",
+  "permlevel": 0,
+  "read": 1,
+  "print": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Stock Ledger Entry",
+  "role": "FSMS Manager",
+  "permlevel": 0,
+  "read": 1
+ },
+ {
+  "doctype": "Custom DocPerm",
+  "parent": "Stock Ledger Entry",
+  "role": "FSMS QC Officer",
+  "permlevel": 0,
+  "read": 1
+ }
+]

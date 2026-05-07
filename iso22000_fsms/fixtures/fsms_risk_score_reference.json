@@ -1,0 +1,114 @@
+[
+ {
+  "doctype": "FSMS Risk Score Reference",
+  "score_dimension": "A",
+  "score_value": 1,
+  "description": "Hiếm xảy ra (≥1 năm 1 lần hoặc ít hơn)",
+  "examples": "Sự cố thiên tai lớn"
+ },
+ {
+  "doctype": "FSMS Risk Score Reference",
+  "score_dimension": "A",
+  "score_value": 2,
+  "description": "Thỉnh thoảng xảy ra (vài tháng/lần)",
+  "examples": "Sự cố máy móc lớn"
+ },
+ {
+  "doctype": "FSMS Risk Score Reference",
+  "score_dimension": "A",
+  "score_value": 3,
+  "description": "Thường xuyên xảy ra (vài tuần/lần)",
+  "examples": "Lỗi nhân sự định kỳ"
+ },
+ {
+  "doctype": "FSMS Risk Score Reference",
+  "score_dimension": "A",
+  "score_value": 4,
+  "description": "Xảy ra rất thường xuyên (hàng ngày)",
+  "examples": "Sự cố thiết bị nhỏ, lỗi tem nhãn lẻ"
+ },
+ {
+  "doctype": "FSMS Risk Score Reference",
+  "score_dimension": "B",
+  "score_value": 1,
+  "description": "Hậu quả không đáng kể, tự khắc phục",
+  "examples": "Lỗi nhỏ phát hiện và sửa nội bộ"
+ },
+ {
+  "doctype": "FSMS Risk Score Reference",
+  "score_dimension": "B",
+  "score_value": 2,
+  "description": "Hậu quả nhẹ, không ảnh hưởng SK",
+  "examples": "Khiếu nại bao bì"
+ },
+ {
+  "doctype": "FSMS Risk Score Reference",
+  "score_dimension": "B",
+  "score_value": 3,
+  "description": "Hậu quả vừa, có thể ảnh hưởng SK ngắn hạn",
+  "examples": "Sản phẩm có dị vật cứng nhỏ"
+ },
+ {
+  "doctype": "FSMS Risk Score Reference",
+  "score_dimension": "B",
+  "score_value": 4,
+  "description": "Hậu quả nghiêm trọng, ảnh hưởng SK dài hạn / pháp lý",
+  "examples": "Lô hàng nhiễm độc tố"
+ },
+ {
+  "doctype": "FSMS Risk Score Reference",
+  "score_dimension": "C",
+  "score_value": 1,
+  "description": "Mức độ nghiêm trọng thấp",
+  "examples": "Lỗi cosmetics"
+ },
+ {
+  "doctype": "FSMS Risk Score Reference",
+  "score_dimension": "C",
+  "score_value": 2,
+  "description": "Trung bình",
+  "examples": "Mất 1 buổi sản xuất"
+ },
+ {
+  "doctype": "FSMS Risk Score Reference",
+  "score_dimension": "C",
+  "score_value": 3,
+  "description": "Nghiêm trọng",
+  "examples": "Hủy 1 lô"
+ },
+ {
+  "doctype": "FSMS Risk Score Reference",
+  "score_dimension": "C",
+  "score_value": 4,
+  "description": "Rất nghiêm trọng",
+  "examples": "Recall toàn bộ thị trường"
+ },
+ {
+  "doctype": "FSMS Risk Score Reference",
+  "score_dimension": "D",
+  "score_value": 1,
+  "description": "Dễ phát hiện ngay (kiểm tra cảm quan / online)",
+  "examples": "QC tại chuyền"
+ },
+ {
+  "doctype": "FSMS Risk Score Reference",
+  "score_dimension": "D",
+  "score_value": 2,
+  "description": "Phát hiện trong khâu kiểm tra cuối",
+  "examples": "KCS thành phẩm"
+ },
+ {
+  "doctype": "FSMS Risk Score Reference",
+  "score_dimension": "D",
+  "score_value": 3,
+  "description": "Khó phát hiện, phải lab test",
+  "examples": "Phân tích vi sinh"
+ },
+ {
+  "doctype": "FSMS Risk Score Reference",
+  "score_dimension": "D",
+  "score_value": 4,
+  "description": "Rất khó phát hiện, chỉ phát hiện qua KH",
+  "examples": "Ngộ độc TP"
+ }
+]

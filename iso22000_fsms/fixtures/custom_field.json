@@ -1,0 +1,62 @@
+[
+ {
+  "doctype": "Custom Field",
+  "dt": "Customer",
+  "fieldname": "fsms_recall_priority",
+  "label": "FSMS Recall Priority",
+  "fieldtype": "Select",
+  "options": "\nA\nB\nC",
+  "insert_after": "territory",
+  "module": "FSMS Core"
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "Item",
+  "fieldname": "fsms_haccp_plan",
+  "label": "FSMS HACCP Plan",
+  "fieldtype": "Link",
+  "options": "FSMS HACCP Plan",
+  "insert_after": "item_group",
+  "module": "FSMS HACCP",
+  "description": "Auto-populated when an FSMS HACCP Plan is published for this Item."
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "Supplier",
+  "fieldname": "fsms_supplier_profile",
+  "label": "FSMS Supplier Profile",
+  "fieldtype": "Link",
+  "options": "FSMS Supplier Profile",
+  "insert_after": "supplier_group",
+  "module": "FSMS Supplier"
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "Employee",
+  "fieldname": "fsms_signature_image",
+  "label": "FSMS Signature",
+  "fieldtype": "Attach Image",
+  "insert_after": "image",
+  "module": "FSMS Core",
+  "description": "Used in FSMS Print Format signature block."
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "Employee",
+  "fieldname": "fsms_last_training_date",
+  "label": "FSMS Last Training Date",
+  "fieldtype": "Date",
+  "insert_after": "fsms_signature_image",
+  "module": "FSMS Training"
+ },
+ {
+  "doctype": "Custom Field",
+  "dt": "Batch",
+  "fieldname": "fsms_traceability_indexed",
+  "label": "FSMS Trace Indexed",
+  "fieldtype": "Check",
+  "insert_after": "batch_id",
+  "module": "FSMS Traceability",
+  "description": "Set after the Batch has been registered in the trace materialization table."
+ }
+]

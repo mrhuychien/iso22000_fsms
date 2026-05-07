@@ -1,0 +1,42 @@
+[
+ {
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocField",
+  "doc_type": "Item",
+  "field_name": "is_stock_item",
+  "property": "default",
+  "value": "1",
+  "property_type": "Text",
+  "module": "FSMS Core"
+ },
+ {
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocField",
+  "doc_type": "Batch",
+  "field_name": "batch_id",
+  "property": "unique",
+  "value": "1",
+  "property_type": "Check",
+  "module": "FSMS Traceability"
+ },
+ {
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocField",
+  "doc_type": "Supplier",
+  "field_name": "supplier_group",
+  "property": "reqd",
+  "value": "1",
+  "property_type": "Check",
+  "module": "FSMS Supplier"
+ },
+ {
+  "doctype": "Property Setter",
+  "doctype_or_field": "DocField",
+  "doc_type": "Customer",
+  "field_name": "territory",
+  "property": "reqd",
+  "value": "1",
+  "property_type": "Check",
+  "module": "FSMS Recall"
+ }
+]

@@ -6,6 +6,19 @@ app_publisher = "Công ty CP Hoàng Giang"
 app_description = "Hệ thống quản lý ATTP theo ISO 22000:2018"
 app_email = "hoanggiavn.vn@gmail.com"
 app_license = "MIT"
+required_apps = ["frappe", "erpnext"]
+
+# ============================================================================
+# Static asset bundles
+# ============================================================================
+app_include_css = ["/assets/iso22000_fsms/css/fsms.css"]
+app_include_js = ["/assets/iso22000_fsms/js/fsms_client.js"]
+
+# ============================================================================
+# Lifecycle
+# ============================================================================
+after_install = "iso22000_fsms.install.after_install"
+before_uninstall = "iso22000_fsms.install.before_uninstall"
 
 # ============================================================================
 # Document Events — server hooks per DocType
@@ -105,18 +118,40 @@ override_whitelisted_methods = {
 extend_bootinfo = ["iso22000_fsms.boot.boot_fsms_session"]
 
 # ============================================================================
+# Jinja helpers (Print Format + email templates)
+# ============================================================================
+jinja = {
+	"methods": [
+		"iso22000_fsms.utils.format_vnd",
+		"iso22000_fsms.utils.format_vn_date",
+		"iso22000_fsms.utils.signature_or_blank",
+	],
+}
+
+# ============================================================================
 # Fixtures (loaded on app install)
 # ============================================================================
 fixtures = [
-	"Role",
-	"Custom Field",
-	"Custom Permission",
+	{"doctype": "Role", "filters": [["role_name", "like", "FSMS%"]]},
+	{"doctype": "Role", "filters": [["role_name", "in", [
+		"Production Department Head", "Sales Department Head",
+		"Planning Department Head", "Accounting Department Head",
+	]]]},
+	{"doctype": "Custom Field", "filters": [["fieldname", "like", "fsms_%"]]},
+	{"doctype": "Custom DocPerm", "filters": [["role", "like", "FSMS%"]]},
+	{"doctype": "Property Setter", "filters": [["module", "in", [
+		"FSMS Core", "FSMS Traceability", "FSMS Supplier", "FSMS Recall",
+	]]]},
 	{"doctype": "Workflow State"},
-	{"doctype": "Workflow"},
 	{"doctype": "Workflow Action Master"},
-	{"doctype": "Notification"},
-	{"doctype": "Email Template"},
+	{"doctype": "Workflow", "filters": [["name", "like", "FSMS%"]]},
+	{"doctype": "Notification", "filters": [["module", "=", "ISO 22000 FSMS"]]},
+	{"doctype": "Email Template", "filters": [["module", "=", "ISO 22000 FSMS"]]},
 	{"doctype": "Print Format", "filters": [["module", "=", "ISO 22000 FSMS"]]},
+	{"doctype": "Dashboard Chart", "filters": [["module", "=", "ISO 22000 FSMS"]]},
+	{"doctype": "Number Card", "filters": [["module", "=", "ISO 22000 FSMS"]]},
+	{"doctype": "Dashboard", "filters": [["module", "=", "ISO 22000 FSMS"]]},
+	{"doctype": "Workspace", "filters": [["module", "=", "ISO 22000 FSMS"]]},
 	{"doctype": "FSMS Document Category"},
 	{"doctype": "FSMS NCR Source"},
 	{"doctype": "FSMS Risk Score Reference"},

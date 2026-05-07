@@ -1,0 +1,1568 @@
+[
+ {
+  "doctype": "Workflow",
+  "name": "FSMS NCR Workflow",
+  "workflow_name": "FSMS NCR Workflow",
+  "document_type": "FSMS NCR",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đề xuất",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager,FSMS Team Member,FSMS Employee"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Phân tích",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager,FSMS Team Member"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Chờ phê duyệt",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager,FSMS Director,Production Department Head,Sales Department Head,Planning Department Head,Accounting Department Head"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đang thực hiện",
+    "doc_status": "1",
+    "allow_edit": "FSMS Manager,FSMS Team Member,FSMS Employee"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đang xác minh",
+    "doc_status": "1",
+    "allow_edit": "FSMS Manager,FSMS Internal Auditor"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đã đóng",
+    "doc_status": "1",
+    "allow_edit": "FSMS Manager,FSMS Internal Auditor"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Chuyển tiếp",
+    "doc_status": "1",
+    "allow_edit": ""
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Đề xuất",
+    "action": "Gửi phân tích",
+    "next_state": "Phân tích",
+    "allowed": "FSMS Manager,FSMS Team Member,FSMS Employee",
+    "condition": "doc.nonconformity_description"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Phân tích",
+    "action": "Gửi phê duyệt",
+    "next_state": "Chờ phê duyệt",
+    "allowed": "FSMS Manager,FSMS Team Member",
+    "condition": "doc.root_cause_analysis and doc.proposed_action and doc.assigned_to and doc.proposed_completion_date"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Chờ phê duyệt",
+    "action": "Phê duyệt",
+    "next_state": "Đang thực hiện",
+    "allowed": "FSMS Manager,FSMS Director,Production Department Head,Sales Department Head,Planning Department Head,Accounting Department Head"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Chờ phê duyệt",
+    "action": "Yêu cầu sửa",
+    "next_state": "Phân tích",
+    "allowed": "FSMS Manager,FSMS Director,Production Department Head,Sales Department Head,Planning Department Head,Accounting Department Head",
+    "condition": "doc.approver_remarks"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Đang thực hiện",
+    "action": "Hoàn thành thực hiện",
+    "next_state": "Đang xác minh",
+    "allowed": "FSMS Manager,FSMS Team Member,FSMS Employee",
+    "condition": "doc.actual_completion_date"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Đang xác minh",
+    "action": "Đạt - đóng phiếu",
+    "next_state": "Đã đóng",
+    "allowed": "FSMS Manager,FSMS Internal Auditor",
+    "condition": "doc.verification_outcome == 'Đạt yêu cầu'"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Đang xác minh",
+    "action": "Không đạt - chuyển tiếp",
+    "next_state": "Chuyển tiếp",
+    "allowed": "FSMS Manager,FSMS Internal Auditor",
+    "condition": "doc.verification_outcome == 'Không đạt'"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Recall Event Workflow",
+  "workflow_name": "FSMS Recall Event Workflow",
+  "document_type": "FSMS Recall Event",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Phát sinh",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager,FSMS Director"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Lập kế hoạch",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đang thu hồi",
+    "doc_status": "1",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Bảo quản",
+    "doc_status": "1",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Báo cáo",
+    "doc_status": "1",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đóng",
+    "doc_status": "1",
+    "allow_edit": ""
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Phát sinh",
+    "action": "Plan",
+    "next_state": "Lập kế hoạch",
+    "allowed": "FSMS Manager,FSMS Director"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Lập kế hoạch",
+    "action": "GD phê duyệt thu hồi",
+    "next_state": "Đang thu hồi",
+    "allowed": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Đang thu hồi",
+    "action": "Đã thu hồi vật lý",
+    "next_state": "Bảo quản",
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Bảo quản",
+    "action": "Bắt đầu báo cáo",
+    "next_state": "Báo cáo",
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Báo cáo",
+    "action": "GD ký duyệt báo cáo",
+    "next_state": "Đóng",
+    "allowed": "FSMS Director"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Document Change Request Workflow",
+  "workflow_name": "FSMS Document Change Request Workflow",
+  "document_type": "FSMS Document Change Request",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đề xuất",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager,FSMS Team Member,FSMS Employee"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Chờ phê duyệt",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager,FSMS Director"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Phát hành",
+    "doc_status": "1",
+    "allow_edit": ""
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đóng",
+    "doc_status": "1",
+    "allow_edit": ""
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Chuyển tiếp",
+    "doc_status": "1",
+    "allow_edit": ""
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Đề xuất",
+    "action": "Gửi phê duyệt",
+    "next_state": "Chờ phê duyệt",
+    "allowed": "FSMS Manager,FSMS Team Member"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Chờ phê duyệt",
+    "action": "Phê duyệt",
+    "next_state": "Phát hành",
+    "allowed": "FSMS Manager,FSMS Director"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Chờ phê duyệt",
+    "action": "Yêu cầu sửa",
+    "next_state": "Đề xuất",
+    "allowed": "FSMS Manager,FSMS Director"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Phát hành",
+    "action": "Close",
+    "next_state": "Đóng",
+    "allowed": "FSMS Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS HACCP Plan Workflow",
+  "workflow_name": "FSMS HACCP Plan Workflow",
+  "document_type": "FSMS HACCP Plan",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager,FSMS Production Lead"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Reviewed",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Approved",
+    "doc_status": "1",
+    "allow_edit": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Published",
+    "doc_status": "1",
+    "allow_edit": ""
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Under Revision",
+    "doc_status": "1",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Obsolete",
+    "doc_status": "1",
+    "allow_edit": ""
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Submit for Review",
+    "next_state": "Reviewed",
+    "allowed": "FSMS Manager,FSMS Production Lead"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Reviewed",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Approved",
+    "action": "Publish",
+    "next_state": "Published",
+    "allowed": "FSMS Manager,FSMS Director"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Published",
+    "action": "Initiate Revision",
+    "next_state": "Under Revision",
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Under Revision",
+    "action": "Submit for Review",
+    "next_state": "Reviewed",
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Published",
+    "action": "Mark Obsolete",
+    "next_state": "Obsolete",
+    "allowed": "FSMS Director"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Manual Workflow",
+  "workflow_name": "FSMS Manual Workflow",
+  "document_type": "FSMS Manual",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Reviewed",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Approved",
+    "doc_status": "1",
+    "allow_edit": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Published",
+    "doc_status": "1",
+    "allow_edit": ""
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Obsolete",
+    "doc_status": "1",
+    "allow_edit": ""
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Submit for Review",
+    "next_state": "Reviewed",
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Reviewed",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Approved",
+    "action": "Publish",
+    "next_state": "Published",
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Published",
+    "action": "Mark Obsolete",
+    "next_state": "Obsolete",
+    "allowed": "FSMS Director"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Policy Workflow",
+  "workflow_name": "FSMS Policy Workflow",
+  "document_type": "FSMS Policy",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Reviewed",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Approved",
+    "doc_status": "1",
+    "allow_edit": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Published",
+    "doc_status": "1",
+    "allow_edit": ""
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Obsolete",
+    "doc_status": "1",
+    "allow_edit": ""
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Submit for Review",
+    "next_state": "Reviewed",
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Reviewed",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Approved",
+    "action": "Publish",
+    "next_state": "Published",
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Published",
+    "action": "Mark Obsolete",
+    "next_state": "Obsolete",
+    "allowed": "FSMS Director"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Audit Program Workflow",
+  "workflow_name": "FSMS Audit Program Workflow",
+  "document_type": "FSMS Audit Program",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Reviewed",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Approved",
+    "doc_status": "1",
+    "allow_edit": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Published",
+    "doc_status": "1",
+    "allow_edit": ""
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Obsolete",
+    "doc_status": "1",
+    "allow_edit": ""
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Submit for Review",
+    "next_state": "Reviewed",
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Reviewed",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Approved",
+    "action": "Publish",
+    "next_state": "Published",
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Published",
+    "action": "Mark Obsolete",
+    "next_state": "Obsolete",
+    "allowed": "FSMS Director"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Recall Plan Workflow",
+  "workflow_name": "FSMS Recall Plan Workflow",
+  "document_type": "FSMS Recall Plan",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Reviewed",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Approved",
+    "doc_status": "1",
+    "allow_edit": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Published",
+    "doc_status": "1",
+    "allow_edit": ""
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Obsolete",
+    "doc_status": "1",
+    "allow_edit": ""
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Submit for Review",
+    "next_state": "Reviewed",
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Reviewed",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Approved",
+    "action": "Publish",
+    "next_state": "Published",
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Published",
+    "action": "Mark Obsolete",
+    "next_state": "Obsolete",
+    "allowed": "FSMS Director"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Audit Plan Workflow",
+  "workflow_name": "FSMS Audit Plan Workflow",
+  "document_type": "FSMS Audit Plan",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Approved",
+    "doc_status": "1",
+    "allow_edit": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Executing",
+    "doc_status": "1",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Closed",
+    "doc_status": "1",
+    "allow_edit": ""
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Approved",
+    "action": "Execute",
+    "next_state": "Executing",
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Executing",
+    "action": "Close",
+    "next_state": "Closed",
+    "allowed": "FSMS Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Verification Plan Workflow",
+  "workflow_name": "FSMS Verification Plan Workflow",
+  "document_type": "FSMS Verification Plan",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Approved",
+    "doc_status": "1",
+    "allow_edit": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Executing",
+    "doc_status": "1",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Closed",
+    "doc_status": "1",
+    "allow_edit": ""
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Approved",
+    "action": "Execute",
+    "next_state": "Executing",
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Executing",
+    "action": "Close",
+    "next_state": "Closed",
+    "allowed": "FSMS Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Calibration Plan Workflow",
+  "workflow_name": "FSMS Calibration Plan Workflow",
+  "document_type": "FSMS Calibration Plan",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Approved",
+    "doc_status": "1",
+    "allow_edit": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Executing",
+    "doc_status": "1",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Closed",
+    "doc_status": "1",
+    "allow_edit": ""
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Approved",
+    "action": "Execute",
+    "next_state": "Executing",
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Executing",
+    "action": "Close",
+    "next_state": "Closed",
+    "allowed": "FSMS Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Training Plan Workflow",
+  "workflow_name": "FSMS Training Plan Workflow",
+  "document_type": "FSMS Training Plan",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Approved",
+    "doc_status": "1",
+    "allow_edit": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Executing",
+    "doc_status": "1",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Closed",
+    "doc_status": "1",
+    "allow_edit": ""
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Approved",
+    "action": "Execute",
+    "next_state": "Executing",
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Executing",
+    "action": "Close",
+    "next_state": "Closed",
+    "allowed": "FSMS Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Audit Execution Workflow",
+  "workflow_name": "FSMS Audit Execution Workflow",
+  "document_type": "FSMS Audit Execution",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đang thực hiện",
+    "doc_status": "0",
+    "allow_edit": "FSMS Internal Auditor,FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Hoàn thành",
+    "doc_status": "1",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đã đóng",
+    "doc_status": "1",
+    "allow_edit": ""
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Đang thực hiện",
+    "action": "Submit Findings",
+    "next_state": "Hoàn thành",
+    "allowed": "FSMS Internal Auditor,FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Hoàn thành",
+    "action": "Close",
+    "next_state": "Đã đóng",
+    "allowed": "FSMS Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Audit Observation Workflow",
+  "workflow_name": "FSMS Audit Observation Workflow",
+  "document_type": "FSMS Audit Observation",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS Internal Auditor"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Submitted",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Closed",
+    "doc_status": "0",
+    "allow_edit": ""
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Submit",
+    "next_state": "Submitted",
+    "allowed": "FSMS Internal Auditor"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Submitted",
+    "action": "Close",
+    "next_state": "Closed",
+    "allowed": "FSMS Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Audit Summary Workflow",
+  "workflow_name": "FSMS Audit Summary Workflow",
+  "document_type": "FSMS Audit Summary",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Approved",
+    "doc_status": "0",
+    "allow_edit": "FSMS Director"
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "FSMS Director"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Recall Report Workflow",
+  "workflow_name": "FSMS Recall Report Workflow",
+  "document_type": "FSMS Recall Report",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Reviewed",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Approved",
+    "doc_status": "1",
+    "allow_edit": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Closed",
+    "doc_status": "1",
+    "allow_edit": ""
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Submit for Review",
+    "next_state": "Reviewed",
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Reviewed",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Approved",
+    "action": "Close",
+    "next_state": "Closed",
+    "allowed": "FSMS Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Verification Report Workflow",
+  "workflow_name": "FSMS Verification Report Workflow",
+  "document_type": "FSMS Verification Report",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager,FSMS QC Officer"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Reviewed",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Approved",
+    "doc_status": "1",
+    "allow_edit": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Closed",
+    "doc_status": "1",
+    "allow_edit": ""
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Submit for Review",
+    "next_state": "Reviewed",
+    "allowed": "FSMS Manager,FSMS QC Officer"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Reviewed",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Approved",
+    "action": "Close",
+    "next_state": "Closed",
+    "allowed": "FSMS Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Calibration Record Workflow",
+  "workflow_name": "FSMS Calibration Record Workflow",
+  "document_type": "FSMS Calibration Record",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Submitted",
+    "doc_status": "0",
+    "allow_edit": "FSMS QC Officer,FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Verified",
+    "doc_status": "1",
+    "allow_edit": "FSMS Manager"
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Submitted",
+    "action": "Verify",
+    "next_state": "Verified",
+    "allowed": "FSMS Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Material Inspection Log Workflow",
+  "workflow_name": "FSMS Material Inspection Log Workflow",
+  "document_type": "FSMS Material Inspection Log",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Submitted",
+    "doc_status": "0",
+    "allow_edit": "FSMS QC Officer,FSMS Planning Lead"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Verified",
+    "doc_status": "1",
+    "allow_edit": "FSMS Manager"
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Submitted",
+    "action": "Verify",
+    "next_state": "Verified",
+    "allowed": "FSMS Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Supplier Evaluation Workflow",
+  "workflow_name": "FSMS Supplier Evaluation Workflow",
+  "document_type": "FSMS Supplier Evaluation",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS Planning Lead,FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Reviewed",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Approved",
+    "doc_status": "1",
+    "allow_edit": "FSMS Director"
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Submit for Review",
+    "next_state": "Reviewed",
+    "allowed": "FSMS Planning Lead,FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Reviewed",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "FSMS Director"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Sanitation Report Workflow",
+  "workflow_name": "FSMS Sanitation Report Workflow",
+  "document_type": "FSMS Sanitation Report",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS QC Officer"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Reviewed",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Approved",
+    "doc_status": "0",
+    "allow_edit": "FSMS Director"
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Submit for Review",
+    "next_state": "Reviewed",
+    "allowed": "FSMS QC Officer"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Reviewed",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "FSMS Director"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Risk Register Workflow",
+  "workflow_name": "FSMS Risk Register Workflow",
+  "document_type": "FSMS Risk Register",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Approved",
+    "doc_status": "0",
+    "allow_edit": "FSMS Director"
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "FSMS Director"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Objective Workflow",
+  "workflow_name": "FSMS Objective Workflow",
+  "document_type": "FSMS Objective",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Approved",
+    "doc_status": "0",
+    "allow_edit": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Closed",
+    "doc_status": "0",
+    "allow_edit": ""
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Approved",
+    "action": "Close",
+    "next_state": "Closed",
+    "allowed": "FSMS Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Customer Complaint Workflow",
+  "workflow_name": "FSMS Customer Complaint Workflow",
+  "document_type": "FSMS Customer Complaint",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Mới",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager,FSMS Sales Lead"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đang xử lý",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đã giải quyết",
+    "doc_status": "1",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đóng",
+    "doc_status": "1",
+    "allow_edit": ""
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Mới",
+    "action": "Investigate",
+    "next_state": "Đang xử lý",
+    "allowed": "FSMS Manager,FSMS Sales Lead"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Đang xử lý",
+    "action": "Resolve",
+    "next_state": "Đã giải quyết",
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Đã giải quyết",
+    "action": "Close",
+    "next_state": "Đóng",
+    "allowed": "FSMS Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Emergency Event Workflow",
+  "workflow_name": "FSMS Emergency Event Workflow",
+  "document_type": "FSMS Emergency Event",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đang xảy ra",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đã xử lý",
+    "doc_status": "1",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đã báo cáo",
+    "doc_status": "1",
+    "allow_edit": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đóng",
+    "doc_status": "1",
+    "allow_edit": ""
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Đang xảy ra",
+    "action": "Resolve",
+    "next_state": "Đã xử lý",
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Đã xử lý",
+    "action": "Submit Report",
+    "next_state": "Đã báo cáo",
+    "allowed": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Đã báo cáo",
+    "action": "Close",
+    "next_state": "Đóng",
+    "allowed": "FSMS Director"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Management Review Workflow",
+  "workflow_name": "FSMS Management Review Workflow",
+  "document_type": "FSMS Management Review",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Approved",
+    "doc_status": "1",
+    "allow_edit": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Closed",
+    "doc_status": "1",
+    "allow_edit": ""
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Approve",
+    "next_state": "Approved",
+    "allowed": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Approved",
+    "action": "Close",
+    "next_state": "Closed",
+    "allowed": "FSMS Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Training Session Workflow",
+  "workflow_name": "FSMS Training Session Workflow",
+  "document_type": "FSMS Training Session",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Hoàn thành",
+    "doc_status": "1",
+    "allow_edit": "FSMS Manager"
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Submit",
+    "next_state": "Hoàn thành",
+    "allowed": "FSMS Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "FSMS Traceability Drill Workflow",
+  "workflow_name": "FSMS Traceability Drill Workflow",
+  "document_type": "FSMS Traceability Drill",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "workflow_state",
+  "states": [
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Hoàn thành",
+    "doc_status": "1",
+    "allow_edit": "FSMS Manager"
+   }
+  ],
+  "transitions": [
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Submit Drill Report",
+    "next_state": "Hoàn thành",
+    "allowed": "FSMS Manager"
+   }
+  ]
+ }
+]
