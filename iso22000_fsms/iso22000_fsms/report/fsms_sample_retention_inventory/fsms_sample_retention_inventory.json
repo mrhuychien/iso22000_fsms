@@ -1,0 +1,12 @@
+{
+ "doctype": "Report",
+ "name": "FSMS Sample Retention Inventory",
+ "report_name": "FSMS Sample Retention Inventory",
+ "ref_doctype": "FSMS Sample Retention Log",
+ "report_type": "Script Report",
+ "module": "FSMS Sample",
+ "is_standard": "Yes",
+ "disabled": 0,
+ "json": "{}",
+ "columns": "[{\"label\": \"Sample\", \"fieldtype\": \"Link\", \"options\": \"FSMS Sample Retention Log\", \"width\": 150}, {\"label\": \"Batch\", \"fieldtype\": \"Link\", \"options\": \"Batch\", \"width\": 130}, {\"label\": \"Item\", \"fieldtype\": \"Link\", \"options\": \"Item\", \"width\": 130}, {\"label\": \"Sample Date\", \"fieldtype\": \"Date\", \"options\": \"\", \"width\": 120}, {\"label\": \"Disposal Due\", \"fieldtype\": \"Date\", \"options\": \"\", \"width\": 120}, {\"label\": \"Days to Disposal\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 130}]"
+}

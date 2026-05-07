@@ -1,0 +1,12 @@
+{
+ "doctype": "Report",
+ "name": "FSMS Document Review Due",
+ "report_name": "FSMS Document Review Due",
+ "ref_doctype": "FSMS Document Register Internal",
+ "report_type": "Script Report",
+ "module": "FSMS Document Control",
+ "is_standard": "Yes",
+ "disabled": 0,
+ "json": "{}",
+ "columns": "[{\"label\": \"Doc Code\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 100}, {\"label\": \"Doc Name\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 200}, {\"label\": \"Owner\", \"fieldtype\": \"Link\", \"options\": \"Employee\", \"width\": 130}, {\"label\": \"Next Review\", \"fieldtype\": \"Date\", \"options\": \"\", \"width\": 120}, {\"label\": \"Days to Due\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 100}]"
+}

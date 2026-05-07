@@ -1,0 +1,12 @@
+{
+ "doctype": "Report",
+ "name": "FSMS Recall Events YTD",
+ "report_name": "FSMS Recall Events YTD",
+ "ref_doctype": "FSMS Recall Event",
+ "report_type": "Script Report",
+ "module": "FSMS Recall",
+ "is_standard": "Yes",
+ "disabled": 0,
+ "json": "{}",
+ "columns": "[{\"label\": \"Event\", \"fieldtype\": \"Link\", \"options\": \"FSMS Recall Event\", \"width\": 150}, {\"label\": \"Date\", \"fieldtype\": \"Date\", \"options\": \"\", \"width\": 120}, {\"label\": \"Severity\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 100}, {\"label\": \"Recall Level\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 100}, {\"label\": \"Cost Impact\", \"fieldtype\": \"Currency\", \"options\": \"\", \"width\": 130}, {\"label\": \"Status\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 130}]"
+}

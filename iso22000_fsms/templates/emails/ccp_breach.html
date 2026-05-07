@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html><body style="font-family: Arial, sans-serif">
+<div style="border: 2px solid #dc2626; padding: 16px; max-width: 600px; margin: 0 auto;">
+  <h2 style="color: #dc2626;">⚠️ [FSMS] CCP vượt giới hạn</h2>
+  <p>CCP <b>{{ doc.ccp }}</b> ngày {{ frappe.utils.formatdate(doc.log_date) }} ghi nhận giá trị
+     <b style="color: #dc2626; font-size: 18px;">{{ doc.measurement_value }} {{ doc.measurement_unit or '' }}</b>.</p>
+  <p>Lệnh sản xuất: {{ doc.production_order or '' }}</p>
+  <p>NCR đã được tự tạo: <b>{{ doc.linked_ncr or '(đang xử lý)' }}</b></p>
+</div>
+</body></html>

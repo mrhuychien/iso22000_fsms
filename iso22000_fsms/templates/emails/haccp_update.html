@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html><body style="font-family: Arial, sans-serif">
+<div style="border: 1px solid #ccc; padding: 16px; max-width: 600px; margin: 0 auto;">
+  <h2 style="color: #16a34a;">[FSMS] Cập nhật HACCP {{ doc.name }}</h2>
+  <p>Kế hoạch HACCP <b>{{ doc.name }}</b> cho sản phẩm <b>{{ doc.item }}</b> trạng thái <b>{{ doc.workflow_state }}</b>.</p>
+  <p><b>Phiên bản:</b> {{ doc.plan_version }} · <b>Hiệu lực từ:</b> {{ frappe.utils.formatdate(doc.effective_date) }}</p>
+</div>
+</body></html>

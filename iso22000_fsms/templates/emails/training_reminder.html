@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html><body style="font-family: Arial, sans-serif">
+<div style="border: 1px solid #ccc; padding: 16px; max-width: 600px; margin: 0 auto;">
+  <h2 style="color: #16a34a;">[FSMS] Nhắc tham dự đào tạo</h2>
+  <p>Bạn được phân công tham dự khóa đào tạo <b>{{ doc.course }}</b>.</p>
+  <p><b>Ngày:</b> {{ frappe.utils.formatdate(doc.session_date) }} · <b>Giảng viên:</b> {{ doc.trainer or '' }}</p>
+</div>
+</body></html>

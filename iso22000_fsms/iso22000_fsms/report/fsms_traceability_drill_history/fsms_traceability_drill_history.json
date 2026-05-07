@@ -1,0 +1,12 @@
+{
+ "doctype": "Report",
+ "name": "FSMS Traceability Drill History",
+ "report_name": "FSMS Traceability Drill History",
+ "ref_doctype": "FSMS Traceability Drill",
+ "report_type": "Script Report",
+ "module": "FSMS Traceability",
+ "is_standard": "Yes",
+ "disabled": 0,
+ "json": "{}",
+ "columns": "[{\"label\": \"Drill\", \"fieldtype\": \"Link\", \"options\": \"FSMS Traceability Drill\", \"width\": 150}, {\"label\": \"Date\", \"fieldtype\": \"Date\", \"options\": \"\", \"width\": 120}, {\"label\": \"Batch\", \"fieldtype\": \"Link\", \"options\": \"Batch\", \"width\": 130}, {\"label\": \"Time (min)\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 100}, {\"label\": \"Within Target\", \"fieldtype\": \"Check\", \"options\": \"\", \"width\": 100}, {\"label\": \"Outcome\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 200}]"
+}

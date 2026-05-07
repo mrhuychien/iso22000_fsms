@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html><body style="font-family: Arial, sans-serif">
+<div style="border: 1px solid #ccc; padding: 16px; max-width: 600px; margin: 0 auto;">
+  <h2 style="color: #f59e0b;">[FSMS] Hiệu chuẩn cần thực hiện</h2>
+  <p>Thiết bị đo <b>{{ doc.equipment_code }} — {{ doc.equipment_name }}</b> đến hạn hiệu chuẩn.</p>
+  <p><b>Ngày HC kế tiếp:</b> {{ frappe.utils.formatdate(doc.next_calibration_date) }}</p>
+  <p>Hãy lên lịch HC sớm để đảm bảo hợp chuẩn.</p>
+</div>
+</body></html>

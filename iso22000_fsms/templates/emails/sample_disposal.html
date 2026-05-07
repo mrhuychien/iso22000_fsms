@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html><body style="font-family: Arial, sans-serif">
+<div style="border: 1px solid #ccc; padding: 16px; max-width: 600px; margin: 0 auto;">
+  <h2 style="color: #2563eb;">[FSMS] Hủy mẫu lưu</h2>
+  <p>Mẫu <b>{{ doc.name }}</b> đến hạn hủy vào {{ frappe.utils.formatdate(doc.expected_disposal_date) }}.</p>
+  <p><b>Lô:</b> {{ doc.batch }} · <b>Item:</b> {{ doc.item }}</p>
+</div>
+</body></html>

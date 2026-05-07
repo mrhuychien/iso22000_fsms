@@ -1,0 +1,12 @@
+{
+ "doctype": "Report",
+ "name": "FSMS NCR Aging",
+ "report_name": "FSMS NCR Aging",
+ "ref_doctype": "FSMS NCR",
+ "report_type": "Script Report",
+ "module": "FSMS NCR",
+ "is_standard": "Yes",
+ "disabled": 0,
+ "json": "{}",
+ "columns": "[{\"label\": \"NCR\", \"fieldtype\": \"Link\", \"options\": \"FSMS NCR\", \"width\": 130}, {\"label\": \"Severity\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 80}, {\"label\": \"Department\", \"fieldtype\": \"Link\", \"options\": \"Department\", \"width\": 150}, {\"label\": \"Age (days)\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 100}, {\"label\": \"Bucket\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 100}, {\"label\": \"Workflow State\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 130}]"
+}

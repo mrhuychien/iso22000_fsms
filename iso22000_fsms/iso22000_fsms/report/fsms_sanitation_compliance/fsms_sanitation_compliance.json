@@ -1,0 +1,12 @@
+{
+ "doctype": "Report",
+ "name": "FSMS Sanitation Compliance",
+ "report_name": "FSMS Sanitation Compliance",
+ "ref_doctype": "FSMS Worker Hygiene Daily",
+ "report_type": "Script Report",
+ "module": "FSMS PRP",
+ "is_standard": "Yes",
+ "disabled": 0,
+ "json": "{}",
+ "columns": "[{\"label\": \"Date\", \"fieldtype\": \"Date\", \"options\": \"\", \"width\": 120}, {\"label\": \"Shift\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 80}, {\"label\": \"Total\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 80}, {\"label\": \"Passed\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 80}, {\"label\": \"Failed\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 80}, {\"label\": \"Pass %\", \"fieldtype\": \"Float\", \"options\": \"\", \"width\": 80}]"
+}

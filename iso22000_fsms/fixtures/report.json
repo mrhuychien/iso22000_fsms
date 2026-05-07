@@ -1,0 +1,114 @@
+[
+ {
+  "doctype": "Report",
+  "report_name": "FSMS NCR Aging",
+  "ref_doctype": "FSMS NCR",
+  "report_type": "Script Report",
+  "module": "FSMS NCR",
+  "is_standard": "Yes"
+ },
+ {
+  "doctype": "Report",
+  "report_name": "FSMS NCR by Source × Department",
+  "ref_doctype": "FSMS NCR",
+  "report_type": "Script Report",
+  "module": "FSMS NCR",
+  "is_standard": "Yes"
+ },
+ {
+  "doctype": "Report",
+  "report_name": "FSMS Audit Findings Trend",
+  "ref_doctype": "FSMS Audit Finding",
+  "report_type": "Script Report",
+  "module": "FSMS Audit",
+  "is_standard": "Yes"
+ },
+ {
+  "doctype": "Report",
+  "report_name": "FSMS Calibration Compliance",
+  "ref_doctype": "FSMS Measurement Equipment",
+  "report_type": "Script Report",
+  "module": "FSMS Equipment",
+  "is_standard": "Yes"
+ },
+ {
+  "doctype": "Report",
+  "report_name": "FSMS Supplier Performance",
+  "ref_doctype": "FSMS Supplier Evaluation",
+  "report_type": "Script Report",
+  "module": "FSMS Supplier",
+  "is_standard": "Yes"
+ },
+ {
+  "doctype": "Report",
+  "report_name": "FSMS Recall Events YTD",
+  "ref_doctype": "FSMS Recall Event",
+  "report_type": "Script Report",
+  "module": "FSMS Recall",
+  "is_standard": "Yes"
+ },
+ {
+  "doctype": "Report",
+  "report_name": "FSMS Risk Heatmap",
+  "ref_doctype": "FSMS Risk Register",
+  "report_type": "Script Report",
+  "module": "FSMS Context Risk",
+  "is_standard": "Yes"
+ },
+ {
+  "doctype": "Report",
+  "report_name": "FSMS Training Compliance Matrix",
+  "ref_doctype": "FSMS Training Session",
+  "report_type": "Script Report",
+  "module": "FSMS Training",
+  "is_standard": "Yes"
+ },
+ {
+  "doctype": "Report",
+  "report_name": "FSMS Document Review Due",
+  "ref_doctype": "FSMS Document Register Internal",
+  "report_type": "Script Report",
+  "module": "FSMS Document Control",
+  "is_standard": "Yes"
+ },
+ {
+  "doctype": "Report",
+  "report_name": "FSMS HACCP Plan Status",
+  "ref_doctype": "FSMS HACCP Plan",
+  "report_type": "Script Report",
+  "module": "FSMS HACCP",
+  "is_standard": "Yes"
+ },
+ {
+  "doctype": "Report",
+  "report_name": "FSMS Traceability Drill History",
+  "ref_doctype": "FSMS Traceability Drill",
+  "report_type": "Script Report",
+  "module": "FSMS Traceability",
+  "is_standard": "Yes"
+ },
+ {
+  "doctype": "Report",
+  "report_name": "FSMS Sample Retention Inventory",
+  "ref_doctype": "FSMS Sample Retention Log",
+  "report_type": "Script Report",
+  "module": "FSMS Sample",
+  "is_standard": "Yes"
+ },
+ {
+  "doctype": "Report",
+  "report_name": "FSMS Sanitation Compliance",
+  "ref_doctype": "FSMS Worker Hygiene Daily",
+  "report_type": "Script Report",
+  "module": "FSMS PRP",
+  "is_standard": "Yes"
+ },
+ {
+  "doctype": "Report",
+  "report_name": "FSMS Customer Complaint Analysis",
+  "ref_doctype": "FSMS Customer Complaint",
+  "report_type": "Script Report",
+  "module": "FSMS Communication",
+  "is_standard": "Yes"
+ }
+]

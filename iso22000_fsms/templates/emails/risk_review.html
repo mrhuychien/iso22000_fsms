@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html><body style="font-family: Arial, sans-serif">
+<div style="border: 1px solid #ccc; padding: 16px; max-width: 600px; margin: 0 auto;">
+  <h2 style="color: #7c3aed;">[FSMS] Rủi ro cần soát xét</h2>
+  <p>Rủi ro <b>{{ doc.name }}</b> ({{ doc.risk_category }}) đến hạn soát xét.</p>
+  <p><b>Mức rủi ro:</b> {{ doc.risk_level }} (tổng điểm {{ doc.total_score }})</p>
+  <p><b>Ngày soát xét tiếp:</b> {{ frappe.utils.formatdate(doc.next_review_date) }}</p>
+</div>
+</body></html>

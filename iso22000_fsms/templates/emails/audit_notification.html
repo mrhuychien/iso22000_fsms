@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html><body style="font-family: Arial, sans-serif">
+<div style="border: 1px solid #ccc; padding: 16px; max-width: 600px; margin: 0 auto;">
+  <h2 style="color: #2563eb;">[FSMS] Audit {{ doc.name }}</h2>
+  <p>Kế hoạch đánh giá nội bộ <b>{{ doc.name }}</b> sắp khởi động.</p>
+  <p><b>Thời gian:</b> {{ frappe.utils.formatdate(doc.audit_date_from) }} – {{ frappe.utils.formatdate(doc.audit_date_to) }}</p>
+  <p><b>Phạm vi:</b> {{ doc.audit_scope or '' }}</p>
+  <p><a href="{{ frappe.utils.get_url() }}/app/fsms-audit-plan/{{ doc.name }}">Mở kế hoạch →</a></p>
+</div>
+</body></html>

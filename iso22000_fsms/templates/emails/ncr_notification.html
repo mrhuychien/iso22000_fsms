@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html><body style="font-family: Arial, sans-serif; color: #333">
+<div style="border: 1px solid #ccc; padding: 16px; max-width: 600px; margin: 0 auto;">
+  <h2 style="color: #1e40af; border-bottom: 2px solid #1e40af; padding-bottom: 8px;">[FSMS] Phiếu hành động khắc phục</h2>
+  <p>Kính gửi {{ doc.affected_department or 'quý đồng nghiệp' }},</p>
+  <p>Phiếu NCR <b>{{ doc.name }}</b> ở trạng thái <b>{{ doc.workflow_state or 'Đề xuất' }}</b>.</p>
+  <table cellspacing="0" cellpadding="6" style="border-collapse: collapse; width: 100%; margin: 12px 0;">
+    <tr style="background: #f3f4f6"><td style="border:1px solid #ddd; width: 30%"><b>Mức độ</b></td><td style="border:1px solid #ddd">{{ doc.severity }}</td></tr>
+    <tr><td style="border:1px solid #ddd"><b>Loại</b></td><td style="border:1px solid #ddd">{{ doc.ncr_type }}</td></tr>
+    <tr style="background: #f3f4f6"><td style="border:1px solid #ddd"><b>Người đề xuất</b></td><td style="border:1px solid #ddd">{{ doc.requestor or '' }}</td></tr>
+    <tr><td style="border:1px solid #ddd"><b>Ngày phát sinh</b></td><td style="border:1px solid #ddd">{{ frappe.utils.formatdate(doc.ncr_date) }}</td></tr>
+  </table>
+  <p>{{ doc.nonconformity_description or '' }}</p>
+  <p style="margin-top: 24px;"><a href="{{ frappe.utils.get_url() }}/app/fsms-ncr/{{ doc.name }}"
+     style="background: #1e40af; color: white; padding: 8px 16px; text-decoration: none; border-radius: 4px;">Mở phiếu →</a></p>
+</div>
+</body></html>

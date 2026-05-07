@@ -1,0 +1,12 @@
+{
+ "doctype": "Report",
+ "name": "FSMS HACCP Plan Status",
+ "report_name": "FSMS HACCP Plan Status",
+ "ref_doctype": "FSMS HACCP Plan",
+ "report_type": "Script Report",
+ "module": "FSMS HACCP",
+ "is_standard": "Yes",
+ "disabled": 0,
+ "json": "{}",
+ "columns": "[{\"label\": \"Plan\", \"fieldtype\": \"Link\", \"options\": \"FSMS HACCP Plan\", \"width\": 150}, {\"label\": \"Item\", \"fieldtype\": \"Link\", \"options\": \"Item\", \"width\": 130}, {\"label\": \"Version\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 80}, {\"label\": \"Effective\", \"fieldtype\": \"Date\", \"options\": \"\", \"width\": 120}, {\"label\": \"Next Review\", \"fieldtype\": \"Date\", \"options\": \"\", \"width\": 120}, {\"label\": \"State\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 130}]"
+}

@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html><body style="font-family: Arial, sans-serif">
+<div style="border: 1px solid #ccc; padding: 16px; max-width: 600px; margin: 0 auto;">
+  <h2 style="color: #f59e0b;">[FSMS] Tài liệu cần soát xét</h2>
+  <p>Tài liệu <b>{{ doc.doc_code }} — {{ doc.doc_name }}</b> sắp đến hạn soát xét.</p>
+  <p><b>Ngày hạn:</b> {{ frappe.utils.formatdate(doc.next_review_date) }}</p>
+  <p><b>Phòng ban chủ trì:</b> {{ doc.owner_department or '' }}</p>
+</div>
+</body></html>

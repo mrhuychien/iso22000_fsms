@@ -1,0 +1,12 @@
+{
+ "doctype": "Report",
+ "name": "FSMS Audit Findings Trend",
+ "report_name": "FSMS Audit Findings Trend",
+ "ref_doctype": "FSMS Audit Finding",
+ "report_type": "Script Report",
+ "module": "FSMS Audit",
+ "is_standard": "Yes",
+ "disabled": 0,
+ "json": "{}",
+ "columns": "[{\"label\": \"Quarter\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 100}, {\"label\": \"NC Major\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 100}, {\"label\": \"NC Minor\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 100}, {\"label\": \"Observation\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 100}, {\"label\": \"Total\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 100}]"
+}

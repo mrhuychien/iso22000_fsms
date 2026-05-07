@@ -1,0 +1,12 @@
+{
+ "doctype": "Report",
+ "name": "FSMS Risk Heatmap",
+ "report_name": "FSMS Risk Heatmap",
+ "ref_doctype": "FSMS Risk Register",
+ "report_type": "Script Report",
+ "module": "FSMS Context Risk",
+ "is_standard": "Yes",
+ "disabled": 0,
+ "json": "{}",
+ "columns": "[{\"label\": \"Risk\", \"fieldtype\": \"Link\", \"options\": \"FSMS Risk Register\", \"width\": 150}, {\"label\": \"Category\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 100}, {\"label\": \"Likelihood\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 100}, {\"label\": \"Severity\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 100}, {\"label\": \"Total Score\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 100}, {\"label\": \"Risk Level\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 130}]"
+}

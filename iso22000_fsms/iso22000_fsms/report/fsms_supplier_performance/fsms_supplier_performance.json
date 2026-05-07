@@ -1,0 +1,12 @@
+{
+ "doctype": "Report",
+ "name": "FSMS Supplier Performance",
+ "report_name": "FSMS Supplier Performance",
+ "ref_doctype": "FSMS Supplier Evaluation",
+ "report_type": "Script Report",
+ "module": "FSMS Supplier",
+ "is_standard": "Yes",
+ "disabled": 0,
+ "json": "{}",
+ "columns": "[{\"label\": \"Supplier\", \"fieldtype\": \"Link\", \"options\": \"Supplier\", \"width\": 150}, {\"label\": \"Eval Count\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 80}, {\"label\": \"Avg Score\", \"fieldtype\": \"Float\", \"options\": \"\", \"width\": 100}, {\"label\": \"Last Grade\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 80}, {\"label\": \"Last Eval Date\", \"fieldtype\": \"Date\", \"options\": \"\", \"width\": 120}]"
+}

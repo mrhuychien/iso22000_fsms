@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html><body style="font-family: Arial, sans-serif">
+<div style="border: 1px solid #ccc; padding: 16px; max-width: 600px; margin: 0 auto;">
+  <h2 style="color: #1e40af;">[FSMS] Mời họp xem xét lãnh đạo</h2>
+  <p>Cuộc họp <b>{{ doc.name }}</b> ({{ doc.review_type }}) sẽ diễn ra ngày {{ frappe.utils.formatdate(doc.review_date) }}.</p>
+  <p><b>Chủ trì:</b> {{ doc.chairperson or '' }}</p>
+  <p><b>Kỳ xem xét:</b> {{ frappe.utils.formatdate(doc.reviewed_period_from) }} – {{ frappe.utils.formatdate(doc.reviewed_period_to) }}</p>
+</div>
+</body></html>

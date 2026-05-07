@@ -1,0 +1,12 @@
+{
+ "doctype": "Report",
+ "name": "FSMS NCR by Source × Department",
+ "report_name": "FSMS NCR by Source × Department",
+ "ref_doctype": "FSMS NCR",
+ "report_type": "Script Report",
+ "module": "FSMS NCR",
+ "is_standard": "Yes",
+ "disabled": 0,
+ "json": "{}",
+ "columns": "[{\"label\": \"Source\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 150}, {\"label\": \"Department\", \"fieldtype\": \"Link\", \"options\": \"Department\", \"width\": 150}, {\"label\": \"Count\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 80}]"
+}

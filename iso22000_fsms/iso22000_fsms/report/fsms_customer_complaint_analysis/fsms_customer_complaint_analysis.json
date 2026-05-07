@@ -1,0 +1,12 @@
+{
+ "doctype": "Report",
+ "name": "FSMS Customer Complaint Analysis",
+ "report_name": "FSMS Customer Complaint Analysis",
+ "ref_doctype": "FSMS Customer Complaint",
+ "report_type": "Script Report",
+ "module": "FSMS Communication",
+ "is_standard": "Yes",
+ "disabled": 0,
+ "json": "{}",
+ "columns": "[{\"label\": \"Channel\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 150}, {\"label\": \"Severity\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 100}, {\"label\": \"Count\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 80}, {\"label\": \"Avg Resolution Days\", \"fieldtype\": \"Float\", \"options\": \"\", \"width\": 130}]"
+}
