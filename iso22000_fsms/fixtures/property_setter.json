@@ -1,6 +1,7 @@
 [
  {
   "doctype": "Property Setter",
+  "name": "Item-is_stock_item-default",
   "doctype_or_field": "DocField",
   "doc_type": "Item",
   "field_name": "is_stock_item",
@@ -11,6 +12,7 @@
  },
  {
   "doctype": "Property Setter",
+  "name": "Batch-batch_id-unique",
   "doctype_or_field": "DocField",
   "doc_type": "Batch",
   "field_name": "batch_id",
@@ -21,6 +23,7 @@
  },
  {
   "doctype": "Property Setter",
+  "name": "Supplier-supplier_group-reqd",
   "doctype_or_field": "DocField",
   "doc_type": "Supplier",
   "field_name": "supplier_group",
@@ -31,6 +34,7 @@
  },
  {
   "doctype": "Property Setter",
+  "name": "Customer-territory-reqd",
   "doctype_or_field": "DocField",
   "doc_type": "Customer",
   "field_name": "territory",

@@ -1,6 +1,7 @@
 [
  {
   "doctype": "FSMS PRP Item",
+  "name": "PRP1-Construction",
   "prp_code": "PRP1-Construction",
   "description": "Construction and layout of buildings",
   "monitoring_method": "Quan sát hạ tầng, ghi chép hiện trạng",
@@ -9,6 +10,7 @@
  },
  {
   "doctype": "FSMS PRP Item",
+  "name": "PRP2-Layout",
   "prp_code": "PRP2-Layout",
   "description": "Layout of premises and workspace",
   "monitoring_method": "Sơ đồ + checklist",
@@ -17,6 +19,7 @@
  },
  {
   "doctype": "FSMS PRP Item",
+  "name": "PRP3-Utilities",
   "prp_code": "PRP3-Utilities",
   "description": "Utilities — air, water, energy",
   "monitoring_method": "Test mẫu nước, đo độ ẩm, áp suất",
@@ -25,6 +28,7 @@
  },
  {
   "doctype": "FSMS PRP Item",
+  "name": "PRP4-Waste",
   "prp_code": "PRP4-Waste",
   "description": "Waste disposal",
   "monitoring_method": "Quan sát + ghi sổ chất thải",
@@ -33,6 +37,7 @@
  },
  {
   "doctype": "FSMS PRP Item",
+  "name": "PRP5-Equipment",
   "prp_code": "PRP5-Equipment",
   "description": "Equipment suitability, cleaning, maintenance",
   "monitoring_method": "Kiểm tra thiết bị + lịch BD",
@@ -41,6 +46,7 @@
  },
  {
   "doctype": "FSMS PRP Item",
+  "name": "PRP6-Material",
   "prp_code": "PRP6-Material",
   "description": "Management of purchased materials",
   "monitoring_method": "Kiểm tra COA + nhập kho",
@@ -49,6 +55,7 @@
  },
  {
   "doctype": "FSMS PRP Item",
+  "name": "PRP7-Cross-contam",
   "prp_code": "PRP7-Cross-contam",
   "description": "Measures for prevention of cross-contamination",
   "monitoring_method": "Quan sát + GMP audit",
@@ -57,6 +64,7 @@
  },
  {
   "doctype": "FSMS PRP Item",
+  "name": "PRP8-Cleaning",
   "prp_code": "PRP8-Cleaning",
   "description": "Cleaning and sanitizing",
   "monitoring_method": "Sổ vệ sinh + ATP swab",
@@ -65,6 +73,7 @@
  },
  {
   "doctype": "FSMS PRP Item",
+  "name": "PRP9-Pest",
   "prp_code": "PRP9-Pest",
   "description": "Pest control",
   "monitoring_method": "Sổ diệt côn trùng + bẫy",
@@ -73,6 +82,7 @@
  },
  {
   "doctype": "FSMS PRP Item",
+  "name": "PRP10-Personnel",
   "prp_code": "PRP10-Personnel",
   "description": "Personnel hygiene and employee facilities",
   "monitoring_method": "Sổ vệ sinh CN + sức khỏe",
@@ -81,6 +91,7 @@
  },
  {
   "doctype": "FSMS PRP Item",
+  "name": "PRP11-Rework",
   "prp_code": "PRP11-Rework",
   "description": "Rework",
   "monitoring_method": "Sổ rework + truy xuất",

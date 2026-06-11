@@ -1,6 +1,7 @@
 [
  {
   "doctype": "Dashboard Chart",
+  "name": "FSMS NCR Trend 12 Months",
   "chart_name": "FSMS NCR Trend 12 Months",
   "chart_type": "Group By",
   "document_type": "FSMS NCR",
@@ -16,6 +17,7 @@
  },
  {
   "doctype": "Dashboard Chart",
+  "name": "FSMS Audit Findings by Department",
   "chart_name": "FSMS Audit Findings by Department",
   "chart_type": "Group By",
   "document_type": "FSMS Audit Finding",
@@ -28,6 +30,7 @@
  },
  {
   "doctype": "Dashboard Chart",
+  "name": "FSMS Risk Heatmap",
   "chart_name": "FSMS Risk Heatmap",
   "chart_type": "Group By",
   "document_type": "FSMS Risk Register",
@@ -40,6 +43,7 @@
  },
  {
   "doctype": "Dashboard Chart",
+  "name": "FSMS Calibration Compliance",
   "chart_name": "FSMS Calibration Compliance",
   "chart_type": "Custom",
   "document_type": "FSMS Measurement Equipment",
@@ -50,6 +54,7 @@
  },
  {
   "doctype": "Dashboard Chart",
+  "name": "FSMS Training Compliance",
   "chart_name": "FSMS Training Compliance",
   "chart_type": "Custom",
   "document_type": "FSMS Training Session",
@@ -60,6 +65,7 @@
  },
  {
   "doctype": "Dashboard Chart",
+  "name": "FSMS Supplier Grade Distribution",
   "chart_name": "FSMS Supplier Grade Distribution",
   "chart_type": "Group By",
   "document_type": "FSMS Supplier Profile",

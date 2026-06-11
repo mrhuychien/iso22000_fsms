@@ -1,6 +1,7 @@
 [
  {
   "doctype": "Report",
+  "name": "FSMS NCR Aging",
   "report_name": "FSMS NCR Aging",
   "ref_doctype": "FSMS NCR",
   "report_type": "Script Report",
@@ -9,6 +10,7 @@
  },
  {
   "doctype": "Report",
+  "name": "FSMS NCR by Source × Department",
   "report_name": "FSMS NCR by Source × Department",
   "ref_doctype": "FSMS NCR",
   "report_type": "Script Report",
@@ -17,6 +19,7 @@
  },
  {
   "doctype": "Report",
+  "name": "FSMS Audit Findings Trend",
   "report_name": "FSMS Audit Findings Trend",
   "ref_doctype": "FSMS Audit Finding",
   "report_type": "Script Report",
@@ -25,6 +28,7 @@
  },
  {
   "doctype": "Report",
+  "name": "FSMS Calibration Compliance",
   "report_name": "FSMS Calibration Compliance",
   "ref_doctype": "FSMS Measurement Equipment",
   "report_type": "Script Report",
@@ -33,6 +37,7 @@
  },
  {
   "doctype": "Report",
+  "name": "FSMS Supplier Performance",
   "report_name": "FSMS Supplier Performance",
   "ref_doctype": "FSMS Supplier Evaluation",
   "report_type": "Script Report",
@@ -41,6 +46,7 @@
  },
  {
   "doctype": "Report",
+  "name": "FSMS Recall Events YTD",
   "report_name": "FSMS Recall Events YTD",
   "ref_doctype": "FSMS Recall Event",
   "report_type": "Script Report",
@@ -49,6 +55,7 @@
  },
  {
   "doctype": "Report",
+  "name": "FSMS Risk Heatmap",
   "report_name": "FSMS Risk Heatmap",
   "ref_doctype": "FSMS Risk Register",
   "report_type": "Script Report",
@@ -57,6 +64,7 @@
  },
  {
   "doctype": "Report",
+  "name": "FSMS Training Compliance Matrix",
   "report_name": "FSMS Training Compliance Matrix",
   "ref_doctype": "FSMS Training Session",
   "report_type": "Script Report",
@@ -65,6 +73,7 @@
  },
  {
   "doctype": "Report",
+  "name": "FSMS Document Review Due",
   "report_name": "FSMS Document Review Due",
   "ref_doctype": "FSMS Document Register Internal",
   "report_type": "Script Report",
@@ -73,6 +82,7 @@
  },
  {
   "doctype": "Report",
+  "name": "FSMS HACCP Plan Status",
   "report_name": "FSMS HACCP Plan Status",
   "ref_doctype": "FSMS HACCP Plan",
   "report_type": "Script Report",
@@ -81,6 +91,7 @@
  },
  {
   "doctype": "Report",
+  "name": "FSMS Traceability Drill History",
   "report_name": "FSMS Traceability Drill History",
   "ref_doctype": "FSMS Traceability Drill",
   "report_type": "Script Report",
@@ -89,6 +100,7 @@
  },
  {
   "doctype": "Report",
+  "name": "FSMS Sample Retention Inventory",
   "report_name": "FSMS Sample Retention Inventory",
   "ref_doctype": "FSMS Sample Retention Log",
   "report_type": "Script Report",
@@ -97,6 +109,7 @@
  },
  {
   "doctype": "Report",
+  "name": "FSMS Sanitation Compliance",
   "report_name": "FSMS Sanitation Compliance",
   "ref_doctype": "FSMS Worker Hygiene Daily",
   "report_type": "Script Report",
@@ -105,6 +118,7 @@
  },
  {
   "doctype": "Report",
+  "name": "FSMS Customer Complaint Analysis",
   "report_name": "FSMS Customer Complaint Analysis",
   "ref_doctype": "FSMS Customer Complaint",
   "report_type": "Script Report",

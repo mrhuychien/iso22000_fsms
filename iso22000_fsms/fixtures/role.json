@@ -1,6 +1,7 @@
 [
  {
   "doctype": "Role",
+  "name": "FSMS Director",
   "role_name": "FSMS Director",
   "desk_access": 1,
   "is_custom": 1,
@@ -8,6 +9,7 @@
  },
  {
   "doctype": "Role",
+  "name": "FSMS Manager",
   "role_name": "FSMS Manager",
   "desk_access": 1,
   "is_custom": 1,
@@ -15,54 +17,63 @@
  },
  {
   "doctype": "Role",
+  "name": "FSMS Team Member",
   "role_name": "FSMS Team Member",
   "desk_access": 1,
   "is_custom": 1
  },
  {
   "doctype": "Role",
+  "name": "FSMS Planning Lead",
   "role_name": "FSMS Planning Lead",
   "desk_access": 1,
   "is_custom": 1
  },
  {
   "doctype": "Role",
+  "name": "FSMS Production Lead",
   "role_name": "FSMS Production Lead",
   "desk_access": 1,
   "is_custom": 1
  },
  {
   "doctype": "Role",
+  "name": "FSMS Accounting Lead",
   "role_name": "FSMS Accounting Lead",
   "desk_access": 1,
   "is_custom": 1
  },
  {
   "doctype": "Role",
+  "name": "FSMS Sales Lead",
   "role_name": "FSMS Sales Lead",
   "desk_access": 1,
   "is_custom": 1
  },
  {
   "doctype": "Role",
+  "name": "FSMS Internal Auditor",
   "role_name": "FSMS Internal Auditor",
   "desk_access": 1,
   "is_custom": 1
  },
  {
   "doctype": "Role",
+  "name": "FSMS QC Officer",
   "role_name": "FSMS QC Officer",
   "desk_access": 1,
   "is_custom": 1
  },
  {
   "doctype": "Role",
+  "name": "FSMS Employee",
   "role_name": "FSMS Employee",
   "desk_access": 1,
   "is_custom": 1
  },
  {
   "doctype": "Role",
+  "name": "Production Department Head",
   "role_name": "Production Department Head",
   "desk_access": 1,
   "is_custom": 1,
@@ -70,6 +81,7 @@
  },
  {
   "doctype": "Role",
+  "name": "Sales Department Head",
   "role_name": "Sales Department Head",
   "desk_access": 1,
   "is_custom": 1,
@@ -77,6 +89,7 @@
  },
  {
   "doctype": "Role",
+  "name": "Planning Department Head",
   "role_name": "Planning Department Head",
   "desk_access": 1,
   "is_custom": 1,
@@ -84,6 +97,7 @@
  },
  {
   "doctype": "Role",
+  "name": "Accounting Department Head",
   "role_name": "Accounting Department Head",
   "desk_access": 1,
   "is_custom": 1,

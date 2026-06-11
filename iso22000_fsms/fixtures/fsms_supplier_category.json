@@ -1,6 +1,7 @@
 [
  {
   "doctype": "FSMS Supplier Category",
+  "name": "Loai_1",
   "category_code": "Loai_1",
   "description": "NCC nguyên liệu trực tiếp ảnh hưởng ATTP (đậu xanh, đường, bao bì tiếp xúc thực phẩm)",
   "evaluation_required": 1,
@@ -8,6 +9,7 @@
  },
  {
   "doctype": "FSMS Supplier Category",
+  "name": "Loai_2",
   "category_code": "Loai_2",
   "description": "NCC vật tư phụ trợ không trực tiếp ảnh hưởng ATTP (văn phòng phẩm, dụng cụ vệ sinh)",
   "evaluation_required": 1,
