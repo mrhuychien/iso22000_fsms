@@ -120,7 +120,7 @@
     "doctype": "Workflow Document State",
     "state": "Chuyển tiếp",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    }
   ],
   "transitions": [
@@ -361,7 +361,7 @@
     "doctype": "Workflow Document State",
     "state": "Đóng",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    }
   ],
   "transitions": [
@@ -452,19 +452,19 @@
     "doctype": "Workflow Document State",
     "state": "Phát hành",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    },
    {
     "doctype": "Workflow Document State",
     "state": "Đóng",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    },
    {
     "doctype": "Workflow Document State",
     "state": "Chuyển tiếp",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    }
   ],
   "transitions": [
@@ -556,7 +556,7 @@
     "doctype": "Workflow Document State",
     "state": "Published",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    },
    {
     "doctype": "Workflow Document State",
@@ -568,7 +568,7 @@
     "doctype": "Workflow Document State",
     "state": "Obsolete",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    }
   ],
   "transitions": [
@@ -661,13 +661,13 @@
     "doctype": "Workflow Document State",
     "state": "Published",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    },
    {
     "doctype": "Workflow Document State",
     "state": "Obsolete",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    }
   ],
   "transitions": [
@@ -732,13 +732,13 @@
     "doctype": "Workflow Document State",
     "state": "Published",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    },
    {
     "doctype": "Workflow Document State",
     "state": "Obsolete",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    }
   ],
   "transitions": [
@@ -803,13 +803,13 @@
     "doctype": "Workflow Document State",
     "state": "Published",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    },
    {
     "doctype": "Workflow Document State",
     "state": "Obsolete",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    }
   ],
   "transitions": [
@@ -874,13 +874,13 @@
     "doctype": "Workflow Document State",
     "state": "Published",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    },
    {
     "doctype": "Workflow Document State",
     "state": "Obsolete",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    }
   ],
   "transitions": [
@@ -945,7 +945,7 @@
     "doctype": "Workflow Document State",
     "state": "Closed",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    }
   ],
   "transitions": [
@@ -1003,7 +1003,7 @@
     "doctype": "Workflow Document State",
     "state": "Closed",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    }
   ],
   "transitions": [
@@ -1061,7 +1061,7 @@
     "doctype": "Workflow Document State",
     "state": "Closed",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    }
   ],
   "transitions": [
@@ -1119,7 +1119,7 @@
     "doctype": "Workflow Document State",
     "state": "Closed",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    }
   ],
   "transitions": [
@@ -1177,7 +1177,7 @@
     "doctype": "Workflow Document State",
     "state": "Đã đóng",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    }
   ],
   "transitions": [
@@ -1229,7 +1229,7 @@
     "doctype": "Workflow Document State",
     "state": "Closed",
     "doc_status": "0",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    }
   ],
   "transitions": [
@@ -1312,7 +1312,7 @@
     "doctype": "Workflow Document State",
     "state": "Closed",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    }
   ],
   "transitions": [
@@ -1376,7 +1376,7 @@
     "doctype": "Workflow Document State",
     "state": "Closed",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    }
   ],
   "transitions": [
@@ -1646,7 +1646,7 @@
     "doctype": "Workflow Document State",
     "state": "Closed",
     "doc_status": "0",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    }
   ],
   "transitions": [
@@ -1703,7 +1703,7 @@
     "doctype": "Workflow Document State",
     "state": "Đóng",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    }
   ],
   "transitions": [
@@ -1768,7 +1768,7 @@
     "doctype": "Workflow Document State",
     "state": "Đóng",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    }
   ],
   "transitions": [
@@ -1820,7 +1820,7 @@
     "doctype": "Workflow Document State",
     "state": "Closed",
     "doc_status": "1",
-    "allow_edit": ""
+    "allow_edit": "System Manager"
    }
   ],
   "transitions": [

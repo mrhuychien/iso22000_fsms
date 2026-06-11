@@ -7,17 +7,18 @@
   "function": "Count",
   "filters_json": "[[\"FSMS NCR\", \"workflow_state\", \"not in\", [\"\\u0110\\u00e3 \\u0111\\u00f3ng\", \"Chuy\\u1ec3n ti\\u1ebfp\"]]]",
   "is_public": 1,
-  "module": "ISO 22000 FSMS"
+  "module": "ISO 22000 FSMS",
+  "type": "Document Type"
  },
  {
   "doctype": "Number Card",
   "name": "FSMS NCR On-time Closure Rate",
   "label": "FSMS NCR On-time Closure %",
   "document_type": "FSMS NCR",
-  "function": "Custom",
   "method": "iso22000_fsms.api.ncr_on_time_closure_rate",
   "is_public": 1,
-  "module": "ISO 22000 FSMS"
+  "module": "ISO 22000 FSMS",
+  "type": "Custom"
  },
  {
   "doctype": "Number Card",
@@ -27,16 +28,17 @@
   "function": "Count",
   "filters_json": "[[\"FSMS Recall Event\", \"event_date\", \">=\", \"year_start\"]]",
   "is_public": 1,
-  "module": "ISO 22000 FSMS"
+  "module": "ISO 22000 FSMS",
+  "type": "Document Type"
  },
  {
   "doctype": "Number Card",
   "name": "FSMS Audit Findings Closure Rate",
   "label": "FSMS Audit Closure %",
   "document_type": "FSMS Audit Finding",
-  "function": "Custom",
   "method": "iso22000_fsms.api.audit_findings_closure_rate",
   "is_public": 1,
-  "module": "ISO 22000 FSMS"
+  "module": "ISO 22000 FSMS",
+  "type": "Custom"
  }
 ]

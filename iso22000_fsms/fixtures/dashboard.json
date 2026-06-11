@@ -5,7 +5,7 @@
   "dashboard_name": "FSMS Director Dashboard",
   "module": "ISO 22000 FSMS",
   "is_default": 0,
-  "is_standard": 1,
+  "is_standard": 0,
   "charts": [
    {
     "chart": "FSMS NCR Trend 12 Months",

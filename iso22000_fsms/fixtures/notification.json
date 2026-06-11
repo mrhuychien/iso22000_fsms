@@ -8,7 +8,7 @@
   "channel": "Email",
   "message": "{% include 'iso22000_fsms/templates/notifications/ncr_pending_approval.html' %}",
   "send_to_all_assignees": 0,
-  "is_standard": 1,
+  "is_standard": 0,
   "module": "ISO 22000 FSMS",
   "recipients": [
    {
@@ -31,7 +31,7 @@
   "channel": "Email",
   "message": "{% include 'iso22000_fsms/templates/notifications/ncr_overdue.html' %}",
   "send_to_all_assignees": 0,
-  "is_standard": 1,
+  "is_standard": 0,
   "module": "ISO 22000 FSMS",
   "recipients": [
    {
@@ -52,7 +52,7 @@
   "channel": "Email",
   "message": "{% include 'iso22000_fsms/templates/notifications/recall_event_initiated.html' %}",
   "send_to_all_assignees": 0,
-  "is_standard": 1,
+  "is_standard": 0,
   "module": "ISO 22000 FSMS",
   "recipients": [
    {
@@ -73,7 +73,7 @@
   "channel": "Email",
   "message": "{% include 'iso22000_fsms/templates/notifications/haccp_published.html' %}",
   "send_to_all_assignees": 0,
-  "is_standard": 1,
+  "is_standard": 0,
   "module": "ISO 22000 FSMS",
   "recipients": [
    {
@@ -96,7 +96,7 @@
   "channel": "Email",
   "message": "{% include 'iso22000_fsms/templates/notifications/ccp_out_of_limit.html' %}",
   "send_to_all_assignees": 0,
-  "is_standard": 1,
+  "is_standard": 0,
   "module": "ISO 22000 FSMS",
   "recipients": [
    {
@@ -118,7 +118,7 @@
   "channel": "Email",
   "message": "{% include 'iso22000_fsms/templates/notifications/calibration_due.html' %}",
   "send_to_all_assignees": 0,
-  "is_standard": 1,
+  "is_standard": 0,
   "module": "ISO 22000 FSMS",
   "recipients": [
    {
@@ -136,7 +136,7 @@
   "channel": "Email",
   "message": "{% include 'iso22000_fsms/templates/notifications/calibration_failed.html' %}",
   "send_to_all_assignees": 0,
-  "is_standard": 1,
+  "is_standard": 0,
   "module": "ISO 22000 FSMS",
   "recipients": [
    {
@@ -155,7 +155,7 @@
   "channel": "Email",
   "message": "{% include 'iso22000_fsms/templates/notifications/document_review_due.html' %}",
   "send_to_all_assignees": 0,
-  "is_standard": 1,
+  "is_standard": 0,
   "module": "ISO 22000 FSMS",
   "recipients": [
    {
@@ -176,7 +176,7 @@
   "channel": "Email",
   "message": "{% include 'iso22000_fsms/templates/notifications/audit_kickoff.html' %}",
   "send_to_all_assignees": 0,
-  "is_standard": 1,
+  "is_standard": 0,
   "module": "ISO 22000 FSMS",
   "recipients": [
    {
@@ -197,7 +197,7 @@
   "channel": "Email",
   "message": "{% include 'iso22000_fsms/templates/notifications/sample_disposal_due.html' %}",
   "send_to_all_assignees": 0,
-  "is_standard": 1,
+  "is_standard": 0,
   "module": "ISO 22000 FSMS",
   "recipients": [
    {
@@ -215,7 +215,7 @@
   "channel": "Email",
   "message": "{% include 'iso22000_fsms/templates/notifications/risk_review_due.html' %}",
   "send_to_all_assignees": 0,
-  "is_standard": 1,
+  "is_standard": 0,
   "module": "ISO 22000 FSMS",
   "recipients": [
    {
@@ -236,7 +236,7 @@
   "channel": "Email",
   "message": "{% include 'iso22000_fsms/templates/notifications/complaint_new.html' %}",
   "send_to_all_assignees": 0,
-  "is_standard": 1,
+  "is_standard": 0,
   "module": "ISO 22000 FSMS",
   "recipients": [
    {

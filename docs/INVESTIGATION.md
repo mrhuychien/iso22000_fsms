@@ -74,7 +74,36 @@ path trong hooks, 123 DocType — module/folder/controller/__init__/fieldtype/
 Link-Table target/autoname, 28 workflow — docstatus/state/action/role, chart
 & number card & notification field refs, patches, print format).
 
-## 4. Lưu ý còn mở (không chặn install — theo dõi ở vòng test)
+## 3b. Vòng 3 — lớp lỗi "JSON không khớp schema doctype đích"
+
+Lần cài thứ 3 chết ở **sync module files** (`'str' object does not support item
+assignment`, `base_document.py:448 _init_child`): `Report.columns` là **child
+table** (`Report Column`) nhưng 14 report JSON scaffold ghi nó thành **chuỗi
+JSON** → Frappe duyệt từng ký tự của chuỗi để tạo child row. Đây là cả một lớp
+lỗi: giá trị field trong document JSON không khớp schema thật của doctype đích.
+
+Đã xây `scripts/validate_shipped_docs.py` — tải schema thật của 27 doctype
+core (frappe version-16) + schema doctype của chính app, validate **từng key
+của từng record** ship trong fixtures + module files: shape Table, options
+Select, field reqd (đường fixture chạy validate + mandatory đầy đủ), key không
+tồn tại, guard `is_standard`. Kết quả bắt thêm 7 nhóm lỗi **chưa kịp nổ**:
+
+| Lỗi | Hậu quả nếu không sửa | Fix |
+|---|---|---|
+| 14 report json: `columns` là string | TypeError chết sync (lỗi vòng 3) | `columns: []` — Script Report lấy cột từ `execute()` |
+| `dashboard_chart.json`: `is_standard=1` ×6 | `DashboardChart.validate:390` throw "Cannot edit Standard charts" (không miễn trừ in_install, site không developer_mode) | `is_standard: 0` |
+| `dashboard.json`: `is_standard=1` | Guard y hệt tại `dashboard.py:47` | `is_standard: 0` |
+| `dashboard_chart.json`: thiếu `filters_json` (reqd, không default) | MandatoryError ở fixture import | thêm `filters_json: "[]"` |
+| `workflow.json`: 27 state terminal `allow_edit` rỗng (reqd) | MandatoryError ở fixture import | `allow_edit: "System Manager"` (state đóng ≈ read-only nghiệp vụ) |
+| `number_card.json`: `function='Custom'` ngoài options Select; thiếu `type` | ValidationError (`_validate_selects`); card không biết nguồn dữ liệu | bỏ `function`, set `type: Custom` (card có `method`) / `type: Document Type` |
+| `notification.json`: `is_standard=1` ×12 | Runtime load message template từ **file module** (app không ship) thay vì DB | `is_standard: 0` |
+| `email_template.json`: key `module` không tồn tại trong schema; `role.json`: key `description` | Bị drop im lặng khi import; nhưng hooks filter Email Template theo `module` sẽ vỡ `export-fixtures` | bỏ key; hooks filter đổi sang `name like FSMS%` |
+
+Bài học cho scaffold offline: **mọi record ship đi phải validate chống schema
+thật của Frappe đúng version**, không dựa vào trí nhớ về cấu trúc doctype.
+Chạy `python3 scripts/validate_shipped_docs.py` trước mỗi lần commit fixture.
+
+
 
 - **FSMS PRP Item** là child table được seed 11 row template mồ côi
   (parent NULL) + `FSMS Verification Test.object` Link tới child table —

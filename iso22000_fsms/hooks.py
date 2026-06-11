@@ -145,7 +145,7 @@ fixtures = [
 	{"doctype": "Workflow Action Master"},
 	{"doctype": "Workflow", "filters": [["name", "like", "FSMS%"]]},
 	{"doctype": "Notification", "filters": [["module", "=", "ISO 22000 FSMS"]]},
-	{"doctype": "Email Template", "filters": [["module", "=", "ISO 22000 FSMS"]]},
+	{"doctype": "Email Template", "filters": [["name", "like", "FSMS%"]]},
 	{"doctype": "Print Format", "filters": [["module", "=", "ISO 22000 FSMS"]]},
 	{"doctype": "Dashboard Chart", "filters": [["module", "=", "ISO 22000 FSMS"]]},
 	{"doctype": "Number Card", "filters": [["module", "=", "ISO 22000 FSMS"]]},

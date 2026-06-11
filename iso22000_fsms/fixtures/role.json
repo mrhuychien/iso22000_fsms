@@ -76,31 +76,27 @@
   "name": "Production Department Head",
   "role_name": "Production Department Head",
   "desk_access": 1,
-  "is_custom": 1,
-  "description": "OR-logic approval for NCR — TBP_SX"
+  "is_custom": 1
  },
  {
   "doctype": "Role",
   "name": "Sales Department Head",
   "role_name": "Sales Department Head",
   "desk_access": 1,
-  "is_custom": 1,
-  "description": "OR-logic approval for NCR — TBP_KD"
+  "is_custom": 1
  },
  {
   "doctype": "Role",
   "name": "Planning Department Head",
   "role_name": "Planning Department Head",
   "desk_access": 1,
-  "is_custom": 1,
-  "description": "OR-logic approval for NCR — TBP_KH"
+  "is_custom": 1
  },
  {
   "doctype": "Role",
   "name": "Accounting Department Head",
   "role_name": "Accounting Department Head",
   "desk_access": 1,
-  "is_custom": 1,
-  "description": "OR-logic approval for NCR — TBP_KT"
+  "is_custom": 1
  }
 ]

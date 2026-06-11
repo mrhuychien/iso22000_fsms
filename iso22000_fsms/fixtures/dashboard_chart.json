@@ -12,8 +12,9 @@
   "group_by_type": "Count",
   "type": "Bar",
   "is_public": 1,
-  "is_standard": 1,
-  "module": "ISO 22000 FSMS"
+  "is_standard": 0,
+  "module": "ISO 22000 FSMS",
+  "filters_json": "[]"
  },
  {
   "doctype": "Dashboard Chart",
@@ -25,8 +26,9 @@
   "group_by_type": "Count",
   "type": "Donut",
   "is_public": 1,
-  "is_standard": 1,
-  "module": "ISO 22000 FSMS"
+  "is_standard": 0,
+  "module": "ISO 22000 FSMS",
+  "filters_json": "[]"
  },
  {
   "doctype": "Dashboard Chart",
@@ -38,8 +40,9 @@
   "group_by_type": "Count",
   "type": "Heatmap",
   "is_public": 1,
-  "is_standard": 1,
-  "module": "ISO 22000 FSMS"
+  "is_standard": 0,
+  "module": "ISO 22000 FSMS",
+  "filters_json": "[]"
  },
  {
   "doctype": "Dashboard Chart",
@@ -49,8 +52,9 @@
   "document_type": "FSMS Measurement Equipment",
   "type": "Bar",
   "is_public": 1,
-  "is_standard": 1,
-  "module": "ISO 22000 FSMS"
+  "is_standard": 0,
+  "module": "ISO 22000 FSMS",
+  "filters_json": "[]"
  },
  {
   "doctype": "Dashboard Chart",
@@ -60,8 +64,9 @@
   "document_type": "FSMS Training Session",
   "type": "Bar",
   "is_public": 1,
-  "is_standard": 1,
-  "module": "ISO 22000 FSMS"
+  "is_standard": 0,
+  "module": "ISO 22000 FSMS",
+  "filters_json": "[]"
  },
  {
   "doctype": "Dashboard Chart",
@@ -73,7 +78,8 @@
   "group_by_type": "Count",
   "type": "Pie",
   "is_public": 1,
-  "is_standard": 1,
-  "module": "ISO 22000 FSMS"
+  "is_standard": 0,
+  "module": "ISO 22000 FSMS",
+  "filters_json": "[]"
  }
 ]
