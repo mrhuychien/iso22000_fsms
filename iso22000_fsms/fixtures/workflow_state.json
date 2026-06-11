@@ -1,167 +1,206 @@
 [
  {
   "doctype": "Workflow State",
+  "name": "Draft",
   "workflow_state_name": "Draft",
   "style": "Primary"
  },
  {
   "doctype": "Workflow State",
+  "name": "Reviewed",
   "workflow_state_name": "Reviewed",
   "style": "Warning"
  },
  {
   "doctype": "Workflow State",
+  "name": "Pending Approval",
   "workflow_state_name": "Pending Approval",
   "style": "Warning"
  },
  {
   "doctype": "Workflow State",
+  "name": "Approved",
   "workflow_state_name": "Approved",
   "style": "Success"
  },
  {
   "doctype": "Workflow State",
+  "name": "Published",
   "workflow_state_name": "Published",
   "style": "Success"
  },
  {
   "doctype": "Workflow State",
+  "name": "Under Revision",
   "workflow_state_name": "Under Revision",
   "style": "Warning"
  },
  {
   "doctype": "Workflow State",
+  "name": "Obsolete",
   "workflow_state_name": "Obsolete",
   "style": "Primary"
  },
  {
   "doctype": "Workflow State",
+  "name": "Closed",
   "workflow_state_name": "Closed",
   "style": "Primary"
  },
  {
   "doctype": "Workflow State",
+  "name": "Đóng",
   "workflow_state_name": "Đóng",
   "style": "Primary"
  },
  {
   "doctype": "Workflow State",
+  "name": "Đề xuất",
   "workflow_state_name": "Đề xuất",
   "style": "Primary"
  },
  {
   "doctype": "Workflow State",
+  "name": "Phân tích",
   "workflow_state_name": "Phân tích",
   "style": "Warning"
  },
  {
   "doctype": "Workflow State",
+  "name": "Chờ phê duyệt",
   "workflow_state_name": "Chờ phê duyệt",
   "style": "Warning"
  },
  {
   "doctype": "Workflow State",
+  "name": "Đang thực hiện",
   "workflow_state_name": "Đang thực hiện",
   "style": "Success"
  },
  {
   "doctype": "Workflow State",
+  "name": "Đang xác minh",
   "workflow_state_name": "Đang xác minh",
   "style": "Warning"
  },
  {
   "doctype": "Workflow State",
+  "name": "Đã đóng",
   "workflow_state_name": "Đã đóng",
   "style": "Success"
  },
  {
   "doctype": "Workflow State",
+  "name": "Chuyển tiếp",
   "workflow_state_name": "Chuyển tiếp",
   "style": "Danger"
  },
  {
   "doctype": "Workflow State",
+  "name": "Phát sinh",
   "workflow_state_name": "Phát sinh",
   "style": "Primary"
  },
  {
   "doctype": "Workflow State",
+  "name": "Lập kế hoạch",
   "workflow_state_name": "Lập kế hoạch",
   "style": "Warning"
  },
  {
   "doctype": "Workflow State",
+  "name": "Đang thu hồi",
   "workflow_state_name": "Đang thu hồi",
   "style": "Danger"
  },
  {
   "doctype": "Workflow State",
+  "name": "Bảo quản",
   "workflow_state_name": "Bảo quản",
   "style": "Warning"
  },
  {
   "doctype": "Workflow State",
+  "name": "Báo cáo",
   "workflow_state_name": "Báo cáo",
   "style": "Warning"
  },
  {
   "doctype": "Workflow State",
+  "name": "Notified",
   "workflow_state_name": "Notified",
   "style": "Warning"
  },
  {
   "doctype": "Workflow State",
+  "name": "Executing",
   "workflow_state_name": "Executing",
   "style": "Success"
  },
  {
   "doctype": "Workflow State",
+  "name": "Reported",
   "workflow_state_name": "Reported",
   "style": "Warning"
  },
  {
   "doctype": "Workflow State",
+  "name": "Submitted",
   "workflow_state_name": "Submitted",
   "style": "Warning"
  },
  {
   "doctype": "Workflow State",
+  "name": "Verified",
   "workflow_state_name": "Verified",
   "style": "Success"
  },
  {
   "doctype": "Workflow State",
+  "name": "Hoàn thành",
   "workflow_state_name": "Hoàn thành",
   "style": "Success"
  },
  {
   "doctype": "Workflow State",
+  "name": "Đang xảy ra",
   "workflow_state_name": "Đang xảy ra",
   "style": "Danger"
  },
  {
   "doctype": "Workflow State",
+  "name": "Đã xử lý",
   "workflow_state_name": "Đã xử lý",
   "style": "Warning"
  },
  {
   "doctype": "Workflow State",
+  "name": "Đã báo cáo",
   "workflow_state_name": "Đã báo cáo",
   "style": "Success"
  },
  {
   "doctype": "Workflow State",
+  "name": "Mới",
   "workflow_state_name": "Mới",
   "style": "Primary"
  },
  {
   "doctype": "Workflow State",
+  "name": "Đang xử lý",
   "workflow_state_name": "Đang xử lý",
   "style": "Warning"
  },
  {
   "doctype": "Workflow State",
+  "name": "Đã giải quyết",
   "workflow_state_name": "Đã giải quyết",
+  "style": "Success"
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Phát hành",
+  "workflow_state_name": "Phát hành",
   "style": "Success"
  }
 ]

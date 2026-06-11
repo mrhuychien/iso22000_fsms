@@ -138,7 +138,6 @@ fixtures = [
 		"Planning Department Head", "Accounting Department Head",
 	]]]},
 	{"doctype": "Custom Field", "filters": [["fieldname", "like", "fsms_%"]]},
-	{"doctype": "Custom DocPerm", "filters": [["role", "like", "FSMS%"]]},
 	{"doctype": "Property Setter", "filters": [["module", "in", [
 		"FSMS Core", "FSMS Traceability", "FSMS Supplier", "FSMS Recall",
 	]]]},
@@ -152,12 +151,6 @@ fixtures = [
 	{"doctype": "Number Card", "filters": [["module", "=", "ISO 22000 FSMS"]]},
 	{"doctype": "Dashboard", "filters": [["module", "=", "ISO 22000 FSMS"]]},
 	{"doctype": "Workspace", "filters": [["module", "=", "ISO 22000 FSMS"]]},
-	{"doctype": "Report", "filters": [["module", "in", [
-		"FSMS Core", "FSMS NCR", "FSMS Audit", "FSMS Recall", "FSMS Equipment",
-		"FSMS Supplier", "FSMS Context Risk", "FSMS Training",
-		"FSMS Document Control", "FSMS HACCP", "FSMS Traceability",
-		"FSMS Sample", "FSMS PRP", "FSMS Communication",
-	]]]},
 	{"doctype": "FSMS Document Category"},
 	{"doctype": "FSMS NCR Source"},
 	{"doctype": "FSMS Risk Score Reference"},

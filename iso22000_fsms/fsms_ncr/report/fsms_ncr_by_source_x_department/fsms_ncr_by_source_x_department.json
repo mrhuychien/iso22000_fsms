@@ -1,7 +1,7 @@
 {
  "doctype": "Report",
- "name": "FSMS NCR by Source × Department",
- "report_name": "FSMS NCR by Source × Department",
+ "name": "FSMS NCR by Source x Department",
+ "report_name": "FSMS NCR by Source x Department",
  "ref_doctype": "FSMS NCR",
  "report_type": "Script Report",
  "module": "FSMS NCR",

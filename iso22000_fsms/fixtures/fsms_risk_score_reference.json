@@ -1,6 +1,7 @@
 [
  {
   "doctype": "FSMS Risk Score Reference",
+  "name": "RS-A-1",
   "score_dimension": "A",
   "score_value": 1,
   "description": "Hiếm xảy ra (≥1 năm 1 lần hoặc ít hơn)",
@@ -8,6 +9,7 @@
  },
  {
   "doctype": "FSMS Risk Score Reference",
+  "name": "RS-A-2",
   "score_dimension": "A",
   "score_value": 2,
   "description": "Thỉnh thoảng xảy ra (vài tháng/lần)",
@@ -15,6 +17,7 @@
  },
  {
   "doctype": "FSMS Risk Score Reference",
+  "name": "RS-A-3",
   "score_dimension": "A",
   "score_value": 3,
   "description": "Thường xuyên xảy ra (vài tuần/lần)",
@@ -22,6 +25,7 @@
  },
  {
   "doctype": "FSMS Risk Score Reference",
+  "name": "RS-A-4",
   "score_dimension": "A",
   "score_value": 4,
   "description": "Xảy ra rất thường xuyên (hàng ngày)",
@@ -29,6 +33,7 @@
  },
  {
   "doctype": "FSMS Risk Score Reference",
+  "name": "RS-B-1",
   "score_dimension": "B",
   "score_value": 1,
   "description": "Hậu quả không đáng kể, tự khắc phục",
@@ -36,6 +41,7 @@
  },
  {
   "doctype": "FSMS Risk Score Reference",
+  "name": "RS-B-2",
   "score_dimension": "B",
   "score_value": 2,
   "description": "Hậu quả nhẹ, không ảnh hưởng SK",
@@ -43,6 +49,7 @@
  },
  {
   "doctype": "FSMS Risk Score Reference",
+  "name": "RS-B-3",
   "score_dimension": "B",
   "score_value": 3,
   "description": "Hậu quả vừa, có thể ảnh hưởng SK ngắn hạn",
@@ -50,6 +57,7 @@
  },
  {
   "doctype": "FSMS Risk Score Reference",
+  "name": "RS-B-4",
   "score_dimension": "B",
   "score_value": 4,
   "description": "Hậu quả nghiêm trọng, ảnh hưởng SK dài hạn / pháp lý",
@@ -57,6 +65,7 @@
  },
  {
   "doctype": "FSMS Risk Score Reference",
+  "name": "RS-C-1",
   "score_dimension": "C",
   "score_value": 1,
   "description": "Mức độ nghiêm trọng thấp",
@@ -64,6 +73,7 @@
  },
  {
   "doctype": "FSMS Risk Score Reference",
+  "name": "RS-C-2",
   "score_dimension": "C",
   "score_value": 2,
   "description": "Trung bình",
@@ -71,6 +81,7 @@
  },
  {
   "doctype": "FSMS Risk Score Reference",
+  "name": "RS-C-3",
   "score_dimension": "C",
   "score_value": 3,
   "description": "Nghiêm trọng",
@@ -78,6 +89,7 @@
  },
  {
   "doctype": "FSMS Risk Score Reference",
+  "name": "RS-C-4",
   "score_dimension": "C",
   "score_value": 4,
   "description": "Rất nghiêm trọng",
@@ -85,6 +97,7 @@
  },
  {
   "doctype": "FSMS Risk Score Reference",
+  "name": "RS-D-1",
   "score_dimension": "D",
   "score_value": 1,
   "description": "Dễ phát hiện ngay (kiểm tra cảm quan / online)",
@@ -92,6 +105,7 @@
  },
  {
   "doctype": "FSMS Risk Score Reference",
+  "name": "RS-D-2",
   "score_dimension": "D",
   "score_value": 2,
   "description": "Phát hiện trong khâu kiểm tra cuối",
@@ -99,6 +113,7 @@
  },
  {
   "doctype": "FSMS Risk Score Reference",
+  "name": "RS-D-3",
   "score_dimension": "D",
   "score_value": 3,
   "description": "Khó phát hiện, phải lab test",
@@ -106,6 +121,7 @@
  },
  {
   "doctype": "FSMS Risk Score Reference",
+  "name": "RS-D-4",
   "score_dimension": "D",
   "score_value": 4,
   "description": "Rất khó phát hiện, chỉ phát hiện qua KH",

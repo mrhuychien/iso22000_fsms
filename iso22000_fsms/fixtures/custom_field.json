@@ -1,6 +1,7 @@
 [
  {
   "doctype": "Custom Field",
+  "name": "Customer-fsms_recall_priority",
   "dt": "Customer",
   "fieldname": "fsms_recall_priority",
   "label": "FSMS Recall Priority",
@@ -11,6 +12,7 @@
  },
  {
   "doctype": "Custom Field",
+  "name": "Item-fsms_haccp_plan",
   "dt": "Item",
   "fieldname": "fsms_haccp_plan",
   "label": "FSMS HACCP Plan",
@@ -22,6 +24,7 @@
  },
  {
   "doctype": "Custom Field",
+  "name": "Supplier-fsms_supplier_profile",
   "dt": "Supplier",
   "fieldname": "fsms_supplier_profile",
   "label": "FSMS Supplier Profile",
@@ -32,6 +35,7 @@
  },
  {
   "doctype": "Custom Field",
+  "name": "Employee-fsms_signature_image",
   "dt": "Employee",
   "fieldname": "fsms_signature_image",
   "label": "FSMS Signature",
@@ -42,6 +46,7 @@
  },
  {
   "doctype": "Custom Field",
+  "name": "Employee-fsms_last_training_date",
   "dt": "Employee",
   "fieldname": "fsms_last_training_date",
   "label": "FSMS Last Training Date",
@@ -51,6 +56,7 @@
  },
  {
   "doctype": "Custom Field",
+  "name": "Batch-fsms_traceability_indexed",
   "dt": "Batch",
   "fieldname": "fsms_traceability_indexed",
   "label": "FSMS Trace Indexed",

@@ -1,6 +1,7 @@
 [
  {
   "doctype": "FSMS Emergency Scenario",
+  "name": "PL.03.01",
   "scenario_code": "PL.03.01",
   "scenario_name": "Ứng phó bão lũ",
   "scenario_type": "Thiên tai",
@@ -8,6 +9,7 @@
  },
  {
   "doctype": "FSMS Emergency Scenario",
+  "name": "PL.03.02",
   "scenario_code": "PL.03.02",
   "scenario_name": "Phương án chữa cháy",
   "scenario_type": "Cháy nổ",
@@ -15,6 +17,7 @@
  },
  {
   "doctype": "FSMS Emergency Scenario",
+  "name": "PL.03.03",
   "scenario_code": "PL.03.03",
   "scenario_name": "Ứng phó với điện",
   "scenario_type": "Mất điện",
@@ -22,6 +25,7 @@
  },
  {
   "doctype": "FSMS Emergency Scenario",
+  "name": "PL.03.04",
   "scenario_code": "PL.03.04",
   "scenario_name": "Ứng phó dịch bệnh",
   "scenario_type": "Dịch bệnh",
@@ -29,6 +33,7 @@
  },
  {
   "doctype": "FSMS Emergency Scenario",
+  "name": "PL.03.05",
   "scenario_code": "PL.03.05",
   "scenario_name": "Sản phẩm bị nhầm thông tin",
   "scenario_type": "Thông tin SP",
