@@ -8,5 +8,5 @@
  "is_standard": "Yes",
  "disabled": 0,
  "json": "{}",
- "columns": "[{\"label\": \"Source\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 150}, {\"label\": \"Department\", \"fieldtype\": \"Link\", \"options\": \"Department\", \"width\": 150}, {\"label\": \"Count\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 80}]"
+ "columns": []
 }

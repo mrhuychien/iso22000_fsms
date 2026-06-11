@@ -8,5 +8,5 @@
  "is_standard": "Yes",
  "disabled": 0,
  "json": "{}",
- "columns": "[{\"label\": \"Supplier\", \"fieldtype\": \"Link\", \"options\": \"Supplier\", \"width\": 150}, {\"label\": \"Eval Count\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 80}, {\"label\": \"Avg Score\", \"fieldtype\": \"Float\", \"options\": \"\", \"width\": 100}, {\"label\": \"Last Grade\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 80}, {\"label\": \"Last Eval Date\", \"fieldtype\": \"Date\", \"options\": \"\", \"width\": 120}]"
+ "columns": []
 }

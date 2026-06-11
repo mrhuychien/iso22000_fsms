@@ -8,5 +8,5 @@
  "is_standard": "Yes",
  "disabled": 0,
  "json": "{}",
- "columns": "[{\"label\": \"Equipment\", \"fieldtype\": \"Link\", \"options\": \"FSMS Measurement Equipment\", \"width\": 150}, {\"label\": \"Last Calibration\", \"fieldtype\": \"Date\", \"options\": \"\", \"width\": 130}, {\"label\": \"Next Calibration\", \"fieldtype\": \"Date\", \"options\": \"\", \"width\": 130}, {\"label\": \"Days to Due\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 100}, {\"label\": \"Status\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 100}]"
+ "columns": []
 }

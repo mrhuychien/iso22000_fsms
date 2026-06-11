@@ -8,5 +8,5 @@
  "is_standard": "Yes",
  "disabled": 0,
  "json": "{}",
- "columns": "[{\"label\": \"Risk\", \"fieldtype\": \"Link\", \"options\": \"FSMS Risk Register\", \"width\": 150}, {\"label\": \"Category\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 100}, {\"label\": \"Likelihood\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 100}, {\"label\": \"Severity\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 100}, {\"label\": \"Total Score\", \"fieldtype\": \"Int\", \"options\": \"\", \"width\": 100}, {\"label\": \"Risk Level\", \"fieldtype\": \"Data\", \"options\": \"\", \"width\": 130}]"
+ "columns": []
 }

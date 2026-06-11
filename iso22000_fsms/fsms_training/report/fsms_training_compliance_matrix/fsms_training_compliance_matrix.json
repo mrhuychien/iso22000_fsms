@@ -8,5 +8,5 @@
  "is_standard": "Yes",
  "disabled": 0,
  "json": "{}",
- "columns": "[{\"label\": \"Employee\", \"fieldtype\": \"Link\", \"options\": \"Employee\", \"width\": 130}, {\"label\": \"Course\", \"fieldtype\": \"Link\", \"options\": \"FSMS Training Course\", \"width\": 150}, {\"label\": \"Last Session\", \"fieldtype\": \"Date\", \"options\": \"\", \"width\": 120}, {\"label\": \"Score\", \"fieldtype\": \"Float\", \"options\": \"\", \"width\": 100}, {\"label\": \"Passed\", \"fieldtype\": \"Check\", \"options\": \"\", \"width\": 80}]"
+ "columns": []
 }
