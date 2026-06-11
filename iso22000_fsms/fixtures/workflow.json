@@ -12,37 +12,109 @@
     "doctype": "Workflow Document State",
     "state": "Đề xuất",
     "doc_status": "0",
-    "allow_edit": "FSMS Manager,FSMS Team Member,FSMS Employee"
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đề xuất",
+    "doc_status": "0",
+    "allow_edit": "FSMS Team Member"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đề xuất",
+    "doc_status": "0",
+    "allow_edit": "FSMS Employee"
    },
    {
     "doctype": "Workflow Document State",
     "state": "Phân tích",
     "doc_status": "0",
-    "allow_edit": "FSMS Manager,FSMS Team Member"
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Phân tích",
+    "doc_status": "0",
+    "allow_edit": "FSMS Team Member"
    },
    {
     "doctype": "Workflow Document State",
     "state": "Chờ phê duyệt",
     "doc_status": "0",
-    "allow_edit": "FSMS Manager,FSMS Director,Production Department Head,Sales Department Head,Planning Department Head,Accounting Department Head"
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Chờ phê duyệt",
+    "doc_status": "0",
+    "allow_edit": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Chờ phê duyệt",
+    "doc_status": "0",
+    "allow_edit": "Production Department Head"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Chờ phê duyệt",
+    "doc_status": "0",
+    "allow_edit": "Sales Department Head"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Chờ phê duyệt",
+    "doc_status": "0",
+    "allow_edit": "Planning Department Head"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Chờ phê duyệt",
+    "doc_status": "0",
+    "allow_edit": "Accounting Department Head"
    },
    {
     "doctype": "Workflow Document State",
     "state": "Đang thực hiện",
     "doc_status": "1",
-    "allow_edit": "FSMS Manager,FSMS Team Member,FSMS Employee"
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đang thực hiện",
+    "doc_status": "1",
+    "allow_edit": "FSMS Team Member"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đang thực hiện",
+    "doc_status": "1",
+    "allow_edit": "FSMS Employee"
    },
    {
     "doctype": "Workflow Document State",
     "state": "Đang xác minh",
     "doc_status": "1",
-    "allow_edit": "FSMS Manager,FSMS Internal Auditor"
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đang xác minh",
+    "doc_status": "1",
+    "allow_edit": "FSMS Internal Auditor"
    },
    {
     "doctype": "Workflow Document State",
     "state": "Đã đóng",
     "doc_status": "1",
-    "allow_edit": "FSMS Manager,FSMS Internal Auditor"
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đã đóng",
+    "doc_status": "1",
+    "allow_edit": "FSMS Internal Auditor"
    },
    {
     "doctype": "Workflow Document State",
@@ -57,7 +129,23 @@
     "state": "Đề xuất",
     "action": "Gửi phân tích",
     "next_state": "Phân tích",
-    "allowed": "FSMS Manager,FSMS Team Member,FSMS Employee",
+    "allowed": "FSMS Manager",
+    "condition": "doc.nonconformity_description"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Đề xuất",
+    "action": "Gửi phân tích",
+    "next_state": "Phân tích",
+    "allowed": "FSMS Team Member",
+    "condition": "doc.nonconformity_description"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Đề xuất",
+    "action": "Gửi phân tích",
+    "next_state": "Phân tích",
+    "allowed": "FSMS Employee",
     "condition": "doc.nonconformity_description"
    },
    {
@@ -65,7 +153,15 @@
     "state": "Phân tích",
     "action": "Gửi phê duyệt",
     "next_state": "Chờ phê duyệt",
-    "allowed": "FSMS Manager,FSMS Team Member",
+    "allowed": "FSMS Manager",
+    "condition": "doc.root_cause_analysis and doc.proposed_action and doc.assigned_to and doc.proposed_completion_date"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Phân tích",
+    "action": "Gửi phê duyệt",
+    "next_state": "Chờ phê duyệt",
+    "allowed": "FSMS Team Member",
     "condition": "doc.root_cause_analysis and doc.proposed_action and doc.assigned_to and doc.proposed_completion_date"
    },
    {
@@ -73,14 +169,89 @@
     "state": "Chờ phê duyệt",
     "action": "Phê duyệt",
     "next_state": "Đang thực hiện",
-    "allowed": "FSMS Manager,FSMS Director,Production Department Head,Sales Department Head,Planning Department Head,Accounting Department Head"
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Chờ phê duyệt",
+    "action": "Phê duyệt",
+    "next_state": "Đang thực hiện",
+    "allowed": "FSMS Director"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Chờ phê duyệt",
+    "action": "Phê duyệt",
+    "next_state": "Đang thực hiện",
+    "allowed": "Production Department Head"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Chờ phê duyệt",
+    "action": "Phê duyệt",
+    "next_state": "Đang thực hiện",
+    "allowed": "Sales Department Head"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Chờ phê duyệt",
+    "action": "Phê duyệt",
+    "next_state": "Đang thực hiện",
+    "allowed": "Planning Department Head"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Chờ phê duyệt",
+    "action": "Phê duyệt",
+    "next_state": "Đang thực hiện",
+    "allowed": "Accounting Department Head"
    },
    {
     "doctype": "Workflow Transition",
     "state": "Chờ phê duyệt",
     "action": "Yêu cầu sửa",
     "next_state": "Phân tích",
-    "allowed": "FSMS Manager,FSMS Director,Production Department Head,Sales Department Head,Planning Department Head,Accounting Department Head",
+    "allowed": "FSMS Manager",
+    "condition": "doc.approver_remarks"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Chờ phê duyệt",
+    "action": "Yêu cầu sửa",
+    "next_state": "Phân tích",
+    "allowed": "FSMS Director",
+    "condition": "doc.approver_remarks"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Chờ phê duyệt",
+    "action": "Yêu cầu sửa",
+    "next_state": "Phân tích",
+    "allowed": "Production Department Head",
+    "condition": "doc.approver_remarks"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Chờ phê duyệt",
+    "action": "Yêu cầu sửa",
+    "next_state": "Phân tích",
+    "allowed": "Sales Department Head",
+    "condition": "doc.approver_remarks"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Chờ phê duyệt",
+    "action": "Yêu cầu sửa",
+    "next_state": "Phân tích",
+    "allowed": "Planning Department Head",
+    "condition": "doc.approver_remarks"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Chờ phê duyệt",
+    "action": "Yêu cầu sửa",
+    "next_state": "Phân tích",
+    "allowed": "Accounting Department Head",
     "condition": "doc.approver_remarks"
    },
    {
@@ -88,7 +259,23 @@
     "state": "Đang thực hiện",
     "action": "Hoàn thành thực hiện",
     "next_state": "Đang xác minh",
-    "allowed": "FSMS Manager,FSMS Team Member,FSMS Employee",
+    "allowed": "FSMS Manager",
+    "condition": "doc.actual_completion_date"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Đang thực hiện",
+    "action": "Hoàn thành thực hiện",
+    "next_state": "Đang xác minh",
+    "allowed": "FSMS Team Member",
+    "condition": "doc.actual_completion_date"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Đang thực hiện",
+    "action": "Hoàn thành thực hiện",
+    "next_state": "Đang xác minh",
+    "allowed": "FSMS Employee",
     "condition": "doc.actual_completion_date"
    },
    {
@@ -96,7 +283,15 @@
     "state": "Đang xác minh",
     "action": "Đạt - đóng phiếu",
     "next_state": "Đã đóng",
-    "allowed": "FSMS Manager,FSMS Internal Auditor",
+    "allowed": "FSMS Manager",
+    "condition": "doc.verification_outcome == 'Đạt yêu cầu'"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Đang xác minh",
+    "action": "Đạt - đóng phiếu",
+    "next_state": "Đã đóng",
+    "allowed": "FSMS Internal Auditor",
     "condition": "doc.verification_outcome == 'Đạt yêu cầu'"
    },
    {
@@ -104,7 +299,15 @@
     "state": "Đang xác minh",
     "action": "Không đạt - chuyển tiếp",
     "next_state": "Chuyển tiếp",
-    "allowed": "FSMS Manager,FSMS Internal Auditor",
+    "allowed": "FSMS Manager",
+    "condition": "doc.verification_outcome == 'Không đạt'"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Đang xác minh",
+    "action": "Không đạt - chuyển tiếp",
+    "next_state": "Chuyển tiếp",
+    "allowed": "FSMS Internal Auditor",
     "condition": "doc.verification_outcome == 'Không đạt'"
    }
   ]
@@ -122,7 +325,13 @@
     "doctype": "Workflow Document State",
     "state": "Phát sinh",
     "doc_status": "0",
-    "allow_edit": "FSMS Manager,FSMS Director"
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Phát sinh",
+    "doc_status": "0",
+    "allow_edit": "FSMS Director"
    },
    {
     "doctype": "Workflow Document State",
@@ -161,7 +370,14 @@
     "state": "Phát sinh",
     "action": "Plan",
     "next_state": "Lập kế hoạch",
-    "allowed": "FSMS Manager,FSMS Director"
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Phát sinh",
+    "action": "Plan",
+    "next_state": "Lập kế hoạch",
+    "allowed": "FSMS Director"
    },
    {
     "doctype": "Workflow Transition",
@@ -206,13 +422,31 @@
     "doctype": "Workflow Document State",
     "state": "Đề xuất",
     "doc_status": "0",
-    "allow_edit": "FSMS Manager,FSMS Team Member,FSMS Employee"
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đề xuất",
+    "doc_status": "0",
+    "allow_edit": "FSMS Team Member"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đề xuất",
+    "doc_status": "0",
+    "allow_edit": "FSMS Employee"
    },
    {
     "doctype": "Workflow Document State",
     "state": "Chờ phê duyệt",
     "doc_status": "0",
-    "allow_edit": "FSMS Manager,FSMS Director"
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Chờ phê duyệt",
+    "doc_status": "0",
+    "allow_edit": "FSMS Director"
    },
    {
     "doctype": "Workflow Document State",
@@ -239,21 +473,42 @@
     "state": "Đề xuất",
     "action": "Gửi phê duyệt",
     "next_state": "Chờ phê duyệt",
-    "allowed": "FSMS Manager,FSMS Team Member"
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Đề xuất",
+    "action": "Gửi phê duyệt",
+    "next_state": "Chờ phê duyệt",
+    "allowed": "FSMS Team Member"
    },
    {
     "doctype": "Workflow Transition",
     "state": "Chờ phê duyệt",
     "action": "Phê duyệt",
     "next_state": "Phát hành",
-    "allowed": "FSMS Manager,FSMS Director"
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Chờ phê duyệt",
+    "action": "Phê duyệt",
+    "next_state": "Phát hành",
+    "allowed": "FSMS Director"
    },
    {
     "doctype": "Workflow Transition",
     "state": "Chờ phê duyệt",
     "action": "Yêu cầu sửa",
     "next_state": "Đề xuất",
-    "allowed": "FSMS Manager,FSMS Director"
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Chờ phê duyệt",
+    "action": "Yêu cầu sửa",
+    "next_state": "Đề xuất",
+    "allowed": "FSMS Director"
    },
    {
     "doctype": "Workflow Transition",
@@ -277,12 +532,18 @@
     "doctype": "Workflow Document State",
     "state": "Draft",
     "doc_status": "0",
-    "allow_edit": "FSMS Manager,FSMS Production Lead"
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS Production Lead"
    },
    {
     "doctype": "Workflow Document State",
     "state": "Reviewed",
-    "doc_status": "0",
+    "doc_status": "1",
     "allow_edit": "FSMS Manager"
    },
    {
@@ -316,7 +577,14 @@
     "state": "Draft",
     "action": "Submit for Review",
     "next_state": "Reviewed",
-    "allowed": "FSMS Manager,FSMS Production Lead"
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Submit for Review",
+    "next_state": "Reviewed",
+    "allowed": "FSMS Production Lead"
    },
    {
     "doctype": "Workflow Transition",
@@ -330,7 +598,14 @@
     "state": "Approved",
     "action": "Publish",
     "next_state": "Published",
-    "allowed": "FSMS Manager,FSMS Director"
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Approved",
+    "action": "Publish",
+    "next_state": "Published",
+    "allowed": "FSMS Director"
    },
    {
     "doctype": "Workflow Transition",
@@ -884,7 +1159,13 @@
     "doctype": "Workflow Document State",
     "state": "Đang thực hiện",
     "doc_status": "0",
-    "allow_edit": "FSMS Internal Auditor,FSMS Manager"
+    "allow_edit": "FSMS Internal Auditor"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Đang thực hiện",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
    },
    {
     "doctype": "Workflow Document State",
@@ -905,7 +1186,14 @@
     "state": "Đang thực hiện",
     "action": "Submit Findings",
     "next_state": "Hoàn thành",
-    "allowed": "FSMS Internal Auditor,FSMS Manager"
+    "allowed": "FSMS Internal Auditor"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Đang thực hiện",
+    "action": "Submit Findings",
+    "next_state": "Hoàn thành",
+    "allowed": "FSMS Manager"
    },
    {
     "doctype": "Workflow Transition",
@@ -1064,7 +1352,13 @@
     "doctype": "Workflow Document State",
     "state": "Draft",
     "doc_status": "0",
-    "allow_edit": "FSMS Manager,FSMS QC Officer"
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS QC Officer"
    },
    {
     "doctype": "Workflow Document State",
@@ -1091,7 +1385,14 @@
     "state": "Draft",
     "action": "Submit for Review",
     "next_state": "Reviewed",
-    "allowed": "FSMS Manager,FSMS QC Officer"
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Submit for Review",
+    "next_state": "Reviewed",
+    "allowed": "FSMS QC Officer"
    },
    {
     "doctype": "Workflow Transition",
@@ -1122,7 +1423,13 @@
     "doctype": "Workflow Document State",
     "state": "Submitted",
     "doc_status": "0",
-    "allow_edit": "FSMS QC Officer,FSMS Manager"
+    "allow_edit": "FSMS QC Officer"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Submitted",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
    },
    {
     "doctype": "Workflow Document State",
@@ -1154,7 +1461,13 @@
     "doctype": "Workflow Document State",
     "state": "Submitted",
     "doc_status": "0",
-    "allow_edit": "FSMS QC Officer,FSMS Planning Lead"
+    "allow_edit": "FSMS QC Officer"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Submitted",
+    "doc_status": "0",
+    "allow_edit": "FSMS Planning Lead"
    },
    {
     "doctype": "Workflow Document State",
@@ -1186,7 +1499,13 @@
     "doctype": "Workflow Document State",
     "state": "Draft",
     "doc_status": "0",
-    "allow_edit": "FSMS Planning Lead,FSMS Manager"
+    "allow_edit": "FSMS Planning Lead"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "FSMS Manager"
    },
    {
     "doctype": "Workflow Document State",
@@ -1207,7 +1526,14 @@
     "state": "Draft",
     "action": "Submit for Review",
     "next_state": "Reviewed",
-    "allowed": "FSMS Planning Lead,FSMS Manager"
+    "allowed": "FSMS Planning Lead"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Draft",
+    "action": "Submit for Review",
+    "next_state": "Reviewed",
+    "allowed": "FSMS Manager"
    },
    {
     "doctype": "Workflow Transition",
@@ -1353,7 +1679,13 @@
     "doctype": "Workflow Document State",
     "state": "Mới",
     "doc_status": "0",
-    "allow_edit": "FSMS Manager,FSMS Sales Lead"
+    "allow_edit": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Document State",
+    "state": "Mới",
+    "doc_status": "0",
+    "allow_edit": "FSMS Sales Lead"
    },
    {
     "doctype": "Workflow Document State",
@@ -1380,7 +1712,14 @@
     "state": "Mới",
     "action": "Investigate",
     "next_state": "Đang xử lý",
-    "allowed": "FSMS Manager,FSMS Sales Lead"
+    "allowed": "FSMS Manager"
+   },
+   {
+    "doctype": "Workflow Transition",
+    "state": "Mới",
+    "action": "Investigate",
+    "next_state": "Đang xử lý",
+    "allowed": "FSMS Sales Lead"
    },
    {
     "doctype": "Workflow Transition",
