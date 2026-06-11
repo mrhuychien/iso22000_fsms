@@ -138,7 +138,6 @@ fixtures = [
 		"Planning Department Head", "Accounting Department Head",
 	]]]},
 	{"doctype": "Custom Field", "filters": [["fieldname", "like", "fsms_%"]]},
-	{"doctype": "Custom DocPerm", "filters": [["role", "like", "FSMS%"]]},
 	{"doctype": "Property Setter", "filters": [["module", "in", [
 		"FSMS Core", "FSMS Traceability", "FSMS Supplier", "FSMS Recall",
 	]]]},
