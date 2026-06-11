@@ -38,7 +38,7 @@ xuyên thẳng ra ngoài làm chết install.
 | `name` đặt sẵn được giữ nguyên khi import (mọi kiểu autoname, kể cả hash/child) | `frappe/model/naming.py:158` — `if ... not frappe.flags.in_import: doc.name = None`; `import_doc` bật `frappe.flags.in_import` |
 | Fixtures chạy **trước** `after_install` → roles đã có khi cấp quyền | `frappe/installer.py::install_app`: `sync_for` → `sync_fixtures` → `after_install` |
 | `add_permission` idempotent + copy DocPerm chuẩn sang Custom DocPerm trước (không mất quyền core) | `frappe/permissions.py::add_permission` → `setup_custom_perms` + check tồn tại `(parent, role, permlevel, if_owner)` |
-| Module trong modules.txt được tạo Module Def dù không có thư mục | `frappe/installer.py:321→723 add_module_defs` |
+| Module trong modules.txt được tạo Module Def tự động, **nhưng `sync_for` import package Python của từng module vô điều kiện** → mỗi module trong modules.txt BẮT BUỘC có thư mục package (`<scrub(module)>/__init__.py`) | `frappe/installer.py:321→723 add_module_defs`; `frappe/model/sync.py:117` (`frappe.get_module(app + "." + module)`) — vỡ thực tế ở lần cài thứ 2, đã fix bằng package `iso_22000_fsms/` |
 | Luật docstatus workflow: cấm `2→*`, `1→0`, `0→2`; validate chạy **ngay lúc import fixture** (data_import=True không tắt validate) | `frappe/workflow/doctype/workflow/workflow.py::validate_docstatus`; `import_file.py::import_doc` |
 | `allow_edit`/`allowed` là Link 1 role; client gộp allow_edit của **mọi row trùng state**; transition match theo từng row | `frappe/public/js/frappe/model/workflow.js::is_read_only`, `frappe/model/workflow.py::get_transitions` |
 | Print Format `standard=Yes` import được trên site không developer_mode | `print_format.py::validate` miễn khi `in_install`/`in_migrate` |
@@ -57,7 +57,8 @@ xuyên thẳng ra ngoài làm chết install.
    idempotent); đổi `fsms_prp_item_template.json` → `fsms_prp_item.json` khớp
    scrub(doctype); bổ sung master bị thiếu: Workflow State `Phát hành`,
    Workflow Action Master `Submit`, `Verify`.
-4. `fix(modules)` — đăng ký module ô dù `ISO 22000 FSMS` (7 file fixture trỏ tới).
+4. `fix(modules)` — đăng ký module ô dù `ISO 22000 FSMS` (7 file fixture trỏ tới)
+   + package `iso_22000_fsms/__init__.py` (sync_for import package của mọi module).
 5. `fix(reports)` — 14 Script Report nằm ở `iso22000_fsms/iso22000_fsms/report/`
    (không khớp module nào → không bao giờ sync, chạy là ImportError) → chuyển về
    đúng thư mục module khai trong JSON; đổi tên report chứa ký tự unicode `×`
