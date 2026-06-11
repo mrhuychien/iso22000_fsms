@@ -129,13 +129,30 @@ def check_record(schemas, rec, dt, ctx, mandatory_enforced):
 					E.append(f"{ctx}: thiếu field bắt buộc '{fn}' ({dt}, không có default) — MandatoryError ở fixture import")
 
 
+def check_controller_rules(schemas, rec, ctx):
+	"""Luật validate đặc thù của controller core (chạy đầy đủ ở đường fixture)."""
+	dt = rec.get("doctype")
+	target = rec.get("document_type")
+	target_istable = bool(schemas.get(target, {}).get("istable")) if target else False
+	# DashboardChart.check_required_field / NumberCard.validate:
+	# document_type là child table -> bắt buộc parent_document_type
+	if dt == "Dashboard Chart" and rec.get("chart_type") not in ("Custom", "Report"):
+		if target_istable and not rec.get("parent_document_type"):
+			E.append(f"{ctx}: document_type '{target}' là child table — thiếu parent_document_type (DashboardChart.check_required_field throw)")
+	if dt == "Number Card" and rec.get("type") == "Document Type":
+		if target_istable and not rec.get("parent_document_type"):
+			E.append(f"{ctx}: document_type '{target}' là child table — thiếu parent_document_type (NumberCard.validate throw)")
+
+
 def main():
 	fetch_schemas()
 	schemas = load_schemas()
 	# fixtures: data_import=True -> validate + mandatory BẬT
 	for f in sorted(glob.glob(f"{APP}/fixtures/*.json")):
 		for i, rec in enumerate(json.load(open(f))):
-			check_record(schemas, rec, rec.get("doctype"), f"{os.path.basename(f)}[{i} {rec.get('name', '?')}]", True)
+			ctx = f"{os.path.basename(f)}[{i} {rec.get('name', '?')}]"
+			check_record(schemas, rec, rec.get("doctype"), ctx, True)
+			check_controller_rules(schemas, rec, ctx)
 	# module-file sync (report, ...): validate/mandatory TẮT -> chỉ cần shape
 	for f in sorted(glob.glob(f"{APP}/*/report/*/*.json")):
 		check_record(schemas, json.load(open(f)), "Report", os.path.relpath(f, APP), False)

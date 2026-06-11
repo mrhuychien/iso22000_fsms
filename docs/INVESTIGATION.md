@@ -103,7 +103,33 @@ Bài học cho scaffold offline: **mọi record ship đi phải validate chống
 thật của Frappe đúng version**, không dựa vào trí nhớ về cấu trúc doctype.
 Chạy `python3 scripts/validate_shipped_docs.py` trước mỗi lần commit fixture.
 
+## 3c. Vòng 4 — thứ tự installer của build server + chart trỏ child table
 
+Log vòng 4 (site sạch) chứng minh: **build Frappe trên server chạy
+`after_install` TRƯỚC `sync_fixtures`** (installer.py: add_module_defs:321 →
+sync_for:323 → after_install → sync_fixtures:339) — ngược với nhánh
+version-16 public. Hệ quả: `_setup_core_permissions()` chạy khi role.json
+chưa import → 28/48 rule bị bỏ qua ("Role chưa tồn tại"; các role thoát nạn
+là nhờ `make_module_and_roles` tự tạo từ DocType permissions lúc sync).
+
+Fix: `_setup_core_permissions` tự tạo Role còn thiếu (desk_access=1,
+is_custom=1); role.json import sau ghi đè bằng thuộc tính đầy đủ. An toàn vì
+`delete_old_doc` của fixture dùng `delete_doc(for_reload=True)` — **bỏ qua
+on_trash** (delete_doc.py docstring 50–52) nên Custom DocPerm vừa cấp không
+bị cascade xóa khi Role bị delete+reinsert.
+
+Crash thật vòng 4: chart "FSMS Audit Findings by Department" có
+`document_type = FSMS Audit Finding` — **child table** →
+`DashboardChart.check_required_field` (dashboard_chart.py:404) đòi
+`parent_document_type`. Fix: `parent_document_type = FSMS Audit Execution`
+(bảng cha chứa field `findings`). Card cùng doctype thoát check vì
+`type=Custom`. Validator đã thêm rule này (`check_controller_rules`).
+
+Noise vô hại của build mới trong log: "Creating Sidebar Items for Nga"
+(workspace app khác) và "Error creating icons 'list' object is not callable"
+(core tự catch, install chạy tiếp — không phải code app).
+
+## 4. Lưu ý còn mở (không chặn install — theo dõi ở vòng test)
 
 - **FSMS PRP Item** là child table được seed 11 row template mồ côi
   (parent NULL) + `FSMS Verification Test.object` Link tới child table —

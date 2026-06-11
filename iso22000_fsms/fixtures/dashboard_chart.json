@@ -28,7 +28,8 @@
   "is_public": 1,
   "is_standard": 0,
   "module": "ISO 22000 FSMS",
-  "filters_json": "[]"
+  "filters_json": "[]",
+  "parent_document_type": "FSMS Audit Execution"
  },
  {
   "doctype": "Dashboard Chart",

@@ -100,11 +100,12 @@ CORE_DOCTYPE_PERMISSIONS = {
 def after_install():
 	"""Called once after `bench install-app iso22000_fsms`.
 
-	Frappe auto-loads fixtures (fixtures/*.json) before this runs, so các Role
-	FSMS đã tồn tại trong DB khi tới đây. Hook này lo các việc cần SQL thật:
-	1. Ensure FSMS Settings has its sole record
-	2. Cấp quyền DocType core cho role FSMS (thay cho custom_docperm.json cũ)
-	3. Print a friendly banner
+	LƯU Ý thứ tự: trên Frappe v16 bản mới, after_install chạy TRƯỚC
+	sync_fixtures (installer.py: add_module_defs → sync_for → after_install
+	→ ... → sync_fixtures), nên KHÔNG được giả định role.json đã vào DB.
+	_setup_core_permissions tự tạo Role còn thiếu; fixture role.json import
+	sau đó sẽ ghi đè bằng thuộc tính đầy đủ (delete_old_doc dùng
+	for_reload=True nên không chạy on_trash — Custom DocPerm không bị mất).
 	"""
 	if frappe.db.exists("DocType", "FSMS Settings") and not frappe.db.exists("FSMS Settings"):
 		frappe.get_doc({"doctype": "FSMS Settings", "company_name": "(Chưa cấu hình)"}).insert(
@@ -128,8 +129,11 @@ def _setup_core_permissions():
 			continue
 		for role in roles:
 			if not frappe.db.exists("Role", role):
-				print(f"⚠ iso22000_fsms: bỏ qua quyền {doctype}/{role} — Role chưa tồn tại")
-				continue
+				# after_install chạy trước fixtures trên build mới — tạo tối thiểu,
+				# role.json sẽ ghi đè bằng thuộc tính đầy đủ khi fixtures sync.
+				frappe.get_doc(
+					{"doctype": "Role", "role_name": role, "desk_access": 1, "is_custom": 1}
+				).insert(ignore_permissions=True, ignore_if_duplicate=True)
 			add_permission(doctype, role, 0)
 			for ptype in extra_ptypes:
 				update_permission_property(doctype, role, 0, ptype, 1)
