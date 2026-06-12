@@ -169,9 +169,31 @@ def check_not_child_table(schemas, f):
 			E.append(f"{os.path.basename(f)}: '{dt}' là child table (istable=1) — không thể ship làm fixture (MandatoryError parent/parenttype). Seed qua parent trong after_install.")
 
 
+def check_workflow_targets(schemas):
+	"""Workflow không gắn được lên Single (không có bảng tab -> update_default_workflow_status
+	chạy UPDATE tab{dt} VỠ), và state doc_status>=1 đòi doctype is_submittable."""
+	wf_path = os.path.join(APP, "fixtures", "workflow.json")
+	if not os.path.exists(wf_path):
+		return
+	for wf in json.load(open(wf_path)):
+		dt = wf.get("document_type")
+		s = schemas.get(dt)
+		ctx = f"workflow.json[{wf.get('name')}]"
+		if not s:
+			E.append(f"{ctx}: document_type '{dt}' không tồn tại")
+			continue
+		if s.get("issingle"):
+			E.append(f"{ctx}: '{dt}' là Single doctype — workflow.on_update chạy UPDATE tab{dt} (không có bảng) -> install VỠ")
+		states = wf.get("states") or []
+		max_ds = max((int(st.get("doc_status", 0)) for st in states), default=0)
+		if max_ds >= 1 and not s.get("is_submittable"):
+			E.append(f"{ctx}: có state doc_status>=1 nhưng '{dt}' không is_submittable — apply_workflow vỡ runtime")
+
+
 def main():
 	fetch_schemas()
 	schemas = load_schemas()
+	check_workflow_targets(schemas)
 	# fixtures: data_import=True -> validate + mandatory BẬT
 	for f in sorted(glob.glob(f"{APP}/fixtures/*.json")):
 		check_not_child_table(schemas, f)

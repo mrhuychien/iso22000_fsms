@@ -205,5 +205,6 @@
  "autoname": "naming_series:",
  "naming_rule": "By \"Naming Series\" field",
  "title_field": "program_year",
- "track_changes": 1
+ "track_changes": 1,
+ "is_submittable": 1
 }

@@ -146,6 +146,25 @@ message (hợp lệ). Còn lại: 3 notification `event=Method` thiếu `method`
 KHÔNG chặn install (validate không bắt), chức năng đã do scheduler task trong
 `tasks.py` lo; để nguyên.
 
+## 3e. Vòng 6 — workflow gắn lên Single doctype + thiếu is_submittable
+
+Vòng 6 qua sạch tới `workflow.json` (file 15/18), chết với
+`(1146, "Table 'tab FSMS Manual' doesn't exist")` tại
+`Workflow.on_update → update_default_workflow_status` — hàm này chạy
+`UPDATE tab{document_type} SET workflow_state=default ...` **vô điều kiện**.
+
+Hai bug class:
+
+| Lỗi | Doctype | Fix |
+|---|---|---|
+| Workflow gắn lên **Single doctype** (issingle=1 → không có bảng `tab` → UPDATE vỡ; Single cũng không submit được) | `FSMS Manual`, `FSMS Policy` (đúng là Single — `api.py`/test dùng `get_single`) | Bỏ 2 workflow `FSMS Manual Workflow`, `FSMS Policy Workflow`. Manual/Policy quản lý phê duyệt bằng các field chữ ký prepared/reviewed/approved, không qua Frappe Workflow |
+| Workflow có state `doc_status>=1` nhưng doctype **không is_submittable** (apply_workflow vỡ runtime khi submit) | `FSMS Audit Program`, `FSMS Audit Plan`, `FSMS Training Plan` (workflow Draft→Approved(1)→…→Closed(1), không có on_submit code) | Bật `is_submittable=1` trên 3 doctype — đúng ý đồ lifecycle "khoá sau phê duyệt" |
+
+Validator thêm `check_workflow_targets`: workflow trên Single → ERROR; workflow
+có doc_status>=1 mà doctype không is_submittable → ERROR. Đã quét: dashboard
+chart/number card không trỏ Single (đã import qua ở vòng 6), notification không
+Single → hết bug class này.
+
 ## 4. Lưu ý còn mở (không chặn install — theo dõi ở vòng test)
 
 - **FSMS PRP Item** là child table được seed 11 row template mồ côi
