@@ -381,6 +381,7 @@ def execute():
 bench --site mysite migrate
 
 # Export fixtures (sau khi tạo Roles, Custom Fields trong Desk)
+# LUÔN export, ĐỪNG viết tay: Frappe ghi kèm `name` + đúng schema + đúng kiểu.
 bench --site mysite export-fixtures --app npp_sale
 
 # Build assets nếu có Client Script trong app
@@ -389,6 +390,25 @@ bench build --app npp_sale
 # Restart để Python module reload
 bench restart
 ```
+
+#### BƯỚC 8.5 — CỔNG KIỂM TRƯỚC KHI CÀI (bắt buộc nếu fixtures viết tay)
+
+Fixtures import = **full validate**, theo **alphabet tên file**, KHÔNG áp schema
+default, lỗi không-phải-ImportError = chết install. Trước khi đưa lên site:
+
+```bash
+python3 references/validate_shipped_docs.py apps/npp_sale/npp_sale   # 0 ERROR mới cài
+```
+
+15 cạm bẫy hay làm vỡ `install-app` (child-table-as-fixture, Workspace.content,
+Notification event fields, workflow-trên-Single, is_submittable, field reqd phải
+tường minh, Custom DocPerm hash, Single doctype, module thiếu package, Report
+columns string...) + bảng tra lỗi → xem `references/fixtures-install-pitfalls.md`.
+**Đọc file đó khi build bất kỳ fixture nào.**
+
+Kỷ luật khi chữa install thật: sửa → validator → commit (1 fix/commit) → server
+`git pull` → **`drop-site` rồi `new-site`** (install dở để lại xác, đừng
+`--force` lên site bẩn) → cài lại. Mỗi vòng tiến thêm một file fixture.
 
 ## 🔚 OUTPUT KẾT THÚC
 

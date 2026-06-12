@@ -21,3 +21,16 @@ Skill này áp dụng **3-tier QA discipline** của Vibecode V5 cho Frappe cont
 - `test_records.json` (fixture data tối thiểu)
 - `REVIEW_REPORT.md`
 - `UAT_SCRIPT.md`
+
+## 🚦 Cổng kiểm fixtures/install (thêm vào CI/pre-merge)
+
+App có ship fixtures (viết tay) → thêm gate **trước** khi `install-app`/merge:
+```bash
+python3 <validate_shipped_docs.py> apps/<app>/<app>   # 0 ERROR mới qua
+```
+Script + 15 cạm bẫy install ở skill `nextcode-build`
+(`references/validate_shipped_docs.py`, `references/fixtures-install-pitfalls.md`).
+Tier-2 review nên có mục: fixtures `export-fixtures` chứ không viết tay; Custom
+DocPerm không ship qua fixture; mọi seed `after_install` bọc try/except. Khi viết
+regression test cho bug install vừa fix → assert `install-app` trên site sạch
+chạy trọn (hoặc validator ra 0 ERROR).

@@ -27,3 +27,16 @@ Skill này áp dụng **9-step Investigation Protocol** của Vibecode V5 cho Fr
 - `bench worker --queue long` (xem background job real-time)
 - `bench --site X clear-cache`
 - `bench --site X migrate --resume`
+
+## 🔧 `install-app` / `migrate` chết giữa chừng → `references/install-failure-playbook.md`
+
+Loại bug riêng (vỡ trong tiến trình cài, không reproduce qua UAT). Nhớ ngay:
+- Install chết giữa chừng **để lại xác** → luôn `drop-site` + `new-site`, đừng tin
+  site bẩn, đừng `install-app --force`.
+- Fixtures import theo **alphabet tên file**, import mọi `.json`; file đang chết →
+  file sau nó **chưa chạy**. Bug đi theo **lớp** → mô phỏng tĩnh tìm hết đồng loại
+  (validator ở `nextcode-build/references/validate_shipped_docs.py`), đừng vá lẻ.
+- Xác thực server chạy đúng code bằng **md5 / `calculated_hash`** trước khi sửa.
+- Đọc **source thật** controller đang vỡ (`curl` raw GitHub), tin format
+  `[doctype, name]: field` trong MandatoryError (không tin biến lặp `d=...`).
+- Bảng tra exception→nguyên nhân + 15 cạm bẫy: playbook trên + skill `nextcode-build`.
