@@ -165,6 +165,24 @@ có doc_status>=1 mà doctype không is_submittable → ERROR. Đã quét: dashb
 chart/number card không trỏ Single (đã import qua ở vòng 6), notification không
 Single → hết bug class này.
 
+## 3f. Vòng 7 — field reqd phải hiện diện tường minh (fixture KHÔNG áp schema default)
+
+Vòng 7 qua tới `workspace.json` (file 18/18 — file cuối), chết với
+`[Workspace, FSMS]: type`. Đọc kỹ: doctype=Workspace, name=FSMS, thiếu field
+`type` trên **bản ghi cha** (dòng `d = Workspace Link...` chỉ là biến vòng lặp
+cuối trong frame, không phải nguồn lỗi). `Workspace.type` là Select
+("Workspace"/"Link"/"URL"), **reqd=1, default="Workspace"**.
+
+Bài học hệ thống (sửa cả lỗ hổng validator): **đường import fixture
+(`get_doc(dict)` → `_validate_mandatory`) KHÔNG áp schema default trước khi
+check mandatory** — chỉ `frappe.new_doc()` mới áp default. Validator cũ coi
+`default` là đủ cho mandatory nên lọt. Đã siết: field reqd phải **hiện diện
+tường minh** trong JSON, không được dựa default. Quét lại một lượt toàn bộ
+fixtures với rule mới → chỉ `workspace.type` thiếu; thêm `type: "Workspace"`,
+mọi fixture giờ 0 ERROR kể cả rule siết.
+
+Fix: thêm `"type": "Workspace"` vào workspace fixture.
+
 ## 4. Lưu ý còn mở (không chặn install — theo dõi ở vòng test)
 
 - **FSMS PRP Item** là child table được seed 11 row template mồ côi

@@ -2,6 +2,7 @@
  {
   "doctype": "Workspace",
   "name": "FSMS",
+  "type": "Workspace",
   "label": "Bảng điều khiển ATTP",
   "title": "Bảng điều khiển ATTP",
   "module": "ISO 22000 FSMS",

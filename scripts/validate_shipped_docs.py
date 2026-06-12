@@ -125,8 +125,12 @@ def check_record(schemas, rec, dt, ctx, mandatory_enforced):
 	if mandatory_enforced:
 		for fn, f in fm.items():
 			if f.get("reqd") and f.get("fieldtype") not in LAYOUT_FT:
-				if rec.get(fn, f.get("default")) in (None, ""):
-					E.append(f"{ctx}: thiếu field bắt buộc '{fn}' ({dt}, không có default) — MandatoryError ở fixture import")
+				# Đường import fixture (get_doc -> _validate_mandatory) KHÔNG áp schema
+				# default trước khi check mandatory (chỉ frappe.new_doc mới áp). Nên field
+				# reqd phải HIỆN DIỆN tường minh trong record — không được dựa vào default.
+				if fn not in rec or rec.get(fn) in (None, ""):
+					hint = f" (schema có default={f.get('default')!r} nhưng fixture import KHÔNG áp)" if f.get("default") not in (None, "") else ""
+					E.append(f"{ctx}: thiếu field bắt buộc '{fn}' ({dt}){hint} — MandatoryError ở fixture import")
 
 
 def check_controller_rules(schemas, rec, ctx):
