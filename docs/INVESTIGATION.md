@@ -129,6 +129,23 @@ Noise vô hại của build mới trong log: "Creating Sidebar Items for Nga"
 (workspace app khác) và "Error creating icons 'list' object is not callable"
 (core tự catch, install chạy tiếp — không phải code app).
 
+## 3d. Vòng 5 — 3 fixture còn nổ ở runtime validate (cùng loại schema-mismatch)
+
+Vòng 5 (đã chạy đúng code mới): after_install + 4 fixture đầu qua sạch, chết ở
+`fsms_prp_item.json`. Soi sâu các controller-validate còn lại, gỡ luôn 3 quả:
+
+| Fixture | Validate ném ở đâu | Fix |
+|---|---|---|
+| `fsms_prp_item.json` | `FSMS PRP Item` là **child table** (istable=1); insert standalone → `_validate_mandatory` đòi parent/parenttype | Bỏ fixture; seed 11 PRP chuẩn thành child rows của 1 `FSMS PRP Program` mẫu trong `after_install` (`_seed_prp_templates`, bọc try/except, idempotent theo program_version) |
+| `workspace.json` | `content=""` → `json.loads("")` lỗi → `Workspace.validate` throw "Content data shoud be a list" | Dựng `content` là JSON list hợp lệ (header + 2 shortcut + 1 card) + thêm 1 row "Card Break" gom 12 link |
+| `notification.json` | 3 record `event="Days Before"` thiếu `date_changed` → `Notification.validate` throw "Please specify which date field" | Điền `date_changed` = field ngày thật (next_review_date / kickoff_meeting_date) + `days_in_advance` |
+
+Validator thêm 3 rule: child-table-as-fixture, Workspace.content-phải-list,
+Notification.event-cần-field-đồng-hành. Đã kiểm Jinja syntax mọi subject/
+message (hợp lệ). Còn lại: 3 notification `event=Method` thiếu `method` —
+KHÔNG chặn install (validate không bắt), chức năng đã do scheduler task trong
+`tasks.py` lo; để nguyên.
+
 ## 4. Lưu ý còn mở (không chặn install — theo dõi ở vòng test)
 
 - **FSMS PRP Item** là child table được seed 11 row template mồ côi

@@ -142,6 +142,31 @@ def check_controller_rules(schemas, rec, ctx):
 	if dt == "Number Card" and rec.get("type") == "Document Type":
 		if target_istable and not rec.get("parent_document_type"):
 			E.append(f"{ctx}: document_type '{target}' là child table — thiếu parent_document_type (NumberCard.validate throw)")
+	# Workspace.validate: json.loads(content) PHẢI ra list ("" -> throw 'Content data shoud be a list')
+	if dt == "Workspace":
+		c = rec.get("content")
+		try:
+			ok = isinstance(json.loads(c), list) if c not in (None, "") else False
+		except Exception:
+			ok = False
+		if not ok:
+			E.append(f"{ctx}: content phải là JSON list hợp lệ (Workspace.validate throw 'Content data shoud be a list')")
+	# Notification.validate: event cần field đồng hành
+	if dt == "Notification":
+		ev = rec.get("event")
+		need = {"Days Before": "date_changed", "Days After": "date_changed", "Value Change": "value_changed"}.get(ev)
+		if need and not rec.get(need):
+			E.append(f"{ctx}: event='{ev}' nhưng thiếu '{need}' (Notification.validate throw)")
+
+
+def check_not_child_table(schemas, f):
+	"""Child table (istable=1) KHÔNG thể ship làm fixture standalone:
+	Frappe cấm insert child row thiếu parent/parenttype -> MandatoryError."""
+	recs = json.load(open(f))
+	dts = {r.get("doctype") for r in recs if isinstance(r, dict)}
+	for dt in dts:
+		if schemas.get(dt, {}).get("istable"):
+			E.append(f"{os.path.basename(f)}: '{dt}' là child table (istable=1) — không thể ship làm fixture (MandatoryError parent/parenttype). Seed qua parent trong after_install.")
 
 
 def main():
@@ -149,6 +174,7 @@ def main():
 	schemas = load_schemas()
 	# fixtures: data_import=True -> validate + mandatory BẬT
 	for f in sorted(glob.glob(f"{APP}/fixtures/*.json")):
+		check_not_child_table(schemas, f)
 		for i, rec in enumerate(json.load(open(f))):
 			ctx = f"{os.path.basename(f)}[{i} {rec.get('name', '?')}]"
 			check_record(schemas, rec, rec.get("doctype"), ctx, True)

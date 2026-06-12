@@ -165,7 +165,9 @@
     "receiver_by_role": "FSMS Manager"
    }
   ],
-  "enabled": 1
+  "enabled": 1,
+  "date_changed": "next_review_date",
+  "days_in_advance": 14
  },
  {
   "doctype": "Notification",
@@ -186,7 +188,9 @@
     "receiver_by_role": "FSMS Manager"
    }
   ],
-  "enabled": 1
+  "enabled": 1,
+  "date_changed": "kickoff_meeting_date",
+  "days_in_advance": 7
  },
  {
   "doctype": "Notification",
@@ -225,7 +229,9 @@
     "receiver_by_role": "FSMS Manager"
    }
   ],
-  "enabled": 1
+  "enabled": 1,
+  "date_changed": "next_review_date",
+  "days_in_advance": 30
  },
  {
   "doctype": "Notification",

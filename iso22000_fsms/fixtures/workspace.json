@@ -10,6 +10,11 @@
   "is_hidden": 0,
   "links": [
    {
+    "type": "Card Break",
+    "label": "Nghiệp vụ ATTP",
+    "link_count": 12
+   },
+   {
     "label": "Phiếu yêu cầu hành động khắc phục",
     "type": "Link",
     "link_type": "DocType",
@@ -93,6 +98,7 @@
     "type": "DocType",
     "link_to": "FSMS NCR"
    }
-  ]
+  ],
+  "content": "[{\"id\": \"fsmshdr01\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Bảng điều khiển ATTP — ISO 22000</b></span>\", \"col\": 12}}, {\"id\": \"fsmssc0001\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Tạo NCR mới\", \"col\": 3}}, {\"id\": \"fsmssc0002\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"FSMS Settings\", \"col\": 3}}, {\"id\": \"fsmscard01\", \"type\": \"card\", \"data\": {\"card_name\": \"Nghiệp vụ ATTP\", \"col\": 4}}]"
  }
 ]

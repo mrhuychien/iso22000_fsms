@@ -112,7 +112,60 @@ def after_install():
 			ignore_permissions=True
 		)
 	_setup_core_permissions()
+	_seed_prp_templates()
 	print("✓ ISO 22000 FSMS installed. Mở `Bảng điều khiển ATTP` từ menu chính.")
+
+
+# 11 PRP chuẩn theo ISO/TS 22002-1 — seed làm child rows của 1 PRP Program mẫu.
+# KHÔNG ship qua fixtures: FSMS PRP Item là child table (istable=1), Frappe cấm
+# insert child row đứng một mình (parent/parenttype bắt buộc) → MandatoryError.
+PRP_TEMPLATE_PROGRAM_VERSION = "MẪU CHUẨN — 11 PRP (ISO/TS 22002-1)"
+PRP_TEMPLATE_ITEMS = [
+	("PRP1-Construction", "Construction and layout of buildings", "Quan sát hạ tầng, ghi chép hiện trạng", "Năm"),
+	("PRP2-Layout", "Layout of premises and workspace", "Sơ đồ + checklist", "Năm"),
+	("PRP3-Utilities", "Utilities — air, water, energy", "Test mẫu nước, đo độ ẩm, áp suất", "Tuần"),
+	("PRP4-Waste", "Waste disposal", "Quan sát + ghi sổ chất thải", "Ngày"),
+	("PRP5-Equipment", "Equipment suitability, cleaning, maintenance", "Kiểm tra thiết bị + lịch BD", "Tuần"),
+	("PRP6-Material", "Management of purchased materials", "Kiểm tra COA + nhập kho", "Mỗi đợt nhập"),
+	("PRP7-Cross-contam", "Measures for prevention of cross-contamination", "Quan sát + GMP audit", "Tuần"),
+	("PRP8-Cleaning", "Cleaning and sanitizing", "Sổ vệ sinh + ATP swab", "Ngày"),
+	("PRP9-Pest", "Pest control", "Sổ diệt côn trùng + bẫy", "Tuần"),
+	("PRP10-Personnel", "Personnel hygiene and employee facilities", "Sổ vệ sinh CN + sức khỏe", "Ngày"),
+	("PRP11-Rework", "Rework", "Sổ rework + truy xuất", "Mỗi lần rework"),
+]
+
+
+def _seed_prp_templates():
+	"""Tạo 1 FSMS PRP Program mẫu chứa 11 PRP chuẩn (thay cho fixture child-table cũ).
+
+	Idempotent qua program_version (FSMS PRP Program đặt tên bằng hash nên không
+	check theo name được). Bọc try/except: dữ liệu mẫu không tới hạn — lỗi seed
+	không được phép làm chết install.
+	"""
+	if not frappe.db.exists("DocType", "FSMS PRP Program"):
+		return
+	if frappe.db.exists("FSMS PRP Program", {"program_version": PRP_TEMPLATE_PROGRAM_VERSION}):
+		return
+	try:
+		frappe.get_doc(
+			{
+				"doctype": "FSMS PRP Program",
+				"program_version": PRP_TEMPLATE_PROGRAM_VERSION,
+				"effective_date": frappe.utils.today(),
+				"prp_items": [
+					{
+						"prp_code": code,
+						"description": desc,
+						"monitoring_method": method,
+						"frequency": freq,
+						"is_template": 1,
+					}
+					for code, desc, method, freq in PRP_TEMPLATE_ITEMS
+				],
+			}
+		).insert(ignore_permissions=True)
+	except Exception:
+		frappe.log_error(title="iso22000_fsms: seed PRP templates failed")
 
 
 def _setup_core_permissions():

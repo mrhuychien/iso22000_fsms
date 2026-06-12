@@ -156,7 +156,6 @@ fixtures = [
 	{"doctype": "FSMS Risk Score Reference"},
 	{"doctype": "FSMS Supplier Category"},
 	{"doctype": "FSMS Emergency Scenario"},
-	{"doctype": "FSMS PRP Item", "filters": [["is_template", "=", 1]]},
 ]
 
 # ============================================================================
